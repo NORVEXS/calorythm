@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Calorías Diarias 2025 — TMB y TDEE con fórmula Mifflin-St Jeor</title>
+  <meta name="description" content="Calcula tus calorías diarias (TDEE) y tasa metabólica basal (TMB) según tu peso, altura, edad, sexo y nivel de actividad. Fórmula Mifflin-St Jeor. Gratis." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="author" content="IMC Calculadora" />
+  <meta name="theme-color" content="#2563EB" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="canonical" href="https://calculadora-imc.es/calorias-diarias/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="IMC Calculadora" />
+  <meta property="og:url" content="https://calculadora-imc.es/calorias-diarias/" />
+  <meta property="og:title" content="Calculadora de Calorías Diarias 2025 — TMB y TDEE" />
+  <meta property="og:description" content="Calcula tus calorías diarias (TDEE) y tasa metabólica basal (TMB) según tu peso, altura, edad, sexo y nivel de actividad. Fórmula Mifflin-St Jeor. Gratis." />
+  <meta property="og:image" content="https://calculadora-imc.es/og-image.jpg" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Calculadora de Calorías Diarias 2025 — TMB y TDEE" />
+  <meta name="twitter:description" content="Calcula tus calorías diarias (TDEE) y TMB con la fórmula Mifflin-St Jeor. Nivel de actividad personalizable. Gratis." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232563EB'/><circle cx='16' cy='12' r='4' fill='none' stroke='white' stroke-width='2'/><path d='M8 24c0-4.4 3.6-8 8-8s8 3.6 8 8' fill='none' stroke='white' stroke-width='2'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: { extend: { fontFamily: { sans: ["Inter","system-ui","sans-serif"] } } }
+    }
+  </script>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://calculadora-imc.es/calorias-diarias/#app",
+        "name": "Calculadora de Calorías Diarias",
+        "url": "https://calculadora-imc.es/calorias-diarias/",
+        "description": "Calcula tus calorías diarias (TDEE) y tasa metabólica basal (TMB) según peso, altura, edad, sexo y nivel de actividad. Fórmula Mifflin-St Jeor.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web",
+        "browserRequirements": "Requires JavaScript",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+        "inLanguage": "es-ES",
+        "author": { "@type": "Organization", "name": "IMC Calculadora", "url": "https://calculadora-imc.es/" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://calculadora-imc.es/calorias-diarias/#faq",
+        "mainEntity": [
+          { "@type": "Question", "name": "¿Cuántas calorías debo comer al día?", "acceptedAnswer": { "@type": "Answer", "text": "Depende de tu peso, altura, edad, sexo y nivel de actividad. La media oscila entre 1.600 y 2.500 kcal/día para mujeres y entre 2.000 y 3.000 kcal/día para hombres. Nuestra calculadora calcula tu TDEE personalizado usando la fórmula Mifflin-St Jeor." } },
+          { "@type": "Question", "name": "¿Qué es la tasa metabólica basal (TMB)?", "acceptedAnswer": { "@type": "Answer", "text": "La TMB es la cantidad de calorías que tu cuerpo necesita en reposo absoluto para mantener funciones vitales: respiración, circulación, temperatura corporal y funcionamiento celular. Representa aproximadamente el 60-75% del gasto energético total." } },
+          { "@type": "Question", "name": "¿Cuál es la diferencia entre TMB y TDEE?", "acceptedAnswer": { "@type": "Answer", "text": "La TMB (Tasa Metabólica Basal) es el gasto en reposo. El TDEE (Total Daily Energy Expenditure) incluye además la energía gastada en actividad física, digestión y otras funciones. El TDEE es el número de calorías que realmente necesitas al día." } },
+          { "@type": "Question", "name": "¿Cuántas calorías hay que reducir para adelgazar?", "acceptedAnswer": { "@type": "Answer", "text": "Un déficit de 500 kcal/día produce una pérdida aproximada de 0,5 kg por semana, lo que es sostenible y seguro. Un déficit de 1.000 kcal/día puede permitir perder hasta 1 kg/semana, pero debe hacerse con supervisión médica para evitar carencias nutricionales." } },
+          { "@type": "Question", "name": "¿Es fiable la fórmula Mifflin-St Jeor?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. La fórmula Mifflin-St Jeor (1990) es considerada la más precisa para estimar la TMB en adultos, siendo recomendada por la Academia de Nutrición y Dietética de EE.UU. Tiene un margen de error de aproximadamente ±10%." } },
+          { "@type": "Question", "name": "¿Cómo afecta el músculo al metabolismo?", "acceptedAnswer": { "@type": "Answer", "text": "El tejido muscular consume más energía en reposo que el tejido graso. Por cada kilogramo de músculo adicional, el metabolismo basal aumenta aproximadamente 13 kcal/día. Por eso el entrenamiento de fuerza es clave para un metabolismo más activo a largo plazo." } }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://calculadora-imc.es/" },
+          { "@type": "ListItem", "position": 2, "name": "Calorías diarias", "item": "https://calculadora-imc.es/calorias-diarias/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="antialiased">
+
+<!-- ======= NAVBAR ======= -->
+<header class="navbar">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center gap-3 h-full">
+    <a href="/" class="flex items-center gap-2 shrink-0" aria-label="Inicio">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect width="28" height="28" rx="7" fill="#2563EB"/>
+        <circle cx="14" cy="10" r="3.5" stroke="white" stroke-width="1.8" fill="none"/>
+        <path d="M7 21.5c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+        <path d="M14 17v4M12 21h4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span class="font-semibold text-sm tracking-tight hidden sm:inline" style="color:var(--text-primary)">IMC <span style="color:var(--accent)">Calculadora</span></span>
+    </a>
+    <nav class="calc-nav" aria-label="Calculadoras">
+      <a href="/"                   class="calc-nav-link">IMC</a>
+      <a href="/peso-ideal/"        class="calc-nav-link">Peso ideal</a>
+      <a href="/calorias-diarias/"  class="calc-nav-link active">Calorías</a>
+      <a href="/calorias-quemadas/" class="calc-nav-link">Quemadas</a>
+      <a href="/tmb/"               class="calc-nav-link">TMB</a>
+      <a href="/macros/"            class="calc-nav-link">Macros</a>
+      <a href="/ffmi/"              class="calc-nav-link">FFMI</a>
+      <a href="/grasa-corporal/"    class="calc-nav-link">% Grasa</a>
+      <a href="/agua-diaria/"       class="calc-nav-link">Agua</a>
+    </nav>
+    <button id="darkToggle" class="theme-toggle shrink-0" aria-label="Cambiar modo oscuro">
+      <svg id="iconLight" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      <svg id="iconDark"  class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ======= HERO + PANEL ======= -->
+<section id="hero" class="hero-section">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full py-10 lg:py-14">
+
+    <div class="text-center mb-8 lg:mb-10">
+      <div class="trust-badge inline-flex mb-5">
+        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        Fórmula Mifflin-St Jeor · Actualizado 2025
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.03em">
+        Calcula tus <span style="color:var(--accent)">Calorías Diarias</span>
+      </h1>
+      <p class="text-base max-w-xl mx-auto leading-relaxed mb-6" style="color:var(--text-secondary)">
+        Descubre tu <strong style="color:var(--text-primary)">gasto energético total (TDEE)</strong> y tu <strong style="color:var(--text-primary)">tasa metabólica basal (TMB)</strong> según tu perfil y nivel de actividad. Obtén objetivos calóricos personalizados para perder peso, mantener o ganar masa muscular.
+      </p>
+      <div class="flex items-center justify-center flex-wrap gap-2" style="color:var(--text-muted)">
+        <span class="feature-pill">Mifflin-St Jeor</span>
+        <span class="feature-pill">kg/cm · lb/in</span>
+        <span class="feature-pill">5 niveles de actividad</span>
+        <span class="feature-pill">100% privado</span>
+      </div>
+    </div>
+
+    <!-- Panel -->
+    <div class="calc-panel" id="calculadora">
+
+      <!-- TOP: inputs -->
+      <div class="calc-panel__top">
+        <div class="calc-inputs-bar">
+          <!-- Peso -->
+          <div class="cib-field">
+            <label class="cib-label" for="weight">Peso <span id="weightUnit" class="cib-unit">(kg)</span></label>
+            <input id="weight" class="cib-input" type="number" min="1" max="500" step="0.1" placeholder="70"
+              autocomplete="off" inputmode="decimal" aria-label="Peso" />
+            <p id="weightError" class="cib-error hidden">Valor no válido</p>
+          </div>
+          <div class="cib-divider" aria-hidden="true"></div>
+          <!-- Altura -->
+          <div class="cib-field">
+            <label class="cib-label" for="height">Altura <span id="heightUnit" class="cib-unit">(cm)</span></label>
+            <input id="height" class="cib-input" type="number" min="50" max="300" step="0.1" placeholder="175"
+              autocomplete="off" inputmode="decimal" aria-label="Altura" />
+            <p id="heightError" class="cib-error hidden">Valor no válido</p>
+          </div>
+          <div class="cib-divider" aria-hidden="true"></div>
+          <!-- Edad -->
+          <div class="cib-field cib-field--sm">
+            <label class="cib-label" for="age">Edad</label>
+            <input id="age" class="cib-input" type="number" min="10" max="120" step="1" placeholder="30"
+              autocomplete="off" inputmode="numeric" aria-label="Edad" />
+          </div>
+          <div class="cib-divider" aria-hidden="true"></div>
+          <!-- Sexo -->
+          <div class="cib-field cib-field--gender">
+            <label class="cib-label">Sexo biológico</label>
+            <div class="cib-gender">
+              <div class="gender-option selected" id="gMale" onclick="setGender('male')" role="radio" aria-checked="true" tabindex="0">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6" stroke-width="2"/><path d="M14.5 5.5L19 1M19 1h-4M19 1v4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Hombre
+              </div>
+              <div class="gender-option" id="gFemale" onclick="setGender('female')" role="radio" aria-checked="false" tabindex="0">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6" stroke-width="2"/><path d="M12 15v6M9 19h6" stroke-width="2" stroke-linecap="round"/></svg>
+                Mujer
+              </div>
+            </div>
+          </div>
+          <!-- Botón -->
+          <button id="calcBtn" class="cib-btn" onclick="calculate()">
+            Calcular
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+          </button>
+        </div>
+        <!-- Subrow -->
+        <div class="calc-subrow">
+          <div class="unit-toggle">
+            <button class="unit-btn active" id="btnMetric" onclick="setUnit('metric')">kg / cm</button>
+            <button class="unit-btn" id="btnImperial" onclick="setUnit('imperial')">lb / in</button>
+          </div>
+          <div class="cp-trust">
+            <svg class="w-3 h-3" style="color:#4ade80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            <span>100% privado</span>
+            <span class="cp-trust-dot">·</span>
+            <span>Sin registro</span>
+            <span class="cp-trust-dot">·</span>
+            <span>Mifflin-St Jeor</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM: actividad + resultado -->
+      <div class="calc-panel__bottom">
+
+        <!-- Selector de actividad — siempre visible cuando el panel está abierto -->
+        <div id="activitySection" style="padding:1.25rem 1.5rem 0;border-bottom:1px solid var(--border)">
+          <p class="cib-label mb-3">Nivel de actividad física</p>
+          <div class="activity-grid">
+            <button class="activity-btn" data-activity="sedentary" onclick="setActivity('sedentary')">
+              <span class="font-semibold block" style="font-size:0.8125rem">Sedentario</span>
+              <span style="font-size:0.6875rem;color:var(--text-muted)">sin ejercicio o muy poco</span>
+            </button>
+            <button class="activity-btn" data-activity="light" onclick="setActivity('light')">
+              <span class="font-semibold block" style="font-size:0.8125rem">Ligero</span>
+              <span style="font-size:0.6875rem;color:var(--text-muted)">1–3 días/sem</span>
+            </button>
+            <button class="activity-btn selected" data-activity="moderate" onclick="setActivity('moderate')">
+              <span class="font-semibold block" style="font-size:0.8125rem">Moderado</span>
+              <span style="font-size:0.6875rem;color:var(--text-muted)">3–5 días/sem</span>
+            </button>
+            <button class="activity-btn" data-activity="active" onclick="setActivity('active')">
+              <span class="font-semibold block" style="font-size:0.8125rem">Activo</span>
+              <span style="font-size:0.6875rem;color:var(--text-muted)">6–7 días/sem</span>
+            </button>
+            <button class="activity-btn" data-activity="veryactive" onclick="setActivity('veryactive')">
+              <span class="font-semibold block" style="font-size:0.8125rem">Muy activo</span>
+              <span style="font-size:0.6875rem;color:var(--text-muted)">intenso + trabajo físico</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Placeholder -->
+        <div id="resultPlaceholder" class="result-placeholder">
+          <div style="width:56px;height:56px;border-radius:14px;background:var(--surface-3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;opacity:0.5">
+            <svg class="w-6 h-6" style="color:var(--text-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <div class="rp-score">—</div>
+          <p class="rp-label">Introduce tus datos y pulsa <strong>Calcular</strong></p>
+          <p class="rp-desc">Obtendrás tu TDEE, TMB, multiplicador de actividad y objetivos calóricos personalizados.</p>
+        </div>
+
+        <!-- Resultados -->
+        <div id="results" class="hidden">
+          <div class="res-simple">
+
+            <!-- Valor principal: TDEE -->
+            <div class="res-big">
+              <div>
+                <span class="res-big-value" id="tdeeValue">—</span>
+                <span class="res-big-unit">kcal/día</span>
+              </div>
+              <p class="res-big-label">Gasto energético total (TDEE)</p>
+            </div>
+
+            <!-- Mini-cards: TMB, Multiplicador, Nivel -->
+            <div class="res-cards-grid" style="grid-template-columns:1fr 1fr 1fr">
+              <div class="res-mini-card">
+                <p class="res-mini-label">TMB</p>
+                <p class="res-mini-value" id="tmbValue">—</p>
+                <p class="res-mini-sub">kcal (en reposo)</p>
+              </div>
+              <div class="res-mini-card">
+                <p class="res-mini-label">Multiplicador</p>
+                <p class="res-mini-value" id="multValue">—</p>
+                <p class="res-mini-sub">factor actividad</p>
+              </div>
+              <div class="res-mini-card">
+                <p class="res-mini-label">Nivel</p>
+                <p class="res-mini-value" id="levelValue" style="font-size:0.9375rem">—</p>
+                <p class="res-mini-sub">actividad actual</p>
+              </div>
+            </div>
+
+            <!-- Tabla de objetivos -->
+            <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border)">
+              <table class="res-table">
+                <thead>
+                  <tr>
+                    <th>Objetivo</th>
+                    <th>Calorías/día</th>
+                    <th class="hidden sm:table-cell">Descripción</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Pérdida rápida</td>
+                    <td class="td-val" id="goalFastLoss">—</td>
+                    <td class="hidden sm:table-cell" style="font-size:0.75rem">–1.000 kcal/día (–1 kg/sem)</td>
+                  </tr>
+                  <tr>
+                    <td>Perder peso</td>
+                    <td class="td-val" id="goalLoss">—</td>
+                    <td class="hidden sm:table-cell" style="font-size:0.75rem">–500 kcal/día (–0,5 kg/sem)</td>
+                  </tr>
+                  <tr class="highlighted">
+                    <td><strong>Mantener</strong></td>
+                    <td class="td-val" id="goalMaintain">—</td>
+                    <td class="hidden sm:table-cell" style="font-size:0.75rem">Tu TDEE actual</td>
+                  </tr>
+                  <tr>
+                    <td>Ganar peso</td>
+                    <td class="td-val" id="goalGain">—</td>
+                    <td class="hidden sm:table-cell" style="font-size:0.75rem">+300 kcal/día</td>
+                  </tr>
+                  <tr>
+                    <td>Volumen</td>
+                    <td class="td-val" id="goalVolume">—</td>
+                    <td class="hidden sm:table-cell" style="font-size:0.75rem">+500 kcal/día</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /calc-panel -->
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======= SECCIÓN EDUCATIVA ======= -->
+<section class="py-16 md:py-24" style="background:var(--surface)">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="max-w-xl mb-12 reveal">
+      <p class="section-label mb-3">Guía nutricional</p>
+      <h2 class="text-3xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.025em">Calorías, TMB y TDEE explicados</h2>
+      <p class="text-base leading-relaxed" style="color:var(--text-secondary)">Entender tu gasto energético es el primer paso para cualquier objetivo de composición corporal, ya sea perder grasa, mantener o ganar músculo.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="card card-hover reveal">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:var(--accent-light)">
+          <svg class="w-5 h-5" style="color:var(--accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Qué es el TDEE</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">El TDEE (Total Daily Energy Expenditure) es el total de calorías que gastas cada día, incluyendo el metabolismo basal, la digestión (efecto térmico) y toda tu actividad física. Es el número de referencia para diseñar tu dieta.</p>
+      </div>
+      <div class="card card-hover reveal" style="transition-delay:0.08s">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:var(--accent-light)">
+          <svg class="w-5 h-5" style="color:var(--accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+        </div>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Fórmula Mifflin-St Jeor</h3>
+        <p class="text-sm leading-relaxed mb-3" style="color:var(--text-secondary)">Publicada en 1990, es la más precisa para adultos según la Academia de Nutrición y Dietética de EE.UU. con un margen de error de ±10%.</p>
+        <div class="rounded-lg p-3 text-xs" style="background:var(--surface-2);border:1px solid var(--border);color:var(--text-secondary)">
+          <p class="font-mono mb-1"><strong>Hombre:</strong> 10×P + 6,25×A – 5×E + 5</p>
+          <p class="font-mono"><strong>Mujer:</strong> 10×P + 6,25×A – 5×E – 161</p>
+          <p class="mt-1" style="color:var(--text-muted)">P=peso(kg), A=altura(cm), E=edad</p>
+        </div>
+      </div>
+      <div class="card card-hover reveal" style="transition-delay:0.16s">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:var(--accent-light)">
+          <svg class="w-5 h-5" style="color:var(--accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Cómo usar el resultado</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">Para perder grasa de forma sostenible, resta 300–500 kcal a tu TDEE. Para ganar músculo, suma 200–500 kcal. Para mantener tu peso, come exactamente tu TDEE. Ajusta cada 2–4 semanas según evoluciones.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======= FAQ ======= -->
+<section id="faq" class="py-16 md:py-24" style="background:var(--surface-2)">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <div class="mb-12 reveal">
+      <p class="section-label mb-3">Preguntas frecuentes</p>
+      <h2 class="text-3xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.025em">Todo sobre las calorías diarias</h2>
+      <p class="text-sm" style="color:var(--text-secondary)">Respuestas basadas en evidencia científica sobre calorías, TMB, TDEE y pérdida de peso.</p>
+    </div>
+    <div class="rounded-xl overflow-hidden reveal" style="border:1px solid var(--border);background:var(--surface)">
+
+      <div class="faq-item">
+        <button class="faq-btn w-full text-left flex items-center justify-between px-5 py-4 gap-4" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="font-semibold text-sm" style="color:var(--text-primary)">¿Cuántas calorías debo comer al día?</span>
+          <svg class="faq-icon w-4 h-4 shrink-0 transition-transform" style="color:var(--text-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content px-5 pb-4">
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">Depende de tu peso, altura, edad, sexo y nivel de actividad. La media oscila entre 1.600 y 2.500 kcal/día para mujeres y entre 2.000 y 3.000 kcal/día para hombres. Nuestra calculadora calcula tu TDEE personalizado usando la fórmula Mifflin-St Jeor, el estándar más recomendado actualmente.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn w-full text-left flex items-center justify-between px-5 py-4 gap-4" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="font-semibold text-sm" style="color:var(--text-primary)">¿Qué es la tasa metabólica basal (TMB)?</span>
+          <svg class="faq-icon w-4 h-4 shrink-0 transition-transform" style="color:var(--text-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content px-5 pb-4">
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">La TMB es la cantidad de calorías que tu cuerpo necesita en reposo absoluto (sin moverse) para mantener funciones vitales: respiración, circulación, temperatura corporal, síntesis celular y funcionamiento de órganos. Representa aproximadamente el 60–75% del gasto energético total diario.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn w-full text-left flex items-center justify-between px-5 py-4 gap-4" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="font-semibold text-sm" style="color:var(--text-primary)">¿Cuál es la diferencia entre TMB y TDEE?</span>
+          <svg class="faq-icon w-4 h-4 shrink-0 transition-transform" style="color:var(--text-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content px-5 pb-4">
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">La TMB (Tasa Metabólica Basal) es el gasto calórico en reposo total. El TDEE (Total Daily Energy Expenditure) incluye además la energía gastada en actividad física diaria, el efecto térmico de los alimentos (~10%) y otras actividades. El TDEE es siempre mayor que la TMB y es el número que debes usar para planificar tu dieta.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn w-full text-left flex items-center justify-between px-5 py-4 gap-4" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="font-semibold text-sm" style="color:var(--text-primary)">¿Cuántas calorías hay que reducir para adelgazar?</span>
+          <svg class="faq-icon w-4 h-4 shrink-0 transition-transform" style="color:var(--text-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content px-5 pb-4">
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">Un déficit de 500 kcal/día produce una pérdida aproximada de 0,5 kg por semana, lo que es sostenible y seguro para la mayoría de personas. Un déficit de 1.000 kcal/día puede permitir perder hasta 1 kg/semana, pero debe hacerse con supervisión médica para evitar pérdida muscular y carencias nutricionales. No se recomienda bajar de 1.200 kcal/día en mujeres ni de 1.500 en hombres.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn w-full text-left flex items-center justify-between px-5 py-4 gap-4" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="font-semibold text-sm" style="color:var(--text-primary)">¿Es fiable la fórmula Mifflin-St Jeor?</span>
+          <svg class="faq-icon w-4 h-4 shrink-0 transition-transform" style="color:var(--text-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content px-5 pb-4">
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">Sí. Publicada en 1990 por Mifflin y St Jeor, es la más precisa para estimar la TMB en adultos según la Academia de Nutrición y Dietética de EE.UU., con un margen de error de aproximadamente ±10%. Supera en precisión a la fórmula Harris-Benedict (1919) y es la más recomendada actualmente en entornos clínicos y deportivos.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn w-full text-left flex items-center justify-between px-5 py-4 gap-4" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="font-semibold text-sm" style="color:var(--text-primary)">¿Cómo afecta el músculo al metabolismo?</span>
+          <svg class="faq-icon w-4 h-4 shrink-0 transition-transform" style="color:var(--text-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content px-5 pb-4">
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">El tejido muscular consume más energía en reposo que el tejido graso. Por cada kilogramo de músculo adicional, el metabolismo basal aumenta aproximadamente 13 kcal/día. Aunque el efecto individual es modesto, la masa muscular también aumenta el gasto durante la actividad. Por eso el entrenamiento de fuerza es clave para un metabolismo más activo y sostenible a largo plazo.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======= OTRAS HERRAMIENTAS ======= -->
+<section class="py-16 md:py-20" style="background:var(--surface)">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="mb-10 reveal">
+      <p class="section-label mb-3">Herramientas relacionadas</p>
+      <h2 class="text-2xl font-bold tracking-tight" style="color:var(--text-primary);letter-spacing:-0.025em">Otras calculadoras de salud</h2>
+    </div>
+    <div class="tools-grid reveal">
+      <a href="/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <p class="tool-card-name">Calculadora IMC</p>
+        <p class="tool-card-desc">Índice de Masa Corporal según criterios OMS</p>
+      </a>
+      <a href="/macros/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>
+        </div>
+        <p class="tool-card-name">Calculadora de Macros</p>
+        <p class="tool-card-desc">Proteínas, carbohidratos y grasas según tu objetivo</p>
+      </a>
+      <a href="/peso-ideal/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+        </div>
+        <p class="tool-card-name">Peso Ideal</p>
+        <p class="tool-card-desc">Calcula tu peso ideal según altura y complexión</p>
+      </a>
+      <a href="/tmb/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <p class="tool-card-name">Calculadora TMB</p>
+        <p class="tool-card-desc">Tasa Metabólica Basal con múltiples fórmulas</p>
+      </a>
+      <a href="/grasa-corporal/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        </div>
+        <p class="tool-card-name">% Grasa Corporal</p>
+        <p class="tool-card-desc">Porcentaje de grasa por método Navy y circunferencias</p>
+      </a>
+      <a href="/agua-diaria/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8-8h1M3 12H2m15.364-6.364l.707.707M6.343 17.657l-.707.707M17.657 17.657l.707-.707M6.343 6.343l-.707-.707"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <p class="tool-card-name">Agua Diaria</p>
+        <p class="tool-card-desc">Calcula tu ingesta de agua diaria recomendada</p>
+      </a>
+      <a href="/ffmi/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <p class="tool-card-name">FFMI</p>
+        <p class="tool-card-desc">Índice de masa libre de grasa para deportistas</p>
+      </a>
+      <a href="/calorias-quemadas/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>
+        </div>
+        <p class="tool-card-name">Calorías Quemadas</p>
+        <p class="tool-card-desc">Gasto calórico por tipo de ejercicio y duración</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======= FOOTER ======= -->
+<footer style="background:var(--surface-2);border-top:1px solid var(--border);padding:2rem 0;margin-top:0">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <svg width="20" height="20" viewBox="0 0 28 28" fill="none" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#2563EB"/><circle cx="14" cy="10" r="3.5" stroke="white" stroke-width="1.8" fill="none"/><path d="M7 21.5c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+        <span class="text-sm font-semibold" style="color:var(--text-primary)">IMC Calculadora</span>
+      </div>
+      <p class="text-xs text-center" style="color:var(--text-muted)">Herramienta orientativa. No sustituye el consejo médico profesional.</p>
+      <div class="flex gap-4 text-xs flex-wrap justify-center" style="color:var(--text-muted)">
+        <a href="/" style="color:inherit">IMC</a>
+        <a href="/peso-ideal/" style="color:inherit">Peso ideal</a>
+        <a href="/calorias-diarias/" style="color:inherit">Calorías</a>
+        <a href="/macros/" style="color:inherit">Macros</a>
+        <a href="/ffmi/" style="color:inherit">FFMI</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile CTA -->
+<div id="mobileCTA" class="hidden no-print">
+  <a href="#calculadora" class="btn-primary">
+    Calcular mis calorías
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+  </a>
+</div>
+
+<!-- Toast -->
+<div id="toast"></div>
+
+<script src="../js/theme.js"></script>
+<script>
+  /* ===== STATE ===== */
+  let _gender = 'male';
+  let _activity = 'moderate';
+  let _imperial = false;
+
+  const actMult = {
+    sedentary: 1.2,
+    light:     1.375,
+    moderate:  1.55,
+    active:    1.725,
+    veryactive:1.9
+  };
+  const actNames = {
+    sedentary: 'Sedentario',
+    light:     'Ligero',
+    moderate:  'Moderado',
+    active:    'Activo',
+    veryactive:'Muy activo'
+  };
+
+  /* ===== GENDER ===== */
+  function setGender(g) {
+    _gender = g;
+    document.getElementById('gMale').classList.toggle('selected', g === 'male');
+    document.getElementById('gFemale').classList.toggle('selected', g === 'female');
+    document.getElementById('gMale').setAttribute('aria-checked', g === 'male' ? 'true' : 'false');
+    document.getElementById('gFemale').setAttribute('aria-checked', g === 'female' ? 'true' : 'false');
+    recalcIfVisible();
+  }
+
+  /* ===== UNITS ===== */
+  function setUnit(u) {
+    _imperial = (u === 'imperial');
+    document.getElementById('btnMetric').classList.toggle('active', !_imperial);
+    document.getElementById('btnImperial').classList.toggle('active', _imperial);
+    document.getElementById('weightUnit').textContent = _imperial ? '(lb)' : '(kg)';
+    document.getElementById('heightUnit').textContent = _imperial ? '(in)' : '(cm)';
+    document.getElementById('weight').placeholder = _imperial ? '154' : '70';
+    document.getElementById('height').placeholder = _imperial ? '69' : '175';
+    recalcIfVisible();
+  }
+
+  /* ===== ACTIVITY ===== */
+  function setActivity(a) {
+    _activity = a;
+    document.querySelectorAll('.activity-btn').forEach(btn => {
+      btn.classList.toggle('selected', btn.dataset.activity === a);
+    });
+    recalcIfVisible();
+  }
+
+  /* ===== TMB FORMULA ===== */
+  function calcTMB(weightKg, heightCm, age, gender) {
+    return gender === 'male'
+      ? 10 * weightKg + 6.25 * heightCm - 5 * age + 5
+      : 10 * weightKg + 6.25 * heightCm - 5 * age - 161;
+  }
+
+  /* ===== NUMBER ANIMATION ===== */
+  function animateNumber(el, target, decimals) {
+    const start = 0;
+    const duration = 700;
+    const startTime = performance.now();
+    function step(now) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const value = start + (target - start) * ease;
+      el.textContent = decimals
+        ? value.toFixed(decimals).replace('.', ',')
+        : Math.round(value).toLocaleString('es-ES');
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* ===== MAIN CALCULATE ===== */
+  function calculate() {
+    const wRaw = parseFloat(document.getElementById('weight').value);
+    const hRaw = parseFloat(document.getElementById('height').value);
+    const age   = parseInt(document.getElementById('age').value);
+
+    // Reset errors
+    document.getElementById('weightError').classList.add('hidden');
+    document.getElementById('heightError').classList.add('hidden');
+
+    if (!wRaw || !hRaw || !age) {
+      hideResults();
+      return;
+    }
+
+    const wKg = _imperial ? wRaw / 2.20462 : wRaw;
+    const hCm = _imperial ? hRaw * 2.54    : hRaw;
+
+    let valid = true;
+    if (wKg < 20 || wKg > 500) {
+      document.getElementById('weightError').classList.remove('hidden');
+      valid = false;
+    }
+    if (hCm < 100 || hCm > 250) {
+      document.getElementById('heightError').classList.remove('hidden');
+      valid = false;
+    }
+    if (age < 10 || age > 120) { hideResults(); return; }
+    if (!valid) { hideResults(); return; }
+
+    const tmb  = calcTMB(wKg, hCm, age, _gender);
+    const mult = actMult[_activity];
+    const tdee = tmb * mult;
+
+    const perdRapido = Math.round(tdee - 1000);
+    const perder     = Math.round(tdee - 500);
+    const mantener   = Math.round(tdee);
+    const ganar      = Math.round(tdee + 300);
+    const volumen    = Math.round(tdee + 500);
+
+    showResults(Math.round(tmb), mult, tdee, perdRapido, perder, mantener, ganar, volumen);
+  }
+
+  function showResults(tmb, mult, tdee, perdRapido, perder, mantener, ganar, volumen) {
+    document.getElementById('resultPlaceholder').classList.add('hidden');
+    const resEl = document.getElementById('results');
+    resEl.classList.remove('hidden');
+
+    // Animate TDEE
+    animateNumber(document.getElementById('tdeeValue'), Math.round(tdee), 0);
+
+    // Mini cards
+    document.getElementById('tmbValue').textContent = Math.round(tmb).toLocaleString('es-ES');
+    document.getElementById('multValue').textContent = '×' + mult.toFixed(3).replace('.', ',');
+    document.getElementById('levelValue').textContent = actNames[_activity];
+
+    // Table
+    document.getElementById('goalFastLoss').textContent = perdRapido.toLocaleString('es-ES') + ' kcal';
+    document.getElementById('goalLoss').textContent     = perder.toLocaleString('es-ES') + ' kcal';
+    document.getElementById('goalMaintain').textContent = mantener.toLocaleString('es-ES') + ' kcal';
+    document.getElementById('goalGain').textContent     = ganar.toLocaleString('es-ES') + ' kcal';
+    document.getElementById('goalVolume').textContent   = volumen.toLocaleString('es-ES') + ' kcal';
+
+    // Mobile CTA hide
+    document.getElementById('mobileCTA').classList.add('hidden');
+  }
+
+  function hideResults() {
+    document.getElementById('resultPlaceholder').classList.remove('hidden');
+    document.getElementById('results').classList.add('hidden');
+  }
+
+  function recalcIfVisible() {
+    if (!document.getElementById('results').classList.contains('hidden')) {
+      calculate();
+    }
+  }
+
+  /* ===== FAQ ===== */
+  function toggleFaq(btn) {
+    const content = btn.nextElementSibling;
+    const icon = btn.querySelector('.faq-icon');
+    const isOpen = content.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-content.open').forEach(c => {
+      c.classList.remove('open');
+      c.previousElementSibling.querySelector('.faq-icon').style.transform = '';
+      c.previousElementSibling.setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      content.classList.add('open');
+      icon.style.transform = 'rotate(180deg)';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  /* ===== KEYBOARD GENDER ===== */
+  document.querySelectorAll('.gender-option').forEach(el => {
+    el.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        el.click();
+      }
+    });
+  });
+
+  /* ===== ENTER TO CALCULATE ===== */
+  ['weight','height','age'].forEach(id => {
+    document.getElementById(id).addEventListener('keydown', e => {
+      if (e.key === 'Enter') calculate();
+    });
+  });
+
+  /* ===== SCROLL REVEAL ===== */
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  /* ===== MOBILE CTA ===== */
+  const mobileCTA = document.getElementById('mobileCTA');
+  window.addEventListener('scroll', () => {
+    const hero = document.getElementById('hero');
+    const heroBottom = hero.getBoundingClientRect().bottom;
+    if (heroBottom < 0 && window.innerWidth < 768) {
+      mobileCTA.classList.remove('hidden');
+    } else {
+      mobileCTA.classList.add('hidden');
+    }
+  }, { passive: true });
+</script>
+</body>
+</html>

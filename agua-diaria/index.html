@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Agua Diaria 2025 — ¿Cuánta agua debo beber al día?</title>
+  <meta name="description" content="Calcula cuánta agua debes beber al día según tu peso, actividad física y temperatura. Resultado en litros y vasos. Gratis, sin registro." />
+  <meta name="keywords" content="calculadora agua diaria, cuánta agua beber, litros de agua al día, hidratación diaria, agua por peso, agua actividad física, calculadora hidratación" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="author" content="IMC Calculadora" />
+  <meta name="theme-color" content="#2563EB" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="canonical" href="https://calculadora-imc.es/agua-diaria/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="IMC Calculadora" />
+  <meta property="og:url" content="https://calculadora-imc.es/agua-diaria/" />
+  <meta property="og:title" content="Calculadora de Agua Diaria 2025 — ¿Cuánta agua debo beber al día?" />
+  <meta property="og:description" content="Calcula cuánta agua debes beber al día según tu peso, actividad física y temperatura. Resultado en litros y vasos. Gratis, sin registro." />
+  <meta property="og:image" content="https://calculadora-imc.es/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Calculadora de Agua Diaria 2025 — ¿Cuánta agua debo beber al día?" />
+  <meta name="twitter:description" content="Calcula cuánta agua debes beber al día según tu peso, actividad física y temperatura. Gratis, sin registro." />
+  <meta name="twitter:image" content="https://calculadora-imc.es/og-image.jpg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232563EB'/><circle cx='16' cy='12' r='4' fill='none' stroke='white' stroke-width='2'/><path d='M8 24c0-4.4 3.6-8 8-8s8 3.6 8 8' fill='none' stroke='white' stroke-width='2'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: { extend: { fontFamily: { sans: ["Inter","system-ui","sans-serif"] } } }
+    }
+  </script>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://calculadora-imc.es/agua-diaria/#app",
+        "name": "Calculadora de Agua Diaria",
+        "url": "https://calculadora-imc.es/agua-diaria/",
+        "description": "Calcula cuánta agua debes beber al día según tu peso corporal, nivel de actividad física y clima. Resultado en litros, mililitros y vasos de 250 ml.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web",
+        "browserRequirements": "Requires JavaScript",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+        "inLanguage": "es-ES",
+        "author": { "@type": "Organization", "name": "IMC Calculadora", "url": "https://calculadora-imc.es/" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://calculadora-imc.es/agua-diaria/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cuánta agua debo beber al día?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La recomendación general es de 35 ml por kilogramo de peso corporal al día. Para una persona de 70 kg en reposo, eso equivale a unos 2,45 litros (aproximadamente 10 vasos de 250 ml). Las necesidades varían según la actividad física, el clima, la dieta y el estado de salud."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Los refrescos y el café cuentan como agua?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El café, el té y otras infusiones contienen agua y contribuyen a la hidratación, aunque la cafeína tiene un leve efecto diurético. Los refrescos azucarados no son una buena fuente de hidratación por su alto contenido en azúcar. Los zumos naturales y el agua de las frutas y verduras sí cuentan. Lo ideal es que la mayor parte de tu ingesta provenga de agua pura."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Se puede beber demasiada agua?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. La intoxicación hídrica o hiponatremia ocurre cuando se consume agua en exceso, diluyen los electrolitos y puede ser peligrosa. Sin embargo, es poco frecuente en condiciones normales. Los riñones sanos pueden procesar hasta 0,8–1 litro por hora. Beber más de 3–4 litros al día sin una razón médica o deportiva no suele ser necesario."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuándo aumentar el consumo de agua?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Debes aumentar la ingesta de agua cuando: practicas ejercicio físico intenso (añade 500–700 ml por hora de ejercicio), vives en un clima cálido o húmedo (+500 ml al día), tienes fiebre, diarrea o vómitos, estás embarazada o en periodo de lactancia, o consumes muchos alimentos procesados y salados."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿El agua ayuda a perder peso?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El agua puede ayudar de forma indirecta. Beber agua antes de las comidas puede reducir el apetito, y a veces confundimos sed con hambre. Además, el agua no tiene calorías y sustituye a bebidas calóricas. Sin embargo, el agua por sí sola no quema grasa; el efecto termogénico de beber agua fría es mínimo. Es un complemento útil en una estrategia de control de peso, no una solución por sí sola."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://calculadora-imc.es/" },
+          { "@type": "ListItem", "position": 2, "name": "Calculadora de Agua Diaria", "item": "https://calculadora-imc.es/agua-diaria/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="antialiased">
+
+<!-- ======= NAVBAR ======= -->
+<header class="navbar">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center gap-3 h-full">
+    <a href="/" class="flex items-center gap-2 shrink-0" aria-label="Inicio">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect width="28" height="28" rx="7" fill="#2563EB"/>
+        <circle cx="14" cy="10" r="3.5" stroke="white" stroke-width="1.8" fill="none"/>
+        <path d="M7 21.5c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+        <path d="M14 17v4M12 21h4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span class="font-semibold text-sm tracking-tight hidden sm:inline" style="color:var(--text-primary)">IMC <span style="color:var(--accent)">Calculadora</span></span>
+    </a>
+    <nav class="calc-nav" aria-label="Calculadoras">
+      <a href="/"                   class="calc-nav-link">IMC</a>
+      <a href="/peso-ideal/"        class="calc-nav-link">Peso ideal</a>
+      <a href="/calorias-diarias/"  class="calc-nav-link">Calorías</a>
+      <a href="/calorias-quemadas/" class="calc-nav-link">Quemadas</a>
+      <a href="/tmb/"               class="calc-nav-link">TMB</a>
+      <a href="/macros/"            class="calc-nav-link">Macros</a>
+      <a href="/ffmi/"              class="calc-nav-link">FFMI</a>
+      <a href="/grasa-corporal/"    class="calc-nav-link">% Grasa</a>
+      <a href="/agua-diaria/"       class="calc-nav-link active">Agua</a>
+    </nav>
+    <button id="darkToggle" class="theme-toggle shrink-0" aria-label="Cambiar modo oscuro">
+      <svg id="iconLight" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      <svg id="iconDark"  class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ======= HERO + PANEL ======= -->
+<section id="hero" class="hero-section">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full py-10 lg:py-14">
+
+    <!-- Header -->
+    <div class="text-center mb-8 lg:mb-10">
+      <div class="trust-badge inline-flex mb-5">
+        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        Basado en recomendaciones clínicas · Actualizado 2025
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.03em">
+        ¿Cuánta <span style="color:var(--accent)">agua</span> debo beber?
+      </h1>
+      <p class="text-base max-w-xl mx-auto leading-relaxed mb-6" style="color:var(--text-secondary)">
+        Calcula tu ingesta diaria de agua personalizada según tu <strong style="color:var(--text-primary)">peso corporal</strong>, nivel de <strong style="color:var(--text-primary)">actividad física</strong> y el <strong style="color:var(--text-primary)">clima</strong> donde vives.
+      </p>
+      <div class="flex items-center justify-center flex-wrap gap-2" style="color:var(--text-muted)">
+        <span class="feature-pill">Resultado en litros y vasos</span>
+        <span class="feature-pill">Ajuste por clima</span>
+        <span class="feature-pill">100% privado</span>
+        <span class="feature-pill">Distribución horaria</span>
+      </div>
+    </div>
+
+    <!-- Calc Panel -->
+    <div class="calc-panel" id="calculadora">
+
+      <!-- ARRIBA: inputs -->
+      <div class="calc-panel__top">
+        <div class="calc-inputs-bar">
+
+          <!-- Peso -->
+          <div class="cib-field">
+            <label class="cib-label" for="weight">Peso <span class="cib-unit">(kg)</span></label>
+            <input id="weight" class="cib-input" type="number" min="10" max="300" step="0.1" placeholder="70"
+              autocomplete="off" inputmode="decimal" aria-label="Peso en kilogramos" />
+            <p id="weightError" class="cib-error hidden">Valor entre 10 y 300 kg</p>
+          </div>
+
+          <!-- Divisor -->
+          <div class="cib-divider" aria-hidden="true"></div>
+
+          <!-- Clima -->
+          <div class="cib-field">
+            <label class="cib-label">Clima</label>
+            <div class="cib-gender">
+              <div class="gender-option selected" id="climNormal" onclick="setClimate('normal')" role="radio" aria-checked="true" tabindex="0">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" stroke-width="2"/><path stroke-linecap="round" stroke-width="1.5" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                Normal
+              </div>
+              <div class="gender-option" id="climHot" onclick="setClimate('hot')" role="radio" aria-checked="false" tabindex="0">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
+                Caluroso
+              </div>
+            </div>
+          </div>
+
+          <!-- Botón -->
+          <button id="calcBtn" class="cib-btn" onclick="calculate()">
+            Calcular
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+          </button>
+        </div>
+
+        <!-- Activity grid -->
+        <div style="padding:1rem 1.25rem 0.75rem;border-top:1px solid var(--border)">
+          <div style="font-size:0.75rem;font-weight:500;color:var(--text-secondary);margin-bottom:0.5rem;letter-spacing:0.02em;text-transform:uppercase">Nivel de actividad física</div>
+          <div class="activity-grid">
+            <button class="activity-btn" id="actSedentary"  onclick="setActivity('sedentary')"  aria-pressed="false">
+              <span style="font-size:1.1rem">🪑</span>
+              <span>Sedentario</span>
+            </button>
+            <button class="activity-btn" id="actLight"      onclick="setActivity('light')"      aria-pressed="false">
+              <span style="font-size:1.1rem">🚶</span>
+              <span>Ligero</span>
+            </button>
+            <button class="activity-btn selected" id="actModerate"  onclick="setActivity('moderate')"  aria-pressed="true">
+              <span style="font-size:1.1rem">🏃</span>
+              <span>Moderado</span>
+            </button>
+            <button class="activity-btn" id="actActive"     onclick="setActivity('active')"     aria-pressed="false">
+              <span style="font-size:1.1rem">🏋️</span>
+              <span>Activo</span>
+            </button>
+            <button class="activity-btn" id="actVeryActive" onclick="setActivity('veryactive')" aria-pressed="false">
+              <span style="font-size:1.1rem">🔥</span>
+              <span>Muy activo</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Subrow trust -->
+        <div class="calc-subrow">
+          <div></div>
+          <div class="cp-trust">
+            <svg class="w-3 h-3" style="color:#4ade80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            <span>Sin registro</span>
+            <span class="cp-trust-dot">·</span>
+            <span>Datos no almacenados</span>
+            <span class="cp-trust-dot">·</span>
+            <span>Recomendaciones clínicas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABAJO: resultados -->
+      <div class="calc-panel__bottom">
+
+        <!-- Placeholder -->
+        <div id="resultPlaceholder" class="result-placeholder">
+          <div style="font-size:3rem;line-height:1;margin-bottom:0.5rem">💧</div>
+          <div class="rp-score">— L</div>
+          <p class="rp-label">Introduce tu peso y pulsa <strong>Calcular</strong></p>
+          <p class="rp-desc">Obtendrás tu necesidad diaria de agua en litros y vasos, ajustada a tu actividad y clima.</p>
+        </div>
+
+        <!-- Resultados -->
+        <div id="results" class="hidden">
+          <div class="res-simple">
+
+            <!-- Valor principal -->
+            <div class="res-big">
+              <div class="res-big-value number-pop">
+                <span id="mainVal">—</span>
+                <span class="res-big-unit">L</span>
+              </div>
+              <div class="res-big-label" id="mainLabel">de agua al día</div>
+            </div>
+
+            <!-- Mini cards -->
+            <div class="res-cards-grid">
+              <div class="res-mini-card">
+                <div class="res-mini-label">Vasos/día</div>
+                <div class="res-mini-value" id="glassesVal">—</div>
+                <div class="res-mini-sub">vasos de 250 ml</div>
+              </div>
+              <div class="res-mini-card">
+                <div class="res-mini-label">Total en ml</div>
+                <div class="res-mini-value" id="mlVal">—</div>
+                <div class="res-mini-sub">mililitros diarios</div>
+              </div>
+              <div class="res-mini-card">
+                <div class="res-mini-label">Antes de comer</div>
+                <div class="res-mini-value" id="beforeMealVal">—</div>
+                <div class="res-mini-sub">vasos (3 comidas)</div>
+              </div>
+              <div class="res-mini-card">
+                <div class="res-mini-label">Antes de dormir</div>
+                <div class="res-mini-value" id="beforeSleepVal">—</div>
+                <div class="res-mini-sub">vasos recomendados</div>
+              </div>
+            </div>
+
+            <!-- Distribución horaria -->
+            <div id="scheduleCard" style="margin-top:1.25rem;padding:1.25rem;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-lg)">
+              <div style="font-size:0.8rem;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.9rem">Distribución sugerida</div>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;text-align:center">
+                <div style="padding:0.75rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)">
+                  <div style="font-size:1.1rem;margin-bottom:0.25rem">🌅</div>
+                  <div style="font-size:1.1rem;font-weight:700;color:var(--accent)" id="morningVal">—</div>
+                  <div style="font-size:0.7rem;color:var(--text-muted)">Mañana</div>
+                  <div style="font-size:0.7rem;color:var(--text-muted)">06:00–12:00</div>
+                </div>
+                <div style="padding:0.75rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)">
+                  <div style="font-size:1.1rem;margin-bottom:0.25rem">☀️</div>
+                  <div style="font-size:1.1rem;font-weight:700;color:var(--accent)" id="afternoonVal">—</div>
+                  <div style="font-size:0.7rem;color:var(--text-muted)">Tarde</div>
+                  <div style="font-size:0.7rem;color:var(--text-muted)">12:00–18:00</div>
+                </div>
+                <div style="padding:0.75rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)">
+                  <div style="font-size:1.1rem;margin-bottom:0.25rem">🌙</div>
+                  <div style="font-size:1.1rem;font-weight:700;color:var(--accent)" id="eveningVal">—</div>
+                  <div style="font-size:0.7rem;color:var(--text-muted)">Noche</div>
+                  <div style="font-size:0.7rem;color:var(--text-muted)">18:00–22:00</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Consejo contextual -->
+            <div id="adviceCard" style="margin-top:1rem;padding:1rem 1.25rem;border-radius:var(--radius-lg);border:1px solid var(--border);background:var(--accent-light)">
+              <p id="adviceText" style="font-size:0.85rem;color:var(--text-secondary);line-height:1.6"></p>
+            </div>
+
+            <!-- Aviso clima caluroso -->
+            <div id="hotAlert" class="hidden" style="margin-top:0.75rem;padding:0.9rem 1.1rem;border-radius:var(--radius);border:1px solid #fdba74;background:#fff7ed;display:flex;align-items:flex-start;gap:0.6rem">
+              <span style="font-size:1rem;line-height:1.4">🌡️</span>
+              <p style="font-size:0.83rem;color:#9a3412;line-height:1.5;margin:0">Clima caluroso detectado. Se han añadido <strong>500 ml adicionales</strong> para compensar la mayor sudoración. En días de calor extremo, incrementa más según tu actividad y sudoración real.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= CONTENIDO EDUCATIVO ======= -->
+<main>
+
+  <!-- Sección educativa -->
+  <section style="padding:4rem 0;background:var(--surface)" aria-label="Información sobre hidratación">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 reveal">
+        <span class="section-label">Ciencia de la hidratación</span>
+        <h2 class="text-3xl font-bold mt-2 mb-3" style="color:var(--text-primary);letter-spacing:-0.02em">¿Por qué es importante hidratarse bien?</h2>
+        <p class="text-base max-w-2xl mx-auto" style="color:var(--text-secondary)">
+          El agua interviene en casi todos los procesos corporales, desde la temperatura hasta la función cognitiva.
+        </p>
+      </div>
+      <div class="tools-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem">
+
+        <article class="card card-hover reveal" style="padding:1.5rem">
+          <div style="background:#eff6ff;color:#2563eb;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.2rem">
+            💧
+          </div>
+          <h3 class="font-semibold mb-2" style="color:var(--text-primary)">La regla de los 35 ml/kg</h3>
+          <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.65">
+            La recomendación base más utilizada es <strong style="color:var(--text-primary)">35 ml de agua por kilogramo de peso corporal</strong> al día. Para una persona de 70 kg, eso equivale a 2,45 L. Esta regla no tiene en cuenta la actividad física ni el clima, por eso añadimos multiplicadores adicionales.
+          </p>
+        </article>
+
+        <article class="card card-hover reveal" style="padding:1.5rem">
+          <div style="background:#ecfdf5;color:#059669;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.2rem">
+            🏋️
+          </div>
+          <h3 class="font-semibold mb-2" style="color:var(--text-primary)">Actividad física e hidratación</h3>
+          <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.65">
+            Cada hora de ejercicio moderado-intenso puede suponer una pérdida de <strong style="color:var(--text-primary)">500–700 ml de agua</strong> a través del sudor. La calculadora aplica multiplicadores que van de 30 ml/kg (sedentario) hasta 42 ml/kg (muy activo) para reflejar estas diferencias.
+          </p>
+        </article>
+
+        <article class="card card-hover reveal" style="padding:1.5rem">
+          <div style="background:#fef2f2;color:#dc2626;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.2rem">
+            ⚠️
+          </div>
+          <h3 class="font-semibold mb-2" style="color:var(--text-primary)">Señales de deshidratación</h3>
+          <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.65">
+            El cuerpo avisa antes de que sientas sed intensa. Presta atención a: <strong style="color:var(--text-primary)">orina oscura o amarilla intensa</strong>, fatiga inexplicable, dolor de cabeza, dificultad para concentrarte y boca seca. Orina de color amarillo pálido es señal de buena hidratación.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabla rápida -->
+  <section style="padding:4rem 0;background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)" aria-label="Tabla de referencia de agua por peso">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-8 reveal">
+        <span class="section-label">Referencia rápida</span>
+        <h2 class="text-2xl font-bold mt-2 mb-2" style="color:var(--text-primary);letter-spacing:-0.02em">Agua diaria según peso — Actividad moderada</h2>
+        <p style="font-size:0.875rem;color:var(--text-secondary)">Calculado con 35 ml/kg (actividad moderada, clima normal). Ajusta con la calculadora para valores personalizados.</p>
+      </div>
+      <div class="reveal" style="overflow-x:auto;border-radius:var(--radius-lg);border:1px solid var(--border)">
+        <table class="res-table" style="width:100%;min-width:480px">
+          <thead>
+            <tr>
+              <th>Peso</th>
+              <th>Litros/día</th>
+              <th>Vasos (250ml)</th>
+              <th>Clima caluroso</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>50 kg</td><td class="td-val">1,75 L</td><td class="td-val">7 vasos</td><td class="td-val">2,25 L</td></tr>
+            <tr><td>60 kg</td><td class="td-val">2,10 L</td><td class="td-val">8 vasos</td><td class="td-val">2,60 L</td></tr>
+            <tr class="highlighted"><td>70 kg</td><td class="td-val">2,45 L</td><td class="td-val">10 vasos</td><td class="td-val">2,95 L</td></tr>
+            <tr><td>80 kg</td><td class="td-val">2,80 L</td><td class="td-val">11 vasos</td><td class="td-val">3,30 L</td></tr>
+            <tr><td>90 kg</td><td class="td-val">3,15 L</td><td class="td-val">13 vasos</td><td class="td-val">3,65 L</td></tr>
+            <tr><td>100 kg</td><td class="td-val">3,50 L</td><td class="td-val">14 vasos</td><td class="td-val">4,00 L</td></tr>
+            <tr><td>110 kg</td><td class="td-val">3,85 L</td><td class="td-val">15 vasos</td><td class="td-val">4,35 L</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="padding:4rem 0;background:var(--surface)" aria-labelledby="faqTitle">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 reveal">
+        <span class="section-label">Preguntas frecuentes</span>
+        <h2 id="faqTitle" class="text-3xl font-bold mt-2" style="color:var(--text-primary);letter-spacing:-0.02em">Dudas sobre la hidratación</h2>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:1rem">
+
+        <details class="card reveal" style="padding:0;overflow:hidden">
+          <summary style="padding:1.25rem 1.5rem;font-weight:600;cursor:pointer;color:var(--text-primary);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem">
+            ¿Cuánta agua debo beber al día?
+            <svg class="w-4 h-4 shrink-0" style="color:var(--text-muted);transition:transform 0.2s" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div style="padding:0 1.5rem 1.25rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.7;border-top:1px solid var(--border)">
+            La recomendación general es de 35 ml por kilogramo de peso corporal al día. Para una persona de 70 kg con actividad moderada, eso equivale a unos 2,45 litros (aproximadamente 10 vasos de 250 ml). Las necesidades varían según la actividad física, el clima, la dieta y el estado de salud. Usa la calculadora de arriba para obtener tu cifra personalizada.
+          </div>
+        </details>
+
+        <details class="card reveal" style="padding:0;overflow:hidden">
+          <summary style="padding:1.25rem 1.5rem;font-weight:600;cursor:pointer;color:var(--text-primary);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem">
+            ¿Los refrescos y el café cuentan como agua?
+            <svg class="w-4 h-4 shrink-0" style="color:var(--text-muted);transition:transform 0.2s" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div style="padding:0 1.5rem 1.25rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.7;border-top:1px solid var(--border)">
+            El café y el té contienen agua y contribuyen a la hidratación, aunque la cafeína tiene un leve efecto diurético. Los refrescos azucarados no son una buena fuente de hidratación por su alto contenido en azúcar. Los zumos naturales y el agua presente en frutas y verduras sí cuentan. Lo ideal es que la mayor parte de tu ingesta provenga de agua pura o infusiones sin azúcar.
+          </div>
+        </details>
+
+        <details class="card reveal" style="padding:0;overflow:hidden">
+          <summary style="padding:1.25rem 1.5rem;font-weight:600;cursor:pointer;color:var(--text-primary);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem">
+            ¿Se puede beber demasiada agua?
+            <svg class="w-4 h-4 shrink-0" style="color:var(--text-muted);transition:transform 0.2s" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div style="padding:0 1.5rem 1.25rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.7;border-top:1px solid var(--border)">
+            Sí. La intoxicación hídrica o hiponatremia ocurre cuando se consume agua en exceso y se diluyen los electrolitos, lo que puede ser peligroso. Sin embargo, es poco frecuente en condiciones normales. Los riñones sanos pueden procesar hasta 0,8–1 litro por hora. Beber más de 3–4 litros al día sin una razón deportiva o médica concreta generalmente no es necesario.
+          </div>
+        </details>
+
+        <details class="card reveal" style="padding:0;overflow:hidden">
+          <summary style="padding:1.25rem 1.5rem;font-weight:600;cursor:pointer;color:var(--text-primary);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem">
+            ¿Cuándo debo aumentar el consumo de agua?
+            <svg class="w-4 h-4 shrink-0" style="color:var(--text-muted);transition:transform 0.2s" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div style="padding:0 1.5rem 1.25rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.7;border-top:1px solid var(--border)">
+            Debes aumentar la ingesta de agua cuando: practicas ejercicio físico intenso (añade 500–700 ml por hora de ejercicio), vives en un clima cálido o húmedo (+500 ml al día), tienes fiebre, diarrea o vómitos, estás embarazada o en periodo de lactancia, o consumes muchos alimentos procesados y salados.
+          </div>
+        </details>
+
+        <details class="card reveal" style="padding:0;overflow:hidden">
+          <summary style="padding:1.25rem 1.5rem;font-weight:600;cursor:pointer;color:var(--text-primary);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem">
+            ¿El agua ayuda a perder peso?
+            <svg class="w-4 h-4 shrink-0" style="color:var(--text-muted);transition:transform 0.2s" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div style="padding:0 1.5rem 1.25rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.7;border-top:1px solid var(--border)">
+            El agua puede ayudar de forma indirecta. Beber agua antes de las comidas puede reducir el apetito, y a veces confundimos sed con hambre. Además, el agua no tiene calorías y sustituye a bebidas calóricas. Sin embargo, no quema grasa por sí sola. Es un complemento muy útil en una estrategia integral de control de peso, no una solución aislada.
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculadoras relacionadas -->
+  <section style="padding:4rem 0;background:var(--surface-2);border-top:1px solid var(--border)" aria-label="Otras calculadoras">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-8 reveal">
+        <span class="section-label">Sigue explorando</span>
+        <h2 class="text-2xl font-bold mt-2" style="color:var(--text-primary);letter-spacing:-0.02em">Calculadoras relacionadas</h2>
+      </div>
+      <div class="tools-grid reveal">
+        <a href="/" class="tool-card">
+          <div class="tool-card-icon">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <div class="tool-card-name">Calculadora IMC</div>
+          <div class="tool-card-desc">Índice de masa corporal según OMS</div>
+        </a>
+        <a href="/calorias-diarias/" class="tool-card">
+          <div class="tool-card-icon">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
+          </div>
+          <div class="tool-card-name">Calorías diarias</div>
+          <div class="tool-card-desc">Necesidades calóricas según actividad</div>
+        </a>
+        <a href="/peso-ideal/" class="tool-card">
+          <div class="tool-card-icon">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+          </div>
+          <div class="tool-card-name">Peso ideal</div>
+          <div class="tool-card-desc">Fórmulas Devine, Robinson y Miller</div>
+        </a>
+        <a href="/tmb/" class="tool-card">
+          <div class="tool-card-icon">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <div class="tool-card-name">Tasa Metabólica Basal</div>
+          <div class="tool-card-desc">Calorías en reposo Harris-Benedict</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ======= FOOTER ======= -->
+<footer style="background:var(--surface-2);border-top:1px solid var(--border);padding:2rem 0;margin-top:0">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <svg width="20" height="20" viewBox="0 0 28 28" fill="none" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#2563EB"/><circle cx="14" cy="10" r="3.5" stroke="white" stroke-width="1.8" fill="none"/><path d="M7 21.5c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+        <span class="text-sm font-semibold" style="color:var(--text-primary)">IMC Calculadora</span>
+      </div>
+      <p class="text-xs text-center" style="color:var(--text-muted)">Herramienta orientativa. No sustituye el consejo médico profesional.</p>
+      <div class="flex gap-4 text-xs flex-wrap justify-center" style="color:var(--text-muted)">
+        <a href="/" style="color:inherit">IMC</a>
+        <a href="/peso-ideal/" style="color:inherit">Peso ideal</a>
+        <a href="/calorias-diarias/" style="color:inherit">Calorías</a>
+        <a href="/ffmi/" style="color:inherit">FFMI</a>
+        <a href="/agua-diaria/" style="color:inherit">Agua</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile CTA -->
+<div id="mobileCTA" class="hidden" style="position:fixed;bottom:0;left:0;right:0;padding:0.75rem 1rem;background:var(--surface);border-top:1px solid var(--border);z-index:40;display:none">
+  <a href="#calculadora" style="display:block;text-align:center;background:var(--accent);color:white;padding:0.75rem;border-radius:var(--radius);font-weight:600;font-size:0.9rem;text-decoration:none">
+    Calcular mi agua diaria
+  </a>
+</div>
+
+<script src="../js/theme.js"></script>
+<script>
+  // ── State ──────────────────────────────────────────────
+  let _activity = 'moderate';
+  let _climate  = 'normal';
+
+  const activityMultiplier = {
+    sedentary:  30,
+    light:      33,
+    moderate:   35,
+    active:     38,
+    veryactive: 42
+  };
+
+  const activityIds = {
+    sedentary:  'actSedentary',
+    light:      'actLight',
+    moderate:   'actModerate',
+    active:     'actActive',
+    veryactive: 'actVeryActive'
+  };
+
+  // ── Activity ───────────────────────────────────────────
+  function setActivity(a) {
+    _activity = a;
+    Object.keys(activityIds).forEach(function(key) {
+      const el = document.getElementById(activityIds[key]);
+      const isSelected = key === a;
+      el.classList.toggle('selected', isSelected);
+      el.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+    });
+    calculate();
+  }
+
+  // ── Climate ────────────────────────────────────────────
+  function setClimate(c) {
+    _climate = c;
+    document.getElementById('climNormal').classList.toggle('selected', c === 'normal');
+    document.getElementById('climHot').classList.toggle('selected', c === 'hot');
+    document.getElementById('climNormal').setAttribute('aria-checked', c === 'normal');
+    document.getElementById('climHot').setAttribute('aria-checked', c === 'hot');
+    calculate();
+  }
+
+  // ── Animate number ─────────────────────────────────────
+  function animateNumber(el, target, decimals, duration) {
+    const start = performance.now();
+    (function step(now) {
+      const t = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = (target * eased).toFixed(decimals);
+      if (t < 1) requestAnimationFrame(step);
+    })(performance.now());
+  }
+
+  // ── Main calculate ─────────────────────────────────────
+  function calculate() {
+    const weight = parseFloat(document.getElementById('weight').value);
+    const errEl  = document.getElementById('weightError');
+
+    if (!weight || isNaN(weight)) {
+      hideResults();
+      errEl.classList.add('hidden');
+      return;
+    }
+
+    if (weight < 10 || weight > 300) {
+      errEl.classList.remove('hidden');
+      hideResults();
+      return;
+    }
+    errEl.classList.add('hidden');
+
+    // Base calculation
+    let ml = weight * activityMultiplier[_activity];
+    if (_climate === 'hot') ml += 500;
+
+    const liters  = ml / 1000;
+    const glasses = Math.round(ml / 250);
+
+    // Time-of-day split (40% morning, 35% afternoon, 25% evening)
+    const morningMl    = ml * 0.40;
+    const afternoonMl  = ml * 0.35;
+    const eveningMl    = ml * 0.25;
+    const morningGl    = Math.round(morningMl / 250);
+    const afternoonGl  = Math.round(afternoonMl / 250);
+    const eveningGl    = Math.round(eveningMl / 250);
+
+    // Before meals: 1 glass each of 3 main meals = 3 glasses
+    const beforeMeal   = 3;
+    // Before sleep: 1 glass
+    const beforeSleep  = 1;
+
+    // Show
+    document.getElementById('resultPlaceholder').classList.add('hidden');
+    document.getElementById('results').classList.remove('hidden');
+
+    // Animate main value
+    animateNumber(document.getElementById('mainVal'), liters, 2, 700);
+
+    // Mini cards
+    document.getElementById('glassesVal').textContent  = glasses + ' vasos';
+    document.getElementById('mlVal').textContent        = Math.round(ml) + ' ml';
+    document.getElementById('beforeMealVal').textContent = beforeMeal + ' vasos';
+    document.getElementById('beforeSleepVal').textContent = beforeSleep + ' vaso';
+
+    // Schedule
+    document.getElementById('morningVal').textContent   = morningGl + ' vasos';
+    document.getElementById('afternoonVal').textContent = afternoonGl + ' vasos';
+    document.getElementById('eveningVal').textContent   = eveningGl + ' vasos';
+
+    // Advice
+    const actLabel = {
+      sedentary:  'sedentario',
+      light:      'ligero',
+      moderate:   'moderado',
+      active:     'activo',
+      veryactive: 'muy activo'
+    }[_activity];
+
+    document.getElementById('adviceText').innerHTML =
+      'Con un nivel de actividad <strong>' + actLabel + '</strong> y un peso de <strong>' + weight.toFixed(1) + ' kg</strong>, ' +
+      'tu necesidad estimada es de <strong>' + liters.toFixed(2) + ' L/día</strong> (' + glasses + ' vasos de 250 ml). ' +
+      'Reparte el consumo a lo largo del día: no esperes a tener sed para beber, ya que la sed es una señal tardía de deshidratación.';
+
+    // Hot alert
+    const hotAlert = document.getElementById('hotAlert');
+    if (_climate === 'hot') {
+      hotAlert.classList.remove('hidden');
+    } else {
+      hotAlert.classList.add('hidden');
+    }
+  }
+
+  function hideResults() {
+    document.getElementById('results').classList.add('hidden');
+    document.getElementById('resultPlaceholder').classList.remove('hidden');
+  }
+
+  // ── Event listeners ────────────────────────────────────
+  document.getElementById('weight').addEventListener('input', calculate);
+
+  // Keyboard accessibility for climate pills
+  document.getElementById('climNormal').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setClimate('normal'); }
+  });
+  document.getElementById('climHot').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setClimate('hot'); }
+  });
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  revealEls.forEach(function(el) { observer.observe(el); });
+
+  // FAQ chevron rotation
+  document.querySelectorAll('details').forEach(function(det) {
+    det.addEventListener('toggle', function() {
+      const svg = det.querySelector('summary svg');
+      if (svg) svg.style.transform = det.open ? 'rotate(180deg)' : '';
+    });
+  });
+</script>
+</body>
+</html>

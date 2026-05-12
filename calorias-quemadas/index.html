@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Calorías Quemadas 2025 — Por actividad, peso y duración</title>
+  <meta name="description" content="Calcula las calorías que quemas en cualquier actividad física según tu peso y duración. Más de 20 actividades. Usa el índice MET. Gratis, sin registro." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="author" content="IMC Calculadora" />
+  <meta name="theme-color" content="#2563EB" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="canonical" href="https://calculadora-imc.es/calorias-quemadas/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="IMC Calculadora" />
+  <meta property="og:url" content="https://calculadora-imc.es/calorias-quemadas/" />
+  <meta property="og:title" content="Calculadora de Calorías Quemadas 2025 — Por actividad, peso y duración" />
+  <meta property="og:description" content="Calcula las calorías que quemas en cualquier actividad física según tu peso y duración. Más de 20 actividades. Usa el índice MET. Gratis, sin registro." />
+  <meta property="og:image" content="https://calculadora-imc.es/og-image.jpg" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Calculadora de Calorías Quemadas 2025 — Por actividad, peso y duración" />
+  <meta name="twitter:description" content="Calcula las calorías que quemas en cualquier actividad según tu peso. Más de 20 actividades con MET. Gratis." />
+  <meta name="twitter:image" content="https://calculadora-imc.es/og-image.jpg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232563EB'/><circle cx='16' cy='12' r='4' fill='none' stroke='white' stroke-width='2'/><path d='M8 24c0-4.4 3.6-8 8-8s8 3.6 8 8' fill='none' stroke='white' stroke-width='2'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: { extend: { fontFamily: { sans: ["Inter","system-ui","sans-serif"] } } }
+    }
+  </script>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://calculadora-imc.es/calorias-quemadas/#app",
+        "name": "Calculadora de Calorías Quemadas",
+        "url": "https://calculadora-imc.es/calorias-quemadas/",
+        "description": "Calcula las calorías quemadas en más de 20 actividades físicas según tu peso y duración. Basado en el índice MET.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web",
+        "browserRequirements": "Requires JavaScript",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+        "inLanguage": "es-ES",
+        "author": { "@type": "Organization", "name": "IMC Calculadora", "url": "https://calculadora-imc.es/" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://calculadora-imc.es/calorias-quemadas/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cómo se calculan las calorías quemadas al hacer ejercicio?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Las calorías quemadas se calculan con la fórmula MET: Kcal = MET × peso (kg) × duración (h). El MET (Equivalente Metabólico) indica la intensidad de cada actividad en relación con el metabolismo en reposo. Caminar tiene un MET de 3,5 mientras que correr a alta velocidad puede superar un MET de 11." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué actividad quema más calorías?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Las actividades con mayor MET son correr a alta velocidad (MET 11,5), saltar a la comba (MET 10), natación intensa (MET 9,8) y HIIT (MET 8). Correr a 12 km/h durante una hora quema aproximadamente 920 kcal en una persona de 80 kg." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuántas calorías se queman caminando?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Caminar a paso normal (MET 3,5) quema alrededor de 280 kcal/hora para una persona de 80 kg. A paso rápido (MET 4,5) sube a 360 kcal/hora. Los valores exactos dependen del peso corporal, la pendiente del terreno y la velocidad real." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Las calorías quemadas dependen del peso?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sí, el gasto energético es directamente proporcional al peso corporal. Una persona de 100 kg quema un 25% más de calorías que una de 80 kg realizando la misma actividad durante el mismo tiempo, ya que se requiere más energía para mover mayor masa." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuántas calorías hay que quemar para perder 1 kg?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Se necesita un déficit aproximado de 7.700 kcal para perder 1 kg de grasa corporal. Eso equivale a correr unos 77 km para una persona de 80 kg. Lo más eficaz es combinar ejercicio con una dieta con déficit calórico moderado (300-500 kcal/día), lo que permite perder aproximadamente 0,5 kg por semana de forma saludable." }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://calculadora-imc.es/" },
+          { "@type": "ListItem", "position": 2, "name": "Calorías quemadas", "item": "https://calculadora-imc.es/calorias-quemadas/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="antialiased">
+
+<!-- ======= NAVBAR ======= -->
+<header class="navbar">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center gap-3 h-full">
+    <a href="/" class="flex items-center gap-2 shrink-0" aria-label="Inicio">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect width="28" height="28" rx="7" fill="#2563EB"/>
+        <circle cx="14" cy="10" r="3.5" stroke="white" stroke-width="1.8" fill="none"/>
+        <path d="M7 21.5c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+        <path d="M14 17v4M12 21h4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span class="font-semibold text-sm tracking-tight hidden sm:inline" style="color:var(--text-primary)">IMC <span style="color:var(--accent)">Calculadora</span></span>
+    </a>
+    <nav class="calc-nav" aria-label="Calculadoras">
+      <a href="/"                   class="calc-nav-link">IMC</a>
+      <a href="/peso-ideal/"        class="calc-nav-link">Peso ideal</a>
+      <a href="/calorias-diarias/"  class="calc-nav-link">Calorías</a>
+      <a href="/calorias-quemadas/" class="calc-nav-link active">Quemadas</a>
+      <a href="/tmb/"               class="calc-nav-link">TMB</a>
+      <a href="/macros/"            class="calc-nav-link">Macros</a>
+      <a href="/ffmi/"              class="calc-nav-link">FFMI</a>
+      <a href="/grasa-corporal/"    class="calc-nav-link">% Grasa</a>
+      <a href="/agua-diaria/"       class="calc-nav-link">Agua</a>
+    </nav>
+    <button id="darkToggle" class="theme-toggle shrink-0" aria-label="Cambiar modo oscuro">
+      <svg id="iconLight" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      <svg id="iconDark"  class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ======= HERO + PANEL ======= -->
+<section id="hero" class="hero-section">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full py-10 lg:py-14">
+
+    <div class="text-center mb-8 lg:mb-10">
+      <div class="trust-badge inline-flex mb-5">
+        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        Basado en el índice MET · Más de 20 actividades · Actualizado 2025
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.03em">
+        Calorías <span style="color:var(--accent)">quemadas</span> por actividad
+      </h1>
+      <p class="text-base max-w-xl mx-auto leading-relaxed mb-6" style="color:var(--text-secondary)">
+        Descubre cuántas calorías quemas en cualquier actividad física según tu <strong style="color:var(--text-primary)">peso</strong> y <strong style="color:var(--text-primary)">duración</strong>. Cálculo preciso con el índice MET. Gratis, sin registro.
+      </p>
+      <div class="flex items-center justify-center flex-wrap gap-2">
+        <span class="feature-pill">Resultado inmediato</span>
+        <span class="feature-pill">kg / lb</span>
+        <span class="feature-pill">22 actividades</span>
+        <span class="feature-pill">100% privado</span>
+      </div>
+    </div>
+
+    <!-- CALC PANEL -->
+    <div class="calc-panel" id="calculadora">
+
+      <!-- TOP: inputs -->
+      <div class="calc-panel__top">
+        <div class="calc-inputs-bar">
+
+          <!-- Peso -->
+          <div class="cib-field">
+            <label class="cib-label" for="weight">Peso <span id="weightUnitLabel" class="cib-unit">(kg)</span></label>
+            <input id="weight" class="cib-input" type="number" min="1" max="500" step="0.1" placeholder="70"
+              autocomplete="off" inputmode="decimal" aria-label="Peso" />
+          </div>
+
+          <div class="cib-divider" aria-hidden="true"></div>
+
+          <!-- Actividad -->
+          <div class="cib-field" style="flex:2">
+            <label class="cib-label" for="activity">Actividad</label>
+            <select id="activity" class="cib-select" aria-label="Actividad">
+              <option value="0">Caminar (paso normal)</option>
+              <option value="1">Caminar (paso rápido)</option>
+              <option value="2">Correr (8 km/h)</option>
+              <option value="3">Correr (10 km/h)</option>
+              <option value="4">Correr (12 km/h)</option>
+              <option value="5">Ciclismo (casual)</option>
+              <option value="6">Ciclismo (intenso)</option>
+              <option value="7">Natación (moderada)</option>
+              <option value="8">Natación (intensa)</option>
+              <option value="9">HIIT</option>
+              <option value="10">Pesas / Musculación</option>
+              <option value="11">Yoga</option>
+              <option value="12">Pilates</option>
+              <option value="13">Fútbol</option>
+              <option value="14">Baloncesto</option>
+              <option value="15">Tenis</option>
+              <option value="16">Baile</option>
+              <option value="17">Senderismo / Montaña</option>
+              <option value="18">Saltar a la comba</option>
+              <option value="19">Elíptica</option>
+              <option value="20">Remo (máquina)</option>
+              <option value="21">Aeróbic</option>
+            </select>
+          </div>
+
+          <div class="cib-divider" aria-hidden="true"></div>
+
+          <!-- Duración -->
+          <div class="cib-field cib-field--sm">
+            <label class="cib-label" for="duration">Duración <span class="cib-unit">(min)</span></label>
+            <input id="duration" class="cib-input" type="number" min="1" max="600" step="1" placeholder="30"
+              autocomplete="off" inputmode="numeric" aria-label="Duración en minutos" />
+          </div>
+
+          <!-- Botón -->
+          <button id="calcBtn" class="cib-btn" onclick="calculate()">
+            Calcular
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+          </button>
+        </div>
+
+        <!-- Subrow -->
+        <div class="calc-subrow">
+          <div class="unit-toggle" role="group" aria-label="Sistema de unidades">
+            <button class="unit-btn active" id="btnMetric" onclick="setUnit('metric')">kg</button>
+            <button class="unit-btn" id="btnImperial" onclick="setUnit('imperial')">lb</button>
+          </div>
+          <div class="cp-trust">
+            <svg class="w-3 h-3" style="color:#4ade80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            <span>100% privado</span>
+            <span class="cp-trust-dot">·</span>
+            <span>Sin registro</span>
+            <span class="cp-trust-dot">·</span>
+            <span>Índice MET</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM: resultado -->
+      <div class="calc-panel__bottom">
+
+        <!-- Placeholder -->
+        <div id="resultPlaceholder" class="result-placeholder">
+          <div style="width:64px;height:64px;border-radius:50%;background:var(--surface-3);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;" aria-hidden="true">
+            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:var(--border-strong)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>
+          </div>
+          <div class="rp-score">— kcal</div>
+          <p class="rp-label">Introduce tus datos y pulsa <strong>Calcular</strong></p>
+          <p class="rp-desc">Obtendrás las calorías quemadas, el gasto por hora, la grasa equivalente y comparativas con alimentos.</p>
+        </div>
+
+        <!-- Resultado -->
+        <div id="results" class="hidden">
+          <div class="res-simple">
+
+            <!-- Valor principal -->
+            <div class="res-big">
+              <div>
+                <span class="res-big-value" id="resKcal">0</span>
+                <span class="res-big-unit">kcal</span>
+              </div>
+              <p class="res-big-label" id="resActivity">Actividad seleccionada</p>
+            </div>
+
+            <!-- Tarjetas de detalle (2 cols) -->
+            <div class="res-cards-grid">
+              <div class="res-mini-card">
+                <p class="res-mini-label">Kcal por hora</p>
+                <p class="res-mini-value" id="resKcalHour">—</p>
+                <p class="res-mini-sub">kcal/h a tu peso</p>
+              </div>
+              <div class="res-mini-card">
+                <p class="res-mini-label">Duración</p>
+                <p class="res-mini-value" id="resDuration">—</p>
+                <p class="res-mini-sub">minutos de ejercicio</p>
+              </div>
+              <div class="res-mini-card">
+                <p class="res-mini-label">Índice MET</p>
+                <p class="res-mini-value" id="resMet">—</p>
+                <p class="res-mini-sub">intensidad relativa</p>
+              </div>
+              <div class="res-mini-card">
+                <p class="res-mini-label">Grasa quemada</p>
+                <p class="res-mini-value" id="resFat">—</p>
+                <p class="res-mini-sub">gramos aprox.</p>
+              </div>
+            </div>
+
+            <!-- Equivalentes alimenticios -->
+            <div id="foodEquiv" style="background:var(--surface-3);border-radius:12px;padding:1rem;">
+              <p class="res-mini-label" style="margin-bottom:0.625rem">Equivalentes calóricos</p>
+              <div class="flex flex-wrap gap-2" id="foodPills"></div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /calc-panel -->
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======= EDUCATIVO: QUÉ ES EL MET ======= -->
+<section class="py-16 md:py-24" style="background:var(--surface)">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="max-w-xl mb-12 reveal">
+      <p class="section-label mb-3">Metodología científica</p>
+      <h2 class="text-3xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.025em">El índice MET explicado</h2>
+      <p class="text-base leading-relaxed" style="color:var(--text-secondary)">El cálculo de calorías quemadas se basa en el <strong style="color:var(--text-primary)">Equivalente Metabólico (MET)</strong>, el estándar científico internacionalmente aceptado para cuantificar el gasto energético de cualquier actividad física.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5">
+      <!-- Card 1 -->
+      <div class="card card-hover reveal">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:var(--accent-light)">
+          <svg class="w-5 h-5" style="color:var(--accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        </div>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">¿Qué es el MET?</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">El MET (Equivalente Metabólico) mide la intensidad de una actividad en relación con el metabolismo en reposo. Un MET = 1 equivale a estar sentado en reposo. Caminar tiene MET 3,5 y correr puede superar MET 11.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="card card-hover reveal" style="transition-delay:0.08s">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:var(--accent-light)">
+          <svg class="w-5 h-5" style="color:var(--accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+        </div>
+        <h3 class="font-semibold text-sm mb-3" style="color:var(--text-primary)">Fórmula de cálculo</h3>
+        <div class="rounded-lg p-4 text-center mb-3" style="background:var(--surface-2);border:1px solid var(--border)">
+          <p class="text-xs font-medium mb-1" style="color:var(--text-muted)">Kcal =</p>
+          <p class="text-sm font-bold" style="color:var(--accent)">MET × peso (kg) × tiempo (h)</p>
+        </div>
+        <p class="text-xs" style="color:var(--text-muted)">Ejemplo: correr (MET 10) × 80 kg × 0,5 h = <strong style="color:var(--text-secondary)">400 kcal</strong></p>
+      </div>
+      <!-- Card 3 -->
+      <div class="card card-hover reveal" style="transition-delay:0.16s">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:var(--accent-light)">
+          <svg class="w-5 h-5" style="color:var(--accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </div>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Variables que afectan</h3>
+        <ul class="space-y-2 text-sm" style="color:var(--text-secondary)">
+          <li class="flex gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span><span><strong style="color:var(--text-primary)">Peso corporal:</strong> a mayor peso, más calorías quemadas.</span></li>
+          <li class="flex gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span><span><strong style="color:var(--text-primary)">Intensidad:</strong> el MET refleja el esfuerzo relativo.</span></li>
+          <li class="flex gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--border-strong)"></span><span><strong style="color:var(--text-primary)">Duración:</strong> el gasto es lineal con el tiempo.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======= FAQ ======= -->
+<section id="faq" class="py-16 md:py-24" style="background:var(--surface-2)">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <div class="mb-12 reveal">
+      <p class="section-label mb-3">Preguntas frecuentes</p>
+      <h2 class="text-3xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.025em">Todo sobre las calorías quemadas</h2>
+      <p class="text-sm" style="color:var(--text-secondary)">Respuestas claras y basadas en evidencia sobre el gasto energético y la actividad física.</p>
+    </div>
+    <div class="rounded-xl overflow-hidden" style="border:1px solid var(--border);background:var(--surface)">
+
+      <!-- FAQ 1 -->
+      <div class="faq-item">
+        <button class="w-full text-left flex items-center justify-between gap-4 px-6 py-5 font-semibold text-sm" style="color:var(--text-primary);background:none;border:none;cursor:pointer;font-family:inherit;" onclick="toggleFaq(this)" aria-expanded="false">
+          ¿Cómo se calculan las calorías quemadas al hacer ejercicio?
+          <svg class="w-4 h-4 shrink-0 faq-chevron transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:var(--text-muted)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content px-6 pb-5 text-sm leading-relaxed" style="color:var(--text-secondary)">
+          Las calorías quemadas se calculan con la fórmula del índice MET: <strong style="color:var(--text-primary)">Kcal = MET × peso (kg) × duración (h)</strong>. El MET (Equivalente Metabólico) indica la intensidad de cada actividad en relación con el metabolismo en reposo. Un MET de 1 equivale a estar sentado; caminar a paso normal tiene MET 3,5 y correr a alta velocidad puede superar MET 11. Esta fórmula es el estándar científico internacional para estimar el gasto energético del ejercicio.
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item">
+        <button class="w-full text-left flex items-center justify-between gap-4 px-6 py-5 font-semibold text-sm" style="color:var(--text-primary);background:none;border:none;cursor:pointer;font-family:inherit;" onclick="toggleFaq(this)" aria-expanded="false">
+          ¿Qué actividad quema más calorías?
+          <svg class="w-4 h-4 shrink-0 faq-chevron transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:var(--text-muted)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content px-6 pb-5 text-sm leading-relaxed" style="color:var(--text-secondary)">
+          Las actividades con mayor gasto calórico son correr a alta velocidad (MET 11,5), saltar a la comba (MET 10), correr a 10 km/h (MET 10) y natación intensa (MET 9,8). Para una persona de 80 kg, correr a 12 km/h durante una hora quema aproximadamente <strong style="color:var(--text-primary)">920 kcal</strong>. El HIIT también es muy eficaz por combinar alta intensidad con períodos de recuperación que mantienen elevado el metabolismo durante horas.
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item">
+        <button class="w-full text-left flex items-center justify-between gap-4 px-6 py-5 font-semibold text-sm" style="color:var(--text-primary);background:none;border:none;cursor:pointer;font-family:inherit;" onclick="toggleFaq(this)" aria-expanded="false">
+          ¿Cuántas calorías se queman caminando?
+          <svg class="w-4 h-4 shrink-0 faq-chevron transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:var(--text-muted)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content px-6 pb-5 text-sm leading-relaxed" style="color:var(--text-secondary)">
+          Caminar a paso normal (MET 3,5) quema alrededor de <strong style="color:var(--text-primary)">280 kcal/hora</strong> para una persona de 80 kg. A paso rápido (MET 4,5) el gasto sube a unos 360 kcal/hora. En 30 minutos de paseo normal, una persona de 70 kg quema aproximadamente 122 kcal. Los valores exactos varían según el peso, la pendiente del terreno y la velocidad real.
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-item">
+        <button class="w-full text-left flex items-center justify-between gap-4 px-6 py-5 font-semibold text-sm" style="color:var(--text-primary);background:none;border:none;cursor:pointer;font-family:inherit;" onclick="toggleFaq(this)" aria-expanded="false">
+          ¿Las calorías quemadas dependen del peso?
+          <svg class="w-4 h-4 shrink-0 faq-chevron transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:var(--text-muted)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content px-6 pb-5 text-sm leading-relaxed" style="color:var(--text-secondary)">
+          Sí, el gasto energético es directamente proporcional al peso corporal. Una persona de 100 kg quema un <strong style="color:var(--text-primary)">25% más</strong> de calorías que una de 80 kg realizando la misma actividad durante el mismo tiempo, porque se necesita más energía para mover mayor masa. Por eso perder peso hace que el ejercicio queme menos calorías, pero los beneficios cardiovasculares y metabólicos siguen siendo iguales de importantes.
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="faq-item">
+        <button class="w-full text-left flex items-center justify-between gap-4 px-6 py-5 font-semibold text-sm" style="color:var(--text-primary);background:none;border:none;cursor:pointer;font-family:inherit;" onclick="toggleFaq(this)" aria-expanded="false">
+          ¿Cuántas calorías hay que quemar para perder 1 kg?
+          <svg class="w-4 h-4 shrink-0 faq-chevron transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:var(--text-muted)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content px-6 pb-5 text-sm leading-relaxed" style="color:var(--text-secondary)">
+          Se necesita un déficit de aproximadamente <strong style="color:var(--text-primary)">7.700 kcal</strong> para perder 1 kg de grasa corporal, lo que equivale a correr unos 77 km para una persona de 80 kg. Lo más eficaz es combinar ejercicio con una alimentación con déficit calórico moderado (300–500 kcal/día), lo que permite perder aproximadamente 0,5 kg por semana de forma sostenible y sin riesgos para la salud.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======= OTRAS HERRAMIENTAS ======= -->
+<section class="py-16 md:py-20" style="background:var(--surface)">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="mb-8 reveal">
+      <p class="section-label mb-2">Calculadoras relacionadas</p>
+      <h2 class="text-2xl font-bold tracking-tight" style="color:var(--text-primary);letter-spacing:-0.025em">Otras herramientas de salud</h2>
+    </div>
+    <div class="tools-grid reveal">
+
+      <a href="/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <span class="tool-card-name">Calculadora IMC</span>
+        <span class="tool-card-desc">Índice de Masa Corporal según criterios OMS</span>
+      </a>
+
+      <a href="/tmb/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        </div>
+        <span class="tool-card-name">Calculadora TMB</span>
+        <span class="tool-card-desc">Tasa Metabólica Basal con Mifflin y Harris</span>
+      </a>
+
+      <a href="/calorias-diarias/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
+        </div>
+        <span class="tool-card-name">Calorías diarias</span>
+        <span class="tool-card-desc">TDEE según actividad física y objetivo</span>
+      </a>
+
+      <a href="/macros/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>
+        </div>
+        <span class="tool-card-name">Calculadora Macros</span>
+        <span class="tool-card-desc">Proteínas, carbohidratos y grasas ideales</span>
+      </a>
+
+      <a href="/peso-ideal/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+        </div>
+        <span class="tool-card-name">Peso ideal</span>
+        <span class="tool-card-desc">Rango de peso saludable según altura y sexo</span>
+      </a>
+
+      <a href="/grasa-corporal/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-width="1.8"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3"/></svg>
+        </div>
+        <span class="tool-card-name">% Grasa corporal</span>
+        <span class="tool-card-desc">Porcentaje de grasa con fórmula naval</span>
+      </a>
+
+      <a href="/ffmi/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+        </div>
+        <span class="tool-card-name">Calculadora FFMI</span>
+        <span class="tool-card-desc">Índice de masa muscular libre de grasa</span>
+      </a>
+
+      <a href="/agua-diaria/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 2C6.48 2 2 7.52 2 13c0 4.97 3.53 9.13 8.24 9.86.33.05.54-.14.54-.47v-1.71c-3.32.72-4.02-1.6-4.02-1.6-.54-1.38-1.32-1.74-1.32-1.74-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48 1 .11-.78.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.93.43.37.82 1.1.82 2.22v3.29c0 .33.2.53.54.47C18.48 22.13 22 17.97 22 13c0-5.48-4.48-11-10-11z"/></svg>
+        </div>
+        <span class="tool-card-name">Agua diaria</span>
+        <span class="tool-card-desc">Litros de agua recomendados según tu perfil</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======= FOOTER ======= -->
+<footer style="background:var(--surface-2);border-top:1px solid var(--border);padding:2rem 0;margin-top:0">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <svg width="20" height="20" viewBox="0 0 28 28" fill="none" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#2563EB"/><circle cx="14" cy="10" r="3.5" stroke="white" stroke-width="1.8" fill="none"/><path d="M7 21.5c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+        <span class="text-sm font-semibold" style="color:var(--text-primary)">IMC Calculadora</span>
+      </div>
+      <p class="text-xs text-center" style="color:var(--text-muted)">Herramienta orientativa. No sustituye el consejo médico profesional.</p>
+      <div class="flex gap-4 text-xs flex-wrap justify-center" style="color:var(--text-muted)">
+        <a href="/" style="color:inherit">IMC</a>
+        <a href="/calorias-diarias/" style="color:inherit">Calorías</a>
+        <a href="/calorias-quemadas/" style="color:inherit">Quemadas</a>
+        <a href="/tmb/" style="color:inherit">TMB</a>
+        <a href="/macros/" style="color:inherit">Macros</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile CTA -->
+<div id="mobileCTA" class="hidden md:hidden no-print">
+  <a href="#calculadora" class="btn-primary">
+    Calcular calorías
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+  </a>
+</div>
+
+<script src="../js/theme.js"></script>
+<script>
+/* ============================================================
+   CALORÍAS QUEMADAS — Calculadora
+   ============================================================ */
+const activities = [
+  { name: 'Caminar (paso normal)', met: 3.5 },
+  { name: 'Caminar (paso rápido)', met: 4.5 },
+  { name: 'Correr (8 km/h)',       met: 8.0 },
+  { name: 'Correr (10 km/h)',      met: 10.0 },
+  { name: 'Correr (12 km/h)',      met: 11.5 },
+  { name: 'Ciclismo (casual)',     met: 6.0 },
+  { name: 'Ciclismo (intenso)',    met: 10.0 },
+  { name: 'Natación (moderada)',   met: 6.0 },
+  { name: 'Natación (intensa)',    met: 9.8 },
+  { name: 'HIIT',                  met: 8.0 },
+  { name: 'Pesas / Musculación',   met: 3.5 },
+  { name: 'Yoga',                  met: 2.5 },
+  { name: 'Pilates',               met: 3.0 },
+  { name: 'Fútbol',               met: 7.0 },
+  { name: 'Baloncesto',            met: 6.5 },
+  { name: 'Tenis',                 met: 7.3 },
+  { name: 'Baile',                 met: 4.8 },
+  { name: 'Senderismo / Montaña', met: 6.0 },
+  { name: 'Saltar a la comba',     met: 10.0 },
+  { name: 'Elíptica',              met: 5.0 },
+  { name: 'Remo (máquina)',        met: 7.0 },
+  { name: 'Aeróbic',              met: 6.0 }
+];
+
+let _imperial = false;
+
+function setUnit(mode) {
+  _imperial = (mode === 'imperial');
+  document.getElementById('btnMetric').classList.toggle('active', !_imperial);
+  document.getElementById('btnImperial').classList.toggle('active', _imperial);
+  document.getElementById('weightUnitLabel').textContent = _imperial ? '(lb)' : '(kg)';
+  document.getElementById('weight').placeholder = _imperial ? '154' : '70';
+}
+
+function animateNumber(el, target, duration) {
+  const start = performance.now();
+  const from = 0;
+  function step(now) {
+    const p = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(from + (target - from) * ease).toLocaleString('es-ES');
+    if (p < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+function calculate() {
+  const wRaw = parseFloat(document.getElementById('weight').value);
+  const dur   = parseFloat(document.getElementById('duration').value);
+  const actIdx = parseInt(document.getElementById('activity').value);
+
+  if (!wRaw || isNaN(wRaw) || !dur || isNaN(dur) || isNaN(actIdx)) {
+    return;
+  }
+
+  const wKg = _imperial ? wRaw / 2.20462 : wRaw;
+
+  if (wKg < 20 || wKg > 300 || dur < 1 || dur > 600) {
+    return;
+  }
+
+  const act = activities[actIdx];
+  const kcal       = Math.round(act.met * wKg * (dur / 60));
+  const kcalPerHour = Math.round(act.met * wKg);
+  const fatGrams   = Math.round(kcal / 9);
+
+  // Food equivalents
+  const foods = [
+    { label: 'manzanas',      kcalEach: 52,  emoji: '🍎' },
+    { label: 'raciones pizza', kcalEach: 285, emoji: '🍕' },
+    { label: 'plátanos',      kcalEach: 89,  emoji: '🍌' },
+    { label: 'huevos',        kcalEach: 78,  emoji: '🥚' }
+  ];
+
+  // Show results
+  document.getElementById('resultPlaceholder').classList.add('hidden');
+  const resultsEl = document.getElementById('results');
+  resultsEl.classList.remove('hidden');
+
+  // Animate main value
+  const kcalEl = document.getElementById('resKcal');
+  animateNumber(kcalEl, kcal, 800);
+
+  document.getElementById('resActivity').textContent = act.name + ' · ' + dur + ' min';
+  document.getElementById('resKcalHour').textContent = kcalPerHour.toLocaleString('es-ES') + ' kcal';
+  document.getElementById('resDuration').textContent = dur + ' min';
+  document.getElementById('resMet').textContent = act.met.toFixed(1);
+  document.getElementById('resFat').textContent = fatGrams + ' g';
+
+  // Food pills
+  const pillsEl = document.getElementById('foodPills');
+  pillsEl.innerHTML = '';
+  const pillColors = ['#eff6ff','#f0fdf4','#fffbeb','#fdf2f8'];
+  const pillTextColors = ['#1d4ed8','#15803d','#b45309','#be185d'];
+  foods.forEach(function(f, i) {
+    const qty = (kcal / f.kcalEach).toFixed(1);
+    const pill = document.createElement('span');
+    pill.style.cssText = 'display:inline-flex;align-items:center;gap:5px;padding:6px 12px;border-radius:99px;font-size:0.8125rem;font-weight:600;background:' + pillColors[i] + ';color:' + pillTextColors[i] + ';';
+    pill.textContent = '≈ ' + qty + ' ' + f.label;
+    pillsEl.appendChild(pill);
+  });
+}
+
+/* FAQ accordion */
+function toggleFaq(btn) {
+  const content = btn.nextElementSibling;
+  const chevron = btn.querySelector('.faq-chevron');
+  const isOpen  = content.classList.contains('open');
+
+  // Close all
+  document.querySelectorAll('.faq-content.open').forEach(function(el) {
+    el.classList.remove('open');
+  });
+  document.querySelectorAll('.faq-chevron').forEach(function(el) {
+    el.style.transform = '';
+  });
+  document.querySelectorAll('[aria-expanded="true"]').forEach(function(el) {
+    el.setAttribute('aria-expanded', 'false');
+  });
+
+  if (!isOpen) {
+    content.classList.add('open');
+    chevron.style.transform = 'rotate(180deg)';
+    btn.setAttribute('aria-expanded', 'true');
+  }
+}
+
+/* Enter key support */
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' && (e.target.id === 'weight' || e.target.id === 'duration')) {
+    calculate();
+  }
+});
+
+/* Scroll reveal */
+(function() {
+  const io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
+
+  /* Mobile CTA */
+  const cta = document.getElementById('mobileCTA');
+  if (cta && window.innerWidth < 768) {
+    setTimeout(function() { cta.classList.remove('hidden'); }, 1500);
+    document.querySelector('#calculadora').addEventListener('click', function() {
+      cta.classList.add('hidden');
+    });
+  }
+})();
+</script>
+</body>
+</html>

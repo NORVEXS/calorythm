@@ -89,24 +89,28 @@
 <body class="antialiased">
 <!-- ======= NAVBAR ======= -->
 <header class="navbar">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between h-full">
-    <a href="#hero" class="flex items-center gap-2.5" aria-label="Ir al inicio">
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center gap-3 h-full">
+    <a href="/" class="flex items-center gap-2 shrink-0" aria-label="Inicio">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
         <rect width="28" height="28" rx="7" fill="#2563EB"/>
         <circle cx="14" cy="10" r="3.5" stroke="white" stroke-width="1.8" fill="none"/>
         <path d="M7 21.5c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/>
         <path d="M14 17v4M12 21h4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
       </svg>
-      <span class="font-semibold text-sm tracking-tight" style="color:var(--text-primary)">
-        IMC <span style="color:var(--accent)">Calculadora</span>
-      </span>
+      <span class="font-semibold text-sm tracking-tight hidden sm:inline" style="color:var(--text-primary)">IMC <span style="color:var(--accent)">Calculadora</span></span>
     </a>
-    <nav class="hidden md:flex items-center gap-1" aria-label="Navegación">
-      <a href="#que-es-imc" class="px-3 py-1.5 text-sm rounded-md transition-colors" style="color:var(--text-secondary)" onmouseover="this.style.color='var(--text-primary)';this.style.background='var(--surface-2)'" onmouseout="this.style.color='var(--text-secondary)';this.style.background='transparent'">Qué es el IMC</a>
-      <a href="#tabla-imc"  class="px-3 py-1.5 text-sm rounded-md transition-colors" style="color:var(--text-secondary)" onmouseover="this.style.color='var(--text-primary)';this.style.background='var(--surface-2)'" onmouseout="this.style.color='var(--text-secondary)';this.style.background='transparent'">Tabla</a>
-      <a href="#faq"        class="px-3 py-1.5 text-sm rounded-md transition-colors" style="color:var(--text-secondary)" onmouseover="this.style.color='var(--text-primary)';this.style.background='var(--surface-2)'" onmouseout="this.style.color='var(--text-secondary)';this.style.background='transparent'">FAQ</a>
+    <nav class="calc-nav" aria-label="Calculadoras">
+      <a href="/"                   class="calc-nav-link active">IMC</a>
+      <a href="/peso-ideal/"        class="calc-nav-link">Peso ideal</a>
+      <a href="/calorias-diarias/"  class="calc-nav-link">Calorías</a>
+      <a href="/calorias-quemadas/" class="calc-nav-link">Quemadas</a>
+      <a href="/tmb/"               class="calc-nav-link">TMB</a>
+      <a href="/macros/"            class="calc-nav-link">Macros</a>
+      <a href="/ffmi/"              class="calc-nav-link">FFMI</a>
+      <a href="/grasa-corporal/"    class="calc-nav-link">% Grasa</a>
+      <a href="/agua-diaria/"       class="calc-nav-link">Agua</a>
     </nav>
-    <button id="darkToggle" class="theme-toggle" aria-label="Cambiar modo oscuro">
+    <button id="darkToggle" class="theme-toggle shrink-0" aria-label="Cambiar modo oscuro">
       <svg id="iconLight" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
       <svg id="iconDark"  class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
     </button>

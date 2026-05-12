@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora FFMI 2025 — Índice de Masa Libre de Grasa para Deportistas</title>
+  <meta name="description" content="Calcula tu FFMI (Fat-Free Mass Index) para evaluar tu desarrollo muscular. Descubre si tu composición corporal es natural o mejorada. Para deportistas y culturistas." />
+  <meta name="keywords" content="calculadora ffmi, fat free mass index, índice masa libre grasa, ffmi natural, ffmi culturismo, ffmi deportistas, ffmi hombre mujer" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="author" content="IMC Calculadora" />
+  <meta name="theme-color" content="#2563EB" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="canonical" href="https://calculadora-imc.es/ffmi/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="IMC Calculadora" />
+  <meta property="og:url" content="https://calculadora-imc.es/ffmi/" />
+  <meta property="og:title" content="Calculadora FFMI 2025 — Índice de Masa Libre de Grasa para Deportistas" />
+  <meta property="og:description" content="Calcula tu FFMI para evaluar tu desarrollo muscular. ¿Es tu composición corporal natural? Descúbrelo con la herramienta usada por deportistas y culturistas." />
+  <meta property="og:image" content="https://calculadora-imc.es/og-image.jpg" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Calculadora FFMI 2025 — Índice de Masa Libre de Grasa" />
+  <meta name="twitter:description" content="Calcula tu FFMI para evaluar tu desarrollo muscular. Descubre si tu composición corporal es natural o mejorada." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232563EB'/><circle cx='16' cy='12' r='4' fill='none' stroke='white' stroke-width='2'/><path d='M8 24c0-4.4 3.6-8 8-8s8 3.6 8 8' fill='none' stroke='white' stroke-width='2'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: { extend: { fontFamily: { sans: ["Inter","system-ui","sans-serif"] } } }
+    }
+  </script>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://calculadora-imc.es/ffmi/#app",
+        "name": "Calculadora FFMI",
+        "alternateName": "Fat-Free Mass Index Calculator",
+        "url": "https://calculadora-imc.es/ffmi/",
+        "description": "Calcula tu FFMI (Fat-Free Mass Index) para evaluar tu desarrollo muscular y determinar si tu composición corporal es natural o mejorada farmacológicamente.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web",
+        "browserRequirements": "Requires JavaScript",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+        "inLanguage": "es-ES",
+        "author": { "@type": "Organization", "name": "IMC Calculadora", "url": "https://calculadora-imc.es/" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://calculadora-imc.es/ffmi/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué es el FFMI?",
+            "acceptedAnswer": { "@type": "Answer", "text": "El FFMI (Fat-Free Mass Index o Índice de Masa Libre de Grasa) es un indicador que mide la cantidad de masa muscular en relación con la altura, excluyendo la grasa corporal. Se calcula como: masa magra (kg) / altura² (m). Es especialmente útil para deportistas y culturistas porque, a diferencia del IMC, no se ve influenciado por el porcentaje de grasa." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuál es un buen FFMI?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Para hombres: un FFMI de 18-20 es bueno, 20-22 es excelente y 22-23 es superior. Para mujeres: 16-18 es bueno, 18-20 es excelente y atlético. Un FFMI normalizado superior a 26 en hombres se considera difícil de alcanzar de forma natural según la investigación científica." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Es posible tener un FFMI de 25 de forma natural?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sí, pero es extremadamente raro. La investigación de Kouri et al. (1995) encontró que los culturistas naturales raramente superaban un FFMI normalizado de 25. Alcanzar un FFMI de 25-26 requiere años de entrenamiento dedicado, genética muy favorable y una nutrición perfectamente optimizada." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿En qué se diferencia el FFMI del IMC?",
+            "acceptedAnswer": { "@type": "Answer", "text": "El IMC (Índice de Masa Corporal) divide el peso total entre la altura al cuadrado, sin distinguir entre grasa y músculo. Un culturista con mucha masa muscular puede tener un IMC de sobrepeso aunque tenga poca grasa. El FFMI solo considera la masa libre de grasa, siendo mucho más preciso para evaluar el desarrollo muscular." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo puedo mejorar mi FFMI?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Para mejorar el FFMI necesitas aumentar la masa muscular manteniendo o reduciendo la grasa corporal. Esto se logra con: entrenamiento de fuerza progresivo (3-5 sesiones semanales), ingesta adecuada de proteínas (1.6-2.2 g/kg de peso corporal), superávit calórico moderado para ganar músculo, descanso suficiente y consistencia a largo plazo." }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://calculadora-imc.es/" },
+          { "@type": "ListItem", "position": 2, "name": "Calculadora FFMI", "item": "https://calculadora-imc.es/ffmi/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="antialiased">
+
+<!-- ======= NAVBAR ======= -->
+<header class="navbar">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center gap-3 h-full">
+    <a href="/" class="flex items-center gap-2 shrink-0" aria-label="Inicio">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect width="28" height="28" rx="7" fill="#2563EB"/>
+        <circle cx="14" cy="10" r="3.5" stroke="white" stroke-width="1.8" fill="none"/>
+        <path d="M7 21.5c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+        <path d="M14 17v4M12 21h4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span class="font-semibold text-sm tracking-tight hidden sm:inline" style="color:var(--text-primary)">IMC <span style="color:var(--accent)">Calculadora</span></span>
+    </a>
+    <nav class="calc-nav" aria-label="Calculadoras">
+      <a href="/"                   class="calc-nav-link">IMC</a>
+      <a href="/peso-ideal/"        class="calc-nav-link">Peso ideal</a>
+      <a href="/calorias-diarias/"  class="calc-nav-link">Calorías</a>
+      <a href="/calorias-quemadas/" class="calc-nav-link">Quemadas</a>
+      <a href="/tmb/"               class="calc-nav-link">TMB</a>
+      <a href="/macros/"            class="calc-nav-link">Macros</a>
+      <a href="/ffmi/"              class="calc-nav-link active">FFMI</a>
+      <a href="/grasa-corporal/"    class="calc-nav-link">% Grasa</a>
+      <a href="/agua-diaria/"       class="calc-nav-link">Agua</a>
+    </nav>
+    <button id="darkToggle" class="theme-toggle shrink-0" aria-label="Cambiar modo oscuro">
+      <svg id="iconLight" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      <svg id="iconDark"  class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ======= HERO + PANEL ======= -->
+<section id="hero" class="hero-section">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full py-10 lg:py-14">
+
+    <div class="text-center mb-8 lg:mb-10">
+      <div class="trust-badge inline-flex mb-5">
+        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        Basado en investigación científica · Actualizado 2025
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.03em">
+        Calculadora <span style="color:var(--accent)">FFMI</span>
+      </h1>
+      <p class="text-base max-w-xl mx-auto leading-relaxed mb-6" style="color:var(--text-secondary)">
+        Calcula tu <strong style="color:var(--text-primary)">Índice de Masa Libre de Grasa</strong> y evalúa tu desarrollo muscular de forma objetiva. La métrica preferida por deportistas y culturistas. Gratis, sin registro.
+      </p>
+      <div class="flex items-center justify-center flex-wrap gap-2" style="color:var(--text-muted)">
+        <span class="feature-pill">Para deportistas</span>
+        <span class="feature-pill">kg/cm · lb/in</span>
+        <span class="feature-pill">100% privado</span>
+        <span class="feature-pill">FFMI normalizado</span>
+      </div>
+    </div>
+
+    <!-- Panel calculadora -->
+    <div class="calc-panel" id="calculadora">
+
+      <!-- Barra de inputs -->
+      <div class="calc-panel__top">
+        <div class="calc-inputs-bar">
+          <!-- Peso -->
+          <div class="cib-field">
+            <label class="cib-label" for="weight">Peso <span id="weightUnit" class="cib-unit">(kg)</span></label>
+            <input id="weight" class="cib-input" type="number" min="30" max="300" step="0.5" placeholder="80"
+              autocomplete="off" inputmode="decimal" aria-label="Peso" oninput="onInputChange()" />
+          </div>
+          <div class="cib-divider" aria-hidden="true"></div>
+          <!-- Altura -->
+          <div class="cib-field cib-field--sm">
+            <label class="cib-label" for="height">Altura <span id="heightUnit" class="cib-unit">(cm)</span></label>
+            <input id="height" class="cib-input" type="number" min="130" max="250" step="0.5" placeholder="175"
+              autocomplete="off" inputmode="decimal" aria-label="Altura" oninput="onInputChange()" />
+          </div>
+          <div class="cib-divider" aria-hidden="true"></div>
+          <!-- % Grasa -->
+          <div class="cib-field cib-field--sm">
+            <label class="cib-label" for="bodyfat">% Grasa <span class="cib-unit">(corporal)</span></label>
+            <input id="bodyfat" class="cib-input" type="number" min="2" max="60" step="0.5" placeholder="15"
+              autocomplete="off" inputmode="decimal" aria-label="Porcentaje de grasa corporal" oninput="onInputChange()" />
+          </div>
+          <div class="cib-divider" aria-hidden="true"></div>
+          <!-- Sexo -->
+          <div class="cib-field cib-field--gender">
+            <label class="cib-label">Sexo biológico</label>
+            <div class="cib-gender">
+              <div class="gender-option selected" id="gMale" onclick="setGender('male')" role="radio" aria-checked="true" tabindex="0">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6" stroke-width="2"/><path d="M14.5 5.5L19 1M19 1h-4M19 1v4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Hombre
+              </div>
+              <div class="gender-option" id="gFemale" onclick="setGender('female')" role="radio" aria-checked="false" tabindex="0">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6" stroke-width="2"/><path d="M12 15v6M9 19h6" stroke-width="2" stroke-linecap="round"/></svg>
+                Mujer
+              </div>
+            </div>
+          </div>
+          <!-- Botón -->
+          <button id="calcBtn" class="cib-btn" onclick="calculate()">
+            Calcular
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+          </button>
+        </div>
+        <!-- Subrow -->
+        <div class="calc-subrow">
+          <div class="unit-toggle">
+            <button class="unit-btn active" id="btnMetric" onclick="setUnit('metric')">kg / cm</button>
+            <button class="unit-btn" id="btnImperial" onclick="setUnit('imperial')">lb / in</button>
+          </div>
+          <div class="cp-trust">
+            <svg class="w-3 h-3" style="color:#4ade80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            <span>100% privado</span>
+            <span class="cp-trust-dot">·</span>
+            <span>Sin registro</span>
+            <span class="cp-trust-dot">·</span>
+            <span>FFMI normalizado a 1,80 m</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resultado -->
+      <div class="calc-panel__bottom">
+
+        <!-- Estado vacío -->
+        <div id="resultPlaceholder" class="result-placeholder">
+          <div style="width:72px;height:72px;border-radius:50%;background:var(--surface-3);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;opacity:0.4" aria-hidden="true">
+            <svg class="w-8 h-8" style="color:var(--text-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <div class="rp-score">—</div>
+          <p class="rp-label">Introduce tus datos y pulsa <strong>Calcular</strong></p>
+          <p class="rp-desc">Obtendrás tu FFMI, FFMI normalizado, masa magra, categoría y una valoración detallada de tu desarrollo muscular.</p>
+        </div>
+
+        <!-- Resultado completo -->
+        <div id="results" class="hidden">
+          <div class="res-layout">
+            <!-- Col izquierda: puntuación + categoría -->
+            <div class="res-col-gauge">
+              <div id="ffmiScoreBadge" style="width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:0.75rem;font-size:1.5rem;font-weight:800;color:#fff;transition:background 0.4s ease" aria-hidden="true">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="stroke:#fff"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              </div>
+              <div id="ffmiScore" class="res-score number-pop font-tabular">—</div>
+              <div id="ffmiCategory" class="res-category">—</div>
+              <div id="ffmiCategoryDesc" class="res-category-desc">—</div>
+              <div class="res-actions no-print" style="margin-top:0.5rem">
+                <button onclick="copyLink()" class="btn-ghost">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  Compartir
+                </button>
+              </div>
+            </div>
+            <!-- Col derecha: tarjeta + métricas -->
+            <div class="res-col-detail">
+              <div id="resultCard" class="res-card bg-cat-normal border-2">
+                <p id="resultMessage" class="res-card-msg"></p>
+                <div class="res-card-metrics">
+                  <div>
+                    <p class="res-metric-label">Masa magra</p>
+                    <p id="leanMassVal" class="res-metric-value">—</p>
+                  </div>
+                  <div>
+                    <p class="res-metric-label">FFMI normalizado</p>
+                    <p id="ffmiNormVal" class="res-metric-value">—</p>
+                  </div>
+                  <div>
+                    <p class="res-metric-label">% Grasa</p>
+                    <p id="bfVal" class="res-metric-value">—</p>
+                  </div>
+                  <div>
+                    <p class="res-metric-label">Sexo</p>
+                    <p id="genderVal" class="res-metric-value">—</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tabla de referencia FFMI -->
+              <div style="background:var(--surface);border-radius:10px;border:1px solid var(--border);overflow:hidden">
+                <table class="res-table" aria-label="Tabla de categorías FFMI">
+                  <thead>
+                    <tr>
+                      <th>Categoría</th>
+                      <th>Hombres</th>
+                      <th>Mujeres</th>
+                    </tr>
+                  </thead>
+                  <tbody id="ffmiTableBody">
+                    <tr>
+                      <td style="color:#2563eb">Por debajo del promedio</td>
+                      <td class="td-val">&lt; 17</td>
+                      <td class="td-val">&lt; 13</td>
+                    </tr>
+                    <tr>
+                      <td style="color:#16a34a">Promedio</td>
+                      <td class="td-val">17 – 18</td>
+                      <td class="td-val">13 – 16</td>
+                    </tr>
+                    <tr>
+                      <td style="color:#16a34a">Por encima del promedio</td>
+                      <td class="td-val">18 – 20</td>
+                      <td class="td-val">16 – 18</td>
+                    </tr>
+                    <tr>
+                      <td style="color:#d97706">Excelente</td>
+                      <td class="td-val">20 – 22</td>
+                      <td class="td-val">18 – 20</td>
+                    </tr>
+                    <tr>
+                      <td style="color:#ea580c">Superior</td>
+                      <td class="td-val">22 – 23</td>
+                      <td class="td-val">≥ 20</td>
+                    </tr>
+                    <tr>
+                      <td style="color:#dc2626">Límite natural</td>
+                      <td class="td-val">23 – 26</td>
+                      <td class="td-val">—</td>
+                    </tr>
+                    <tr>
+                      <td style="color:#9333ea">Prob. asistido</td>
+                      <td class="td-val">&gt; 26</td>
+                      <td class="td-val">—</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /calc-panel -->
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======= QUÉ ES EL FFMI ======= -->
+<section id="que-es-ffmi" class="py-16 md:py-24" style="background:var(--surface)">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="max-w-xl mb-12 reveal">
+      <p class="section-label mb-3">Guía para deportistas</p>
+      <h2 class="text-3xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.025em">Todo sobre el FFMI</h2>
+      <p class="text-base leading-relaxed" style="color:var(--text-secondary)">El <strong style="color:var(--text-primary)">FFMI (Fat-Free Mass Index)</strong> es el indicador de referencia para evaluar el desarrollo muscular en deportistas, muy superior al IMC para personas activas.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5">
+      <!-- Card 1 -->
+      <div class="card card-hover reveal">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:var(--accent-light)">
+          <svg class="w-5 h-5" style="color:var(--accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">¿Qué es el FFMI?</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">El FFMI mide la masa muscular en relación a la altura, excluyendo por completo la grasa corporal. Fue popularizado por el estudio de Kouri et al. (1995) que lo usó para comparar culturistas naturales vs. asistidos farmacológicamente.</p>
+        <div class="mt-4 p-3 rounded-lg text-center" style="background:var(--surface-2);border:1px solid var(--border)">
+          <p class="text-xs font-medium mb-1" style="color:var(--text-muted)">FFMI =</p>
+          <p class="text-sm font-bold" style="color:var(--accent)">masa magra (kg)</p>
+          <div class="my-1 mx-auto" style="width:60px;height:1px;background:var(--border-strong)"></div>
+          <p class="text-sm font-bold" style="color:var(--accent)">altura² (m)</p>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="card card-hover reveal" style="transition-delay:0.08s">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:var(--accent-light)">
+          <svg class="w-5 h-5" style="color:var(--accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Por qué supera al IMC para deportistas</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">El IMC no distingue entre músculo y grasa. Un culturista con 90 kg y 5% de grasa tendrá un IMC de "sobrepeso", pero un FFMI excelente. El FFMI revela la realidad de tu composición corporal.</p>
+        <ul class="mt-3 space-y-2 text-xs" style="color:var(--text-secondary)">
+          <li class="flex gap-2"><span style="color:#16a34a;font-weight:700">✓</span> Ignora el porcentaje de grasa</li>
+          <li class="flex gap-2"><span style="color:#16a34a;font-weight:700">✓</span> Mide desarrollo muscular real</li>
+          <li class="flex gap-2"><span style="color:#16a34a;font-weight:700">✓</span> Permite comparar entre alturas</li>
+          <li class="flex gap-2"><span style="color:#16a34a;font-weight:700">✓</span> Útil para seguimiento de progreso</li>
+        </ul>
+      </div>
+      <!-- Card 3 -->
+      <div class="card card-hover reveal" style="transition-delay:0.16s">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:var(--accent-light)">
+          <svg class="w-5 h-5" style="color:var(--accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">El límite natural: 26 FFMI</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">El estudio de Kouri (1995) encontró que los culturistas naturales raramente superaban un FFMI normalizado de 25–26. Superar este umbral de forma consistente es muy difícil sin asistencia farmacológica.</p>
+        <div class="mt-3 p-3 rounded-lg" style="background:#faf5ff;border:1px solid #e9d5ff">
+          <p class="text-xs font-semibold" style="color:#7e22ce">Referencia científica</p>
+          <p class="text-xs mt-1" style="color:#6b21a8">Kouri et al., 1995 — The New England Journal of Medicine</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======= FAQ ======= -->
+<section id="faq" class="py-16 md:py-24" style="background:var(--surface-2)">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <div class="mb-12 reveal">
+      <p class="section-label mb-3">Preguntas frecuentes</p>
+      <h2 class="text-3xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.025em">Todo sobre el FFMI</h2>
+      <p class="text-sm" style="color:var(--text-secondary)">Respuestas basadas en evidencia científica sobre el índice de masa libre de grasa y el desarrollo muscular.</p>
+    </div>
+    <div class="rounded-xl overflow-hidden" style="border:1px solid var(--border);background:var(--surface)">
+      <!-- FAQ 1 -->
+      <div class="faq-item">
+        <button class="w-full text-left flex items-center justify-between gap-4 px-5 py-4 font-medium text-sm" style="color:var(--text-primary)" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>¿Qué es el FFMI?</span>
+          <svg class="w-4 h-4 shrink-0 transition-transform duration-300" style="color:var(--text-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content">
+          <p class="px-5 pb-4 text-sm leading-relaxed" style="color:var(--text-secondary)">El FFMI (Fat-Free Mass Index o Índice de Masa Libre de Grasa) es un indicador que mide la cantidad de masa muscular en relación con la altura, excluyendo la grasa corporal. Se calcula dividiendo la masa magra (peso total menos la grasa) entre el cuadrado de la altura en metros. A diferencia del IMC, el FFMI no se ve distorsionado por el porcentaje de grasa, lo que lo convierte en la métrica de referencia para deportistas, culturistas y personas activas.</p>
+        </div>
+      </div>
+      <!-- FAQ 2 -->
+      <div class="faq-item">
+        <button class="w-full text-left flex items-center justify-between gap-4 px-5 py-4 font-medium text-sm" style="color:var(--text-primary)" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>¿Cuál es un buen FFMI?</span>
+          <svg class="w-4 h-4 shrink-0 transition-transform duration-300" style="color:var(--text-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content">
+          <p class="px-5 pb-4 text-sm leading-relaxed" style="color:var(--text-secondary)">Para hombres: un FFMI normalizado de 18–20 se considera bueno (por encima del promedio), 20–22 es excelente (requiere años de entrenamiento dedicado) y 22–23 es superior (élite natural). Para mujeres: 16–18 es bueno, 18–20 es excelente y atlético de competición. La mayoría de personas sedentarias tienen un FFMI inferior a 18 en hombres y 14 en mujeres, por lo que cualquier valor por encima ya refleja un estilo de vida activo.</p>
+        </div>
+      </div>
+      <!-- FAQ 3 -->
+      <div class="faq-item">
+        <button class="w-full text-left flex items-center justify-between gap-4 px-5 py-4 font-medium text-sm" style="color:var(--text-primary)" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>¿Es posible tener un FFMI de 25 de forma natural?</span>
+          <svg class="w-4 h-4 shrink-0 transition-transform duration-300" style="color:var(--text-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content">
+          <p class="px-5 pb-4 text-sm leading-relaxed" style="color:var(--text-secondary)">Sí, pero es extremadamente raro. La investigación seminal de Kouri et al. (1995) en The New England Journal of Medicine encontró que los culturistas naturales raramente superaban un FFMI normalizado de 25–26. Alcanzar 25 requiere una combinación muy poco común de: genética excepcional para la ganancia muscular, 8–12 años de entrenamiento progresivo muy bien ejecutado, nutrición perfectamente optimizada y descanso adecuado. No es imposible, pero sí altamente improbable para la mayoría de personas.</p>
+        </div>
+      </div>
+      <!-- FAQ 4 -->
+      <div class="faq-item">
+        <button class="w-full text-left flex items-center justify-between gap-4 px-5 py-4 font-medium text-sm" style="color:var(--text-primary)" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>¿En qué se diferencia el FFMI del IMC?</span>
+          <svg class="w-4 h-4 shrink-0 transition-transform duration-300" style="color:var(--text-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content">
+          <p class="px-5 pb-4 text-sm leading-relaxed" style="color:var(--text-secondary)">El IMC (Índice de Masa Corporal) divide el peso total entre la altura al cuadrado, sin distinguir entre grasa y músculo. Un culturista con 95 kg de peso y solo un 8% de grasa tendrá un IMC de 28–30 (sobrepeso u obesidad I), lo cual es completamente engañoso. El FFMI, en cambio, utiliza únicamente la masa magra: ese mismo deportista tendría un FFMI de 24–25, reflejando su excelente desarrollo muscular. Para cualquier persona que entrene regularmente, el FFMI es un indicador mucho más honesto y útil.</p>
+        </div>
+      </div>
+      <!-- FAQ 5 -->
+      <div class="faq-item">
+        <button class="w-full text-left flex items-center justify-between gap-4 px-5 py-4 font-medium text-sm" style="color:var(--text-primary)" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>¿Cómo puedo mejorar mi FFMI?</span>
+          <svg class="w-4 h-4 shrink-0 transition-transform duration-300" style="color:var(--text-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content">
+          <div class="px-5 pb-4">
+            <p class="text-sm leading-relaxed mb-3" style="color:var(--text-secondary)">Para mejorar el FFMI necesitas aumentar la masa muscular manteniendo o reduciendo el porcentaje de grasa. Las estrategias más efectivas son:</p>
+            <ul class="space-y-2 text-sm" style="color:var(--text-secondary)">
+              <li class="flex gap-2"><span style="color:#2563eb;font-weight:700">1.</span> <strong style="color:var(--text-primary)">Entrenamiento de fuerza progresivo:</strong> 3–5 sesiones semanales con cargas crecientes. La progresión de carga es el estímulo principal para el crecimiento muscular.</li>
+              <li class="flex gap-2"><span style="color:#2563eb;font-weight:700">2.</span> <strong style="color:var(--text-primary)">Ingesta proteica adecuada:</strong> 1,6–2,2 g de proteína por kg de peso corporal al día para maximizar la síntesis proteica muscular.</li>
+              <li class="flex gap-2"><span style="color:#2563eb;font-weight:700">3.</span> <strong style="color:var(--text-primary)">Superávit calórico controlado:</strong> Para ganar músculo necesitas comer ligeramente más de lo que gastas (200–400 kcal/día de superávit).</li>
+              <li class="flex gap-2"><span style="color:#2563eb;font-weight:700">4.</span> <strong style="color:var(--text-primary)">Descanso y recuperación:</strong> El músculo crece durante el descanso. 7–9 horas de sueño son fundamentales.</li>
+              <li class="flex gap-2"><span style="color:#2563eb;font-weight:700">5.</span> <strong style="color:var(--text-primary)">Consistencia a largo plazo:</strong> El desarrollo muscular significativo requiere años, no semanas. La constancia es la variable más importante.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======= OTRAS HERRAMIENTAS ======= -->
+<section id="otras-herramientas" class="py-16 md:py-20 no-print" style="background:var(--surface)">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="mb-10 reveal">
+      <p class="section-label mb-3">Calculadoras relacionadas</p>
+      <h2 class="text-2xl font-bold tracking-tight mb-2" style="color:var(--text-primary);letter-spacing:-0.025em">Otras herramientas de salud</h2>
+      <p class="text-sm" style="color:var(--text-secondary)">Completa tu análisis corporal con estas calculadoras gratuitas.</p>
+    </div>
+    <div class="tools-grid reveal">
+      <a href="/grasa-corporal/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        </div>
+        <span class="tool-card-name">% Grasa corporal</span>
+        <span class="tool-card-desc">Método US Navy con cinta métrica. Sin báscula de grasa.</span>
+      </a>
+      <a href="/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10"/></svg>
+        </div>
+        <span class="tool-card-name">Calculadora IMC</span>
+        <span class="tool-card-desc">Índice de Masa Corporal según criterios OMS.</span>
+      </a>
+      <a href="/peso-ideal/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+        </div>
+        <span class="tool-card-name">Peso ideal</span>
+        <span class="tool-card-desc">Calcula tu peso ideal según múltiples fórmulas.</span>
+      </a>
+      <a href="/macros/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>
+        </div>
+        <span class="tool-card-name">Calculadora de macros</span>
+        <span class="tool-card-desc">Proteínas, carbohidratos y grasas para tu objetivo.</span>
+      </a>
+      <a href="/tmb/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <span class="tool-card-name">TMB</span>
+        <span class="tool-card-desc">Tasa metabólica basal y gasto energético diario.</span>
+      </a>
+      <a href="/calorias-diarias/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
+        </div>
+        <span class="tool-card-name">Calorías diarias</span>
+        <span class="tool-card-desc">Necesidades calóricas según tu nivel de actividad.</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======= FOOTER ======= -->
+<footer style="background:var(--surface-2);border-top:1px solid var(--border);padding:2rem 0;margin-top:0">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <svg width="20" height="20" viewBox="0 0 28 28" fill="none" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#2563EB"/><circle cx="14" cy="10" r="3.5" stroke="white" stroke-width="1.8" fill="none"/><path d="M7 21.5c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+        <span class="text-sm font-semibold" style="color:var(--text-primary)">IMC Calculadora</span>
+      </div>
+      <p class="text-xs text-center" style="color:var(--text-muted)">Herramienta orientativa. No sustituye el consejo médico profesional.</p>
+      <div class="flex gap-4 text-xs flex-wrap justify-center" style="color:var(--text-muted)">
+        <a href="/" style="color:inherit">IMC</a>
+        <a href="/ffmi/" style="color:inherit">FFMI</a>
+        <a href="/grasa-corporal/" style="color:inherit">% Grasa</a>
+        <a href="/calorias-diarias/" style="color:inherit">Calorías</a>
+        <a href="/macros/" style="color:inherit">Macros</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile sticky CTA -->
+<div id="mobileCTA" class="hidden md:hidden no-print">
+  <a href="#calculadora" class="btn-primary">
+    Calcular mi FFMI
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+  </a>
+</div>
+
+<!-- Toast -->
+<div id="toast">
+  <svg class="w-4 h-4 shrink-0" style="color:#4ade80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+  Enlace copiado
+</div>
+
+<!-- JS -->
+<script src="../js/theme.js"></script>
+<script>
+// ============================================================
+//  FFMI CALCULATOR
+// ============================================================
+let _imperial = false;
+let _gender   = 'male';
+
+function setUnit(mode) {
+  _imperial = (mode === 'imperial');
+  document.getElementById('btnMetric').classList.toggle('active', !_imperial);
+  document.getElementById('btnImperial').classList.toggle('active', _imperial);
+  document.getElementById('weightUnit').textContent = _imperial ? '(lb)' : '(kg)';
+  document.getElementById('heightUnit').textContent = _imperial ? '(in)' : '(cm)';
+  calculate();
+}
+
+function setGender(g) {
+  _gender = g;
+  const male   = document.getElementById('gMale');
+  const female = document.getElementById('gFemale');
+  male.classList.toggle('selected', g === 'male');
+  female.classList.toggle('selected', g === 'female');
+  male.setAttribute('aria-checked', g === 'male' ? 'true' : 'false');
+  female.setAttribute('aria-checked', g === 'female' ? 'true' : 'false');
+  calculate();
+}
+
+function onInputChange() {
+  // Auto-calculate on input change
+  calculate();
+}
+
+function getFFMICategory(ffmi, gender) {
+  if (gender === 'male') {
+    if (ffmi < 17)  return { name: 'Por debajo del promedio', short: 'underweight', color: '#2563eb', advice: 'Tu desarrollo muscular está por debajo del promedio. Un programa de entrenamiento de fuerza progresivo y una dieta rica en proteínas pueden ayudarte a mejorar significativamente.' };
+    if (ffmi < 18)  return { name: 'Promedio',                short: 'normal',      color: '#16a34a', advice: 'Desarrollo muscular promedio para la población general. Con entrenamiento consistente puedes mejorar significativamente.' };
+    if (ffmi < 20)  return { name: 'Por encima del promedio', short: 'normal',      color: '#16a34a', advice: 'Buen desarrollo muscular, por encima del promedio. Estás en un rango alcanzable con entrenamiento regular y buena nutrición.' };
+    if (ffmi < 22)  return { name: 'Excelente',               short: 'overweight',  color: '#d97706', advice: 'Excelente desarrollo muscular. Requiere años de entrenamiento dedicado y una nutrición optimizada.' };
+    if (ffmi < 23)  return { name: 'Superior',                short: 'obese1',      color: '#ea580c', advice: 'Desarrollo muscular superior. Solo alcanzable por deportistas muy avanzados con genética favorable y entrenamiento de élite.' };
+    if (ffmi < 26)  return { name: 'Límite natural posible',  short: 'obese2',      color: '#dc2626', advice: 'En el límite del desarrollo muscular natural. Alcanzable pero muy raro sin asistencia farmacológica.' };
+    return          { name: 'Probablemente asistido',         short: 'obese3',      color: '#9333ea', advice: 'Muy difícil de alcanzar de forma natural. La mayoría de investigaciones sugieren que superar 26 FFMI requiere asistencia farmacológica.' };
+  } else {
+    if (ffmi < 13)  return { name: 'Por debajo del promedio', short: 'underweight', color: '#2563eb', advice: 'Desarrollo muscular por debajo del promedio para mujeres. El entrenamiento de fuerza puede ayudarte a mejorar.' };
+    if (ffmi < 16)  return { name: 'Promedio',                short: 'normal',      color: '#16a34a', advice: 'Desarrollo muscular promedio para mujeres. El entrenamiento de fuerza regular puede ayudarte a mejorar.' };
+    if (ffmi < 18)  return { name: 'Por encima del promedio', short: 'normal',      color: '#16a34a', advice: 'Buen desarrollo muscular, por encima del promedio femenino. Refleja un estilo de vida activo y entrenamiento consistente.' };
+    if (ffmi < 20)  return { name: 'Excelente / Atlética',    short: 'overweight',  color: '#d97706', advice: 'Excelente desarrollo muscular para una mujer. Típico de atletas de competición con años de entrenamiento de fuerza.' };
+    return          { name: 'Excepcional',                    short: 'obese1',      color: '#ea580c', advice: 'Desarrollo muscular excepcional, muy raro en mujeres sin asistencia farmacológica.' };
+  }
+}
+
+function animateNumber(el, target, decimals, suffix) {
+  const duration = 800;
+  const start    = performance.now();
+  const from     = 0;
+  function step(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const ease     = 1 - Math.pow(1 - progress, 3);
+    const current  = from + (target - from) * ease;
+    el.textContent = current.toFixed(decimals) + (suffix || '');
+    if (progress < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+function calculate() {
+  const wRaw  = parseFloat(document.getElementById('weight').value);
+  const hRaw  = parseFloat(document.getElementById('height').value);
+  const bf    = parseFloat(document.getElementById('bodyfat').value);
+
+  if (!wRaw || !hRaw || isNaN(bf)) { hideResults(); return; }
+
+  // Convert to metric
+  let wKg = _imperial ? wRaw / 2.20462 : wRaw;
+  let hM  = _imperial ? hRaw * 0.0254  : hRaw / 100;
+
+  // Validate ranges
+  if (wKg < 30 || wKg > 300) { hideResults(); return; }
+  if (hM < 1.3 || hM > 2.5)  { hideResults(); return; }
+  if (bf < 2   || bf > 60)   { hideResults(); return; }
+
+  const leanMass = wKg * (1 - bf / 100);
+  const ffmi     = leanMass / (hM * hM);
+  const ffmiNorm = ffmi + 6.1 * (1.8 - hM); // normalized to 1.80 m
+  const cat      = getFFMICategory(ffmiNorm, _gender);
+
+  showResults(ffmiNorm, leanMass, ffmi, bf, cat);
+}
+
+function hideResults() {
+  document.getElementById('results').classList.add('hidden');
+  document.getElementById('resultPlaceholder').classList.remove('hidden');
+}
+
+function showResults(ffmiNorm, leanMass, ffmiRaw, bf, cat) {
+  document.getElementById('resultPlaceholder').classList.add('hidden');
+  document.getElementById('results').classList.remove('hidden');
+
+  // Score badge background
+  const badge = document.getElementById('ffmiScoreBadge');
+  badge.style.background = cat.color;
+
+  // Big score
+  const scoreEl = document.getElementById('ffmiScore');
+  scoreEl.className = 'res-score number-pop font-tabular';
+  scoreEl.style.color = cat.color;
+  animateNumber(scoreEl, ffmiNorm, 1, '');
+
+  // Category
+  const catEl = document.getElementById('ffmiCategory');
+  catEl.textContent = cat.name;
+  catEl.style.color = cat.color;
+
+  document.getElementById('ffmiCategoryDesc').textContent = cat.name + ' · FFMI ' + ffmiNorm.toFixed(1);
+
+  // Result card class
+  const card = document.getElementById('resultCard');
+  card.className = 'res-card border-2 bg-cat-' + cat.short;
+  document.getElementById('resultMessage').textContent = cat.advice;
+
+  // Metrics
+  document.getElementById('leanMassVal').textContent = leanMass.toFixed(1) + ' kg';
+  document.getElementById('ffmiNormVal').textContent = ffmiNorm.toFixed(2);
+  document.getElementById('bfVal').textContent       = bf.toFixed(1) + '%';
+  document.getElementById('genderVal').textContent   = _gender === 'male' ? 'Hombre' : 'Mujer';
+
+  // Highlight table row
+  highlightTableRow(ffmiNorm, _gender);
+}
+
+function highlightTableRow(ffmiNorm, gender) {
+  const tbody = document.getElementById('ffmiTableBody');
+  const rows  = tbody.querySelectorAll('tr');
+  rows.forEach(r => r.classList.remove('highlighted'));
+
+  let rowIndex;
+  if (gender === 'male') {
+    if (ffmiNorm < 17)      rowIndex = 0;
+    else if (ffmiNorm < 18) rowIndex = 1;
+    else if (ffmiNorm < 20) rowIndex = 2;
+    else if (ffmiNorm < 22) rowIndex = 3;
+    else if (ffmiNorm < 23) rowIndex = 4;
+    else if (ffmiNorm < 26) rowIndex = 5;
+    else                    rowIndex = 6;
+  } else {
+    if (ffmiNorm < 13)      rowIndex = 0;
+    else if (ffmiNorm < 16) rowIndex = 1;
+    else if (ffmiNorm < 18) rowIndex = 2;
+    else if (ffmiNorm < 20) rowIndex = 3;
+    else                    rowIndex = 4;
+  }
+  if (rows[rowIndex]) rows[rowIndex].classList.add('highlighted');
+}
+
+function toggleFaq(btn) {
+  const content  = btn.nextElementSibling;
+  const icon     = btn.querySelector('svg');
+  const isOpen   = content.classList.contains('open');
+
+  // Close all
+  document.querySelectorAll('.faq-content.open').forEach(c => {
+    c.classList.remove('open');
+    c.previousElementSibling.setAttribute('aria-expanded', 'false');
+    c.previousElementSibling.querySelector('svg').style.transform = '';
+  });
+
+  if (!isOpen) {
+    content.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    icon.style.transform = 'rotate(180deg)';
+  }
+}
+
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2500);
+  });
+}
+
+// Scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Mobile CTA visibility
+const mobileCTA = document.getElementById('mobileCTA');
+const hero = document.getElementById('hero');
+if (mobileCTA && hero) {
+  const io = new IntersectionObserver(entries => {
+    mobileCTA.classList.toggle('hidden', entries[0].isIntersecting);
+  }, { threshold: 0.1 });
+  io.observe(hero);
+}
+</script>
+</body>
+</html>

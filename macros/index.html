@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Macros 2025 — Proteínas, Carbohidratos y Grasas según tu objetivo</title>
+  <meta name="description" content="Calcula tus macronutrientes diarios (proteínas, carbohidratos y grasas) según tus calorías totales y objetivo: déficit, mantenimiento o volumen. Gratis." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="author" content="IMC Calculadora" />
+  <meta name="theme-color" content="#2563EB" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="canonical" href="https://calculadora-imc.es/macros/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="IMC Calculadora" />
+  <meta property="og:url" content="https://calculadora-imc.es/macros/" />
+  <meta property="og:title" content="Calculadora de Macros 2025 — Proteínas, Carbohidratos y Grasas" />
+  <meta property="og:description" content="Calcula tus macronutrientes diarios según tus calorías y objetivo: déficit, mantenimiento o volumen. Gratis y sin registro." />
+  <meta property="og:image" content="https://calculadora-imc.es/og-image.jpg" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Calculadora de Macros 2025 — Proteínas, Carbohidratos y Grasas" />
+  <meta name="twitter:description" content="Distribuye tus macronutrientes según tu objetivo: déficit, mantenimiento o volumen. Proteínas, carbohidratos y grasas en gramos y kcal." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232563EB'/><circle cx='16' cy='12' r='4' fill='none' stroke='white' stroke-width='2'/><path d='M8 24c0-4.4 3.6-8 8-8s8 3.6 8 8' fill='none' stroke='white' stroke-width='2'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: { extend: { fontFamily: { sans: ["Inter","system-ui","sans-serif"] } } }
+    }
+  </script>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    /* Macro cards */
+    .macro-card {
+      flex: 1; min-width: 0;
+      border-radius: 14px;
+      padding: 1.375rem 1.25rem;
+      border: 2px solid;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .macro-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+    .macro-card--protein { border-color: #bfdbfe; background: #eff6ff; }
+    .macro-card--carbs   { border-color: #bbf7d0; background: #f0fdf4; }
+    .macro-card--fat     { border-color: #fde68a; background: #fffbeb; }
+    .dark .macro-card--protein { border-color: rgba(37,99,235,0.35);  background: rgba(37,99,235,0.08); }
+    .dark .macro-card--carbs   { border-color: rgba(22,163,74,0.35);  background: rgba(22,163,74,0.08); }
+    .dark .macro-card--fat     { border-color: rgba(217,119,6,0.35);  background: rgba(217,119,6,0.08); }
+    .macro-label { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 6px; }
+    .macro-label--protein { color: #1d4ed8; }
+    .macro-label--carbs   { color: #15803d; }
+    .macro-label--fat     { color: #b45309; }
+    .dark .macro-label--protein { color: #93c5fd; }
+    .dark .macro-label--carbs   { color: #86efac; }
+    .dark .macro-label--fat     { color: #fcd34d; }
+    .macro-grams {
+      font-size: 2.5rem; font-weight: 800; letter-spacing: -0.04em;
+      line-height: 1; font-variant-numeric: tabular-nums; color: var(--text-primary);
+    }
+    .macro-unit { font-size: 1rem; font-weight: 500; color: var(--text-muted); }
+    .macro-sub  { font-size: 0.8125rem; color: var(--text-secondary); margin-top: 6px; }
+
+    /* Objective buttons */
+    .goal-btn {
+      flex: 1; min-width: 0;
+      padding: 0.875rem 1rem;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      background: var(--surface-2);
+      cursor: pointer; font-family: inherit;
+      transition: all 0.15s ease;
+      text-align: center;
+    }
+    .goal-btn:hover:not(.selected) { border-color: var(--border-strong); background: var(--surface-3); }
+    .goal-btn.selected {
+      border-color: var(--accent);
+      background: var(--accent-light);
+    }
+    .goal-btn-title {
+      font-size: 0.875rem; font-weight: 700;
+      color: var(--text-primary); display: block; margin-bottom: 2px;
+    }
+    .goal-btn.selected .goal-btn-title { color: var(--accent); }
+    .goal-btn-sub { font-size: 0.6875rem; color: var(--text-muted); display: block; }
+
+    /* Macro bar */
+    .macro-bar { height: 12px; border-radius: 99px; overflow: hidden; display: flex; gap: 2px; }
+    .macro-bar-seg { height: 100%; border-radius: 99px; transition: width 0.6s cubic-bezier(0.16,1,0.3,1); }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://calculadora-imc.es/macros/#app",
+        "name": "Calculadora de Macros",
+        "url": "https://calculadora-imc.es/macros/",
+        "description": "Calcula tus macronutrientes diarios (proteínas, carbohidratos y grasas) según tus calorías totales y objetivo: déficit, mantenimiento o volumen.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web",
+        "browserRequirements": "Requires JavaScript",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+        "inLanguage": "es-ES",
+        "author": { "@type": "Organization", "name": "IMC Calculadora", "url": "https://calculadora-imc.es/" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://calculadora-imc.es/macros/#faq",
+        "mainEntity": [
+          { "@type": "Question", "name": "¿Qué son los macronutrientes?", "acceptedAnswer": { "@type": "Answer", "text": "Los macronutrientes son los tres grupos de nutrientes que aportan energía: proteínas (4 kcal/g), carbohidratos (4 kcal/g) y grasas (9 kcal/g). A diferencia de los micronutrientes (vitaminas y minerales), los macros se consumen en grandes cantidades y son el sustrato energético principal del organismo." } },
+          { "@type": "Question", "name": "¿Cuánta proteína necesito al día?", "acceptedAnswer": { "@type": "Answer", "text": "Para personas sedentarias, la RDA es de 0,8 g/kg de peso corporal. Para deportistas o personas activas, se recomienda entre 1,6 y 2,2 g/kg. En déficit calórico, aumentar la proteína a 2,0–2,4 g/kg ayuda a preservar la masa muscular." } },
+          { "@type": "Question", "name": "¿Los carbohidratos engordan?", "acceptedAnswer": { "@type": "Answer", "text": "No inherentemente. El aumento de grasa corporal se produce por un exceso calórico total, independientemente del macronutriente que lo cause. Los carbohidratos son la principal fuente de energía para el cerebro y el músculo en ejercicio. La calidad importa: prioriza fuentes integrales, legumbres y frutas frente a azúcares refinados." } },
+          { "@type": "Question", "name": "¿Cuánta grasa es saludable consumir?", "acceptedAnswer": { "@type": "Answer", "text": "Las guías dietéticas recomiendan que las grasas representen entre el 20% y el 35% de las calorías totales. No bajar del 20% es importante para mantener la producción hormonal y la absorción de vitaminas liposolubles (A, D, E, K). Prioriza grasas insaturadas (aceite de oliva, aguacate, frutos secos, pescado azul)." } },
+          { "@type": "Question", "name": "¿Debo contar macros o solo calorías?", "acceptedAnswer": { "@type": "Answer", "text": "Para perder o ganar peso, las calorías totales son lo más determinante. Pero la distribución de macros afecta a la composición corporal, la saciedad, la energía y el rendimiento. Controlar ambos es ideal: las calorías determinan si pierdes o ganas peso; los macros determinan qué tipo de tejido (grasa vs músculo) modificas." } }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://calculadora-imc.es/" },
+          { "@type": "ListItem", "position": 2, "name": "Calculadora de Macros", "item": "https://calculadora-imc.es/macros/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="antialiased">
+
+<!-- ======= NAVBAR ======= -->
+<header class="navbar">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center gap-3 h-full">
+    <a href="/" class="flex items-center gap-2 shrink-0" aria-label="Inicio">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect width="28" height="28" rx="7" fill="#2563EB"/>
+        <circle cx="14" cy="10" r="3.5" stroke="white" stroke-width="1.8" fill="none"/>
+        <path d="M7 21.5c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+        <path d="M14 17v4M12 21h4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span class="font-semibold text-sm tracking-tight hidden sm:inline" style="color:var(--text-primary)">IMC <span style="color:var(--accent)">Calculadora</span></span>
+    </a>
+    <nav class="calc-nav" aria-label="Calculadoras">
+      <a href="/"                   class="calc-nav-link">IMC</a>
+      <a href="/peso-ideal/"        class="calc-nav-link">Peso ideal</a>
+      <a href="/calorias-diarias/"  class="calc-nav-link">Calorías</a>
+      <a href="/calorias-quemadas/" class="calc-nav-link">Quemadas</a>
+      <a href="/tmb/"               class="calc-nav-link">TMB</a>
+      <a href="/macros/"            class="calc-nav-link active">Macros</a>
+      <a href="/ffmi/"              class="calc-nav-link">FFMI</a>
+      <a href="/grasa-corporal/"    class="calc-nav-link">% Grasa</a>
+      <a href="/agua-diaria/"       class="calc-nav-link">Agua</a>
+    </nav>
+    <button id="darkToggle" class="theme-toggle shrink-0" aria-label="Cambiar modo oscuro">
+      <svg id="iconLight" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      <svg id="iconDark"  class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ======= HERO + PANEL ======= -->
+<section id="hero" class="hero-section">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full py-10 lg:py-14">
+
+    <div class="text-center mb-8 lg:mb-10">
+      <div class="trust-badge inline-flex mb-5">
+        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        Distribución de macronutrientes · Actualizado 2025
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.03em">
+        Calcula tus <span style="color:var(--accent)">Macronutrientes</span>
+      </h1>
+      <p class="text-base max-w-xl mx-auto leading-relaxed mb-6" style="color:var(--text-secondary)">
+        Obtén tu distribución diaria de <strong style="color:var(--text-primary)">proteínas, carbohidratos y grasas</strong> en gramos y kcal según tus calorías totales y tu objetivo: déficit, mantenimiento o volumen.
+      </p>
+      <div class="flex items-center justify-center flex-wrap gap-2" style="color:var(--text-muted)">
+        <span class="feature-pill">Proteínas · Carbohidratos · Grasas</span>
+        <span class="feature-pill">3 objetivos</span>
+        <span class="feature-pill">Resultado inmediato</span>
+        <span class="feature-pill">100% privado</span>
+      </div>
+    </div>
+
+    <!-- Panel -->
+    <div class="calc-panel" id="calculadora">
+
+      <!-- TOP: inputs -->
+      <div class="calc-panel__top">
+
+        <!-- Calorías y Peso en barra horizontal -->
+        <div class="calc-inputs-bar" style="margin-bottom:1.25rem">
+          <!-- Calorías -->
+          <div class="cib-field" style="max-width:240px">
+            <label class="cib-label" for="kcal">Calorías diarias <span class="cib-unit">(kcal/día)</span></label>
+            <input id="kcal" class="cib-input" type="number" min="800" max="10000" step="1" placeholder="2000"
+              autocomplete="off" inputmode="decimal" aria-label="Calorías diarias" style="font-size:1.5rem;font-weight:800" />
+            <p id="kcalError" class="cib-error hidden">Introduce un valor entre 800 y 10.000 kcal</p>
+          </div>
+          <div class="cib-divider" aria-hidden="true"></div>
+          <!-- Peso opcional -->
+          <div class="cib-field cib-field--sm" style="flex:0 1 120px">
+            <label class="cib-label" for="weight">Peso <span class="cib-unit">(kg, opt.)</span></label>
+            <input id="weight" class="cib-input" type="number" min="30" max="300" step="0.1" placeholder="70"
+              autocomplete="off" inputmode="decimal" aria-label="Peso en kg (opcional)" />
+          </div>
+          <!-- Botón -->
+          <button id="calcBtn" class="cib-btn" onclick="calculate()">
+            Calcular
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+          </button>
+        </div>
+
+        <!-- Objetivo selector -->
+        <div>
+          <p class="cib-label mb-3">Objetivo</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button class="goal-btn" data-goal="deficit" onclick="setGoal('deficit')">
+              <span class="goal-btn-title">Déficit</span>
+              <span class="goal-btn-sub">Perder peso</span>
+            </button>
+            <button class="goal-btn selected" data-goal="maintenance" onclick="setGoal('maintenance')">
+              <span class="goal-btn-title">Mantenimiento</span>
+              <span class="goal-btn-sub">Mantener peso</span>
+            </button>
+            <button class="goal-btn" data-goal="volume" onclick="setGoal('volume')">
+              <span class="goal-btn-title">Volumen</span>
+              <span class="goal-btn-sub">Ganar músculo</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Subrow trust -->
+        <div class="calc-subrow">
+          <div></div>
+          <div class="cp-trust">
+            <svg class="w-3 h-3" style="color:#4ade80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            <span>100% privado</span>
+            <span class="cp-trust-dot">·</span>
+            <span>Sin registro</span>
+            <span class="cp-trust-dot">·</span>
+            <span>Cálculo instantáneo</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BOTTOM: resultados -->
+      <div class="calc-panel__bottom">
+
+        <!-- Placeholder -->
+        <div id="resultPlaceholder" class="result-placeholder">
+          <div style="display:flex;gap:10px;margin-bottom:1rem;opacity:0.4">
+            <div style="width:44px;height:44px;border-radius:10px;background:#bfdbfe"></div>
+            <div style="width:44px;height:44px;border-radius:10px;background:#bbf7d0"></div>
+            <div style="width:44px;height:44px;border-radius:10px;background:#fde68a"></div>
+          </div>
+          <div class="rp-score">—</div>
+          <p class="rp-label">Introduce tus calorías y pulsa <strong>Calcular</strong></p>
+          <p class="rp-desc">Obtendrás la distribución de proteínas, carbohidratos y grasas en gramos y calorías, con la barra de macros visual.</p>
+        </div>
+
+        <!-- Resultados -->
+        <div id="results" class="hidden">
+          <div style="padding:1.75rem 1.5rem;display:flex;flex-direction:column;gap:1.5rem">
+
+            <!-- 3 macro cards -->
+            <div style="display:flex;gap:12px;flex-wrap:wrap">
+              <!-- Proteínas -->
+              <div class="macro-card macro-card--protein">
+                <p class="macro-label macro-label--protein">Proteínas</p>
+                <div style="display:flex;align-items:baseline;gap:4px">
+                  <span class="macro-grams" id="protG">—</span>
+                  <span class="macro-unit">g</span>
+                </div>
+                <p class="macro-sub" id="protKcal">— kcal · —%</p>
+                <p id="protPerKg" class="hidden" style="font-size:0.75rem;color:var(--text-muted);margin-top:4px"></p>
+              </div>
+              <!-- Carbohidratos -->
+              <div class="macro-card macro-card--carbs">
+                <p class="macro-label macro-label--carbs">Carbohidratos</p>
+                <div style="display:flex;align-items:baseline;gap:4px">
+                  <span class="macro-grams" id="carbG">—</span>
+                  <span class="macro-unit">g</span>
+                </div>
+                <p class="macro-sub" id="carbKcal">— kcal · —%</p>
+              </div>
+              <!-- Grasas -->
+              <div class="macro-card macro-card--fat">
+                <p class="macro-label macro-label--fat">Grasas</p>
+                <div style="display:flex;align-items:baseline;gap:4px">
+                  <span class="macro-grams" id="fatG">—</span>
+                  <span class="macro-unit">g</span>
+                </div>
+                <p class="macro-sub" id="fatKcal">— kcal · —%</p>
+              </div>
+            </div>
+
+            <!-- Barra de distribución visual -->
+            <div>
+              <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+                <p class="res-mini-label">Distribución de macros</p>
+                <p class="res-mini-label" id="ratioLabel">—/—/—</p>
+              </div>
+              <div class="macro-bar">
+                <div class="macro-bar-seg" id="barProt" style="background:#3b82f6;width:0%"></div>
+                <div class="macro-bar-seg" id="barCarb" style="background:#22c55e;width:0%"></div>
+                <div class="macro-bar-seg" id="barFat"  style="background:#f59e0b;width:0%"></div>
+              </div>
+              <div style="display:flex;gap:16px;margin-top:8px">
+                <span style="display:flex;align-items:center;gap:5px;font-size:0.75rem;color:var(--text-muted)">
+                  <span style="width:10px;height:10px;border-radius:3px;background:#3b82f6;display:inline-block"></span>Proteínas
+                </span>
+                <span style="display:flex;align-items:center;gap:5px;font-size:0.75rem;color:var(--text-muted)">
+                  <span style="width:10px;height:10px;border-radius:3px;background:#22c55e;display:inline-block"></span>Carbohidratos
+                </span>
+                <span style="display:flex;align-items:center;gap:5px;font-size:0.75rem;color:var(--text-muted)">
+                  <span style="width:10px;height:10px;border-radius:3px;background:#f59e0b;display:inline-block"></span>Grasas
+                </span>
+              </div>
+            </div>
+
+            <!-- Mini-cards: Total + Ratio + Objetivo -->
+            <div class="res-cards-grid">
+              <div class="res-mini-card">
+                <p class="res-mini-label">Total calorías</p>
+                <p class="res-mini-value" id="totalKcal">—</p>
+                <p class="res-mini-sub">kcal/día</p>
+              </div>
+              <div class="res-mini-card">
+                <p class="res-mini-label">Distribución</p>
+                <p class="res-mini-value" id="ratioMini" style="font-size:0.9375rem">—</p>
+                <p class="res-mini-sub">prot / carbs / grasa</p>
+              </div>
+              <div class="res-mini-card">
+                <p class="res-mini-label">Objetivo</p>
+                <p class="res-mini-value" id="goalMini" style="font-size:0.9375rem">—</p>
+                <p class="res-mini-sub" id="goalMiniSub">estrategia actual</p>
+              </div>
+            </div>
+
+            <!-- Nota médica -->
+            <div style="border-radius:10px;padding:0.875rem 1rem;display:flex;gap:0.75rem;background:var(--accent-light);border:1px solid var(--accent-muted)">
+              <svg class="w-4 h-4 shrink-0 mt-0.5" style="color:var(--accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <p class="text-xs leading-relaxed" style="color:var(--text-secondary)">Estos valores son orientativos. Cada persona responde de forma diferente según su composición corporal, metabolismo y tolerancia. Para un plan individualizado, consulta con un dietista-nutricionista colegiado.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /calc-panel -->
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======= SECCIÓN EDUCATIVA ======= -->
+<section class="py-16 md:py-24" style="background:var(--surface)">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="max-w-xl mb-12 reveal">
+      <p class="section-label mb-3">Guía nutricional</p>
+      <h2 class="text-3xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.025em">Los macronutrientes explicados</h2>
+      <p class="text-base leading-relaxed" style="color:var(--text-secondary)">Entender qué función tiene cada macronutriente te ayudará a distribuirlos de forma inteligente según tu objetivo de composición corporal.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="card card-hover reveal">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:#eff6ff">
+          <svg class="w-5 h-5" style="color:#2563eb" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+        </div>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Qué son los macros</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">Los macronutrientes son los tres pilares energéticos de la dieta: proteínas (4 kcal/g), carbohidratos (4 kcal/g) y grasas (9 kcal/g). Su distribución afecta directamente a la composición corporal, la saciedad, la energía y el rendimiento físico y mental.</p>
+      </div>
+      <div class="card card-hover reveal" style="transition-delay:0.08s">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:#eff6ff">
+          <svg class="w-5 h-5" style="color:#2563eb" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Proteínas y masa muscular</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">Las proteínas son los bloques constructores del músculo. En entrenamiento de fuerza o en déficit calórico, aumentar la ingesta proteica (1,6–2,2 g/kg) preserva la masa muscular, aumenta la saciedad y eleva ligeramente el gasto metabólico por su efecto térmico (~25%).</p>
+      </div>
+      <div class="card card-hover reveal" style="transition-delay:0.16s">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:#eff6ff">
+          <svg class="w-5 h-5" style="color:#2563eb" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)">Carbohidratos e insulina</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">Los carbohidratos son el combustible preferido del cerebro y el músculo durante el ejercicio intenso. Estimulan la insulina, que facilita la captación de glucosa y aminoácidos. En fases de volumen, más carbohidratos mejoran el rendimiento y la recuperación. En déficit, reducirlos ayuda a controlar la glucemia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======= TABLA DE RATIOS ======= -->
+<section class="py-16 md:py-24" style="background:var(--surface-2)">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="max-w-xl mb-10 reveal">
+      <p class="section-label mb-3">Referencia rápida</p>
+      <h2 class="text-3xl font-bold tracking-tight mb-3" style="color:var(--text-primary);letter-spacing:-0.025em">Distribuciones de macros por objetivo</h2>
+      <p class="text-sm" style="color:var(--text-secondary)">Ratios utilizados en esta calculadora, basados en las recomendaciones más extendidas en nutrición deportiva y clínica.</p>
+    </div>
+    <div class="reveal rounded-xl overflow-hidden" style="border:1px solid var(--border);background:var(--surface)">
+      <div class="overflow-x-auto">
+        <table class="res-table w-full">
+          <thead>
+            <tr>
+              <th style="text-align:left">Objetivo</th>
+              <th>Proteínas</th>
+              <th>Carbohidratos</th>
+              <th>Grasas</th>
+              <th class="hidden sm:table-cell" style="text-align:left">Indicado para</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong style="color:var(--text-primary)">Déficit / Perder peso</strong></td>
+              <td class="td-val" style="text-align:center;color:#1d4ed8">40%</td>
+              <td class="td-val" style="text-align:center;color:#15803d">35%</td>
+              <td class="td-val" style="text-align:center;color:#b45309">25%</td>
+              <td class="hidden sm:table-cell" style="font-size:0.8125rem">Preservar músculo en déficit calórico</td>
+            </tr>
+            <tr class="highlighted">
+              <td><strong style="color:var(--text-primary)">Mantenimiento</strong></td>
+              <td class="td-val" style="text-align:center;color:#1d4ed8">30%</td>
+              <td class="td-val" style="text-align:center;color:#15803d">45%</td>
+              <td class="td-val" style="text-align:center;color:#b45309">25%</td>
+              <td class="hidden sm:table-cell" style="font-size:0.8125rem">Equilibrio energético y composición corporal</td>
+            </tr>
+            <tr>
+              <td><strong style="color:var(--text-primary)">Volumen / Ganar músculo</strong></td>
+              <td class="td-val" style="text-align:center;color:#1d4ed8">30%</td>
+              <td class="td-val" style="text-align:center;color:#15803d">50%</td>
+              <td class="td-val" style="text-align:center;color:#b45309">20%</td>
+              <td class="hidden sm:table-cell" style="font-size:0.8125rem">Maximizar energía y síntesis muscular</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="px-5 py-2.5 text-xs" style="background:var(--surface-2);border-top:1px solid var(--border);color:var(--text-muted)">
+        Estos ratios son orientativos. Pueden variar según el perfil individual, tipo de ejercicio y tolerancia a carbohidratos. Consulta con un profesional para personalización avanzada.
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======= FAQ ======= -->
+<section id="faq" class="py-16 md:py-24" style="background:var(--surface)">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <div class="mb-12 reveal">
+      <p class="section-label mb-3">Preguntas frecuentes</p>
+      <h2 class="text-3xl font-bold tracking-tight mb-4" style="color:var(--text-primary);letter-spacing:-0.025em">Todo sobre los macronutrientes</h2>
+      <p class="text-sm" style="color:var(--text-secondary)">Respuestas basadas en evidencia científica sobre proteínas, carbohidratos, grasas y cómo distribuirlos.</p>
+    </div>
+    <div class="rounded-xl overflow-hidden reveal" style="border:1px solid var(--border);background:var(--surface)">
+
+      <div class="faq-item">
+        <button class="faq-btn w-full text-left flex items-center justify-between px-5 py-4 gap-4" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="font-semibold text-sm" style="color:var(--text-primary)">¿Qué son los macronutrientes?</span>
+          <svg class="faq-icon w-4 h-4 shrink-0 transition-transform" style="color:var(--text-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content px-5 pb-4">
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">Los macronutrientes son los tres grupos de nutrientes que aportan energía al organismo: proteínas (4 kcal/g), carbohidratos (4 kcal/g) y grasas (9 kcal/g). A diferencia de los micronutrientes (vitaminas y minerales), los macros se consumen en grandes cantidades y son el sustrato energético principal. Su distribución adecuada impacta en la composición corporal, el rendimiento, la saciedad y la salud metabólica.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn w-full text-left flex items-center justify-between px-5 py-4 gap-4" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="font-semibold text-sm" style="color:var(--text-primary)">¿Cuánta proteína necesito al día?</span>
+          <svg class="faq-icon w-4 h-4 shrink-0 transition-transform" style="color:var(--text-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content px-5 pb-4">
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">Para personas sedentarias, la RDA mínima es de 0,8 g/kg de peso corporal. Para quienes practican ejercicio regularmente, la evidencia actual recomienda entre 1,6 y 2,2 g/kg para optimizar la síntesis proteica muscular. En déficit calórico, aumentar la proteína a 2,0–2,4 g/kg ayuda a preservar la masa muscular mientras se pierde grasa.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn w-full text-left flex items-center justify-between px-5 py-4 gap-4" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="font-semibold text-sm" style="color:var(--text-primary)">¿Los carbohidratos engordan?</span>
+          <svg class="faq-icon w-4 h-4 shrink-0 transition-transform" style="color:var(--text-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content px-5 pb-4">
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">No inherentemente. El aumento de grasa corporal se produce por un exceso calórico total, independientemente del macronutriente que lo cause. Los carbohidratos son la principal fuente de energía para el cerebro y el músculo durante el ejercicio. La calidad importa: prioriza fuentes integrales, legumbres, frutas y verduras frente a azúcares refinados y harinas blancas.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn w-full text-left flex items-center justify-between px-5 py-4 gap-4" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="font-semibold text-sm" style="color:var(--text-primary)">¿Cuánta grasa es saludable consumir?</span>
+          <svg class="faq-icon w-4 h-4 shrink-0 transition-transform" style="color:var(--text-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content px-5 pb-4">
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">Las guías dietéticas recomiendan que las grasas representen entre el 20% y el 35% del total calórico. No bajar del 20% es importante para mantener la producción hormonal (testosterona, estrógenos) y la absorción de vitaminas liposolubles (A, D, E, K). Prioriza grasas insaturadas: aceite de oliva virgen extra, aguacate, frutos secos y pescado azul.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn w-full text-left flex items-center justify-between px-5 py-4 gap-4" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="font-semibold text-sm" style="color:var(--text-primary)">¿Debo contar macros o solo calorías?</span>
+          <svg class="faq-icon w-4 h-4 shrink-0 transition-transform" style="color:var(--text-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content px-5 pb-4">
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">Para perder o ganar peso, las calorías totales son lo más determinante. Pero la distribución de macros afecta a la composición corporal, la saciedad, la energía y el rendimiento. Lo ideal es controlar ambos: las calorías determinan si pierdes o ganas peso; los macros determinan qué tipo de tejido (grasa o músculo) modificas. Para empezar, asegura primero tu ingesta proteica mínima y ajusta carbs y grasas según preferencias.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======= OTRAS HERRAMIENTAS ======= -->
+<section class="py-16 md:py-20" style="background:var(--surface-2)">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="mb-10 reveal">
+      <p class="section-label mb-3">Herramientas relacionadas</p>
+      <h2 class="text-2xl font-bold tracking-tight" style="color:var(--text-primary);letter-spacing:-0.025em">Otras calculadoras de salud</h2>
+    </div>
+    <div class="tools-grid reveal">
+      <a href="/calorias-diarias/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <p class="tool-card-name">Calorías Diarias</p>
+        <p class="tool-card-desc">Calcula tu TDEE y TMB con la fórmula Mifflin-St Jeor</p>
+      </a>
+      <a href="/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <p class="tool-card-name">Calculadora IMC</p>
+        <p class="tool-card-desc">Índice de Masa Corporal según criterios OMS</p>
+      </a>
+      <a href="/peso-ideal/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+        </div>
+        <p class="tool-card-name">Peso Ideal</p>
+        <p class="tool-card-desc">Calcula tu peso ideal según altura y complexión</p>
+      </a>
+      <a href="/tmb/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
+        </div>
+        <p class="tool-card-name">Calculadora TMB</p>
+        <p class="tool-card-desc">Tasa Metabólica Basal con múltiples fórmulas</p>
+      </a>
+      <a href="/ffmi/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <p class="tool-card-name">FFMI</p>
+        <p class="tool-card-desc">Índice de masa libre de grasa para deportistas</p>
+      </a>
+      <a href="/grasa-corporal/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        </div>
+        <p class="tool-card-name">% Grasa Corporal</p>
+        <p class="tool-card-desc">Porcentaje de grasa por método Navy</p>
+      </a>
+      <a href="/agua-diaria/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2C8.13 2 5 8 5 12a7 7 0 0014 0c0-4-3.13-10-7-10z"/></svg>
+        </div>
+        <p class="tool-card-name">Agua Diaria</p>
+        <p class="tool-card-desc">Ingesta de agua diaria recomendada</p>
+      </a>
+      <a href="/calorias-quemadas/" class="tool-card">
+        <div class="tool-card-icon">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>
+        </div>
+        <p class="tool-card-name">Calorías Quemadas</p>
+        <p class="tool-card-desc">Gasto calórico por ejercicio y duración</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======= FOOTER ======= -->
+<footer style="background:var(--surface-2);border-top:1px solid var(--border);padding:2rem 0;margin-top:0">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <svg width="20" height="20" viewBox="0 0 28 28" fill="none" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#2563EB"/><circle cx="14" cy="10" r="3.5" stroke="white" stroke-width="1.8" fill="none"/><path d="M7 21.5c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+        <span class="text-sm font-semibold" style="color:var(--text-primary)">IMC Calculadora</span>
+      </div>
+      <p class="text-xs text-center" style="color:var(--text-muted)">Herramienta orientativa. No sustituye el consejo médico profesional.</p>
+      <div class="flex gap-4 text-xs flex-wrap justify-center" style="color:var(--text-muted)">
+        <a href="/" style="color:inherit">IMC</a>
+        <a href="/peso-ideal/" style="color:inherit">Peso ideal</a>
+        <a href="/calorias-diarias/" style="color:inherit">Calorías</a>
+        <a href="/macros/" style="color:inherit">Macros</a>
+        <a href="/ffmi/" style="color:inherit">FFMI</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile CTA -->
+<div id="mobileCTA" class="hidden no-print">
+  <a href="#calculadora" class="btn-primary">
+    Calcular mis macros
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+  </a>
+</div>
+
+<!-- Toast -->
+<div id="toast"></div>
+
+<script src="../js/theme.js"></script>
+<script>
+  /* ===== STATE ===== */
+  let _goal = 'maintenance';
+
+  const ratios = {
+    deficit:     { protein: 0.40, carbs: 0.35, fat: 0.25 },
+    maintenance: { protein: 0.30, carbs: 0.45, fat: 0.25 },
+    volume:      { protein: 0.30, carbs: 0.50, fat: 0.20 }
+  };
+
+  const goalNames = {
+    deficit:     'Déficit',
+    maintenance: 'Mantenimiento',
+    volume:      'Volumen'
+  };
+
+  const goalSubs = {
+    deficit:     'Perder grasa preservando músculo',
+    maintenance: 'Mantener peso y composición',
+    volume:      'Ganar músculo con superávit calórico'
+  };
+
+  /* ===== GOAL SELECTOR ===== */
+  function setGoal(g) {
+    _goal = g;
+    document.querySelectorAll('.goal-btn').forEach(btn => {
+      btn.classList.toggle('selected', btn.dataset.goal === g);
+    });
+    recalcIfVisible();
+  }
+
+  /* ===== NUMBER ANIMATION ===== */
+  function animateNumber(el, target, suffix) {
+    const duration = 600;
+    const startTime = performance.now();
+    function step(now) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const value = Math.round(target * ease);
+      el.textContent = value + (suffix || '');
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* ===== MAIN CALCULATE ===== */
+  function calculate() {
+    const kcal   = parseFloat(document.getElementById('kcal').value);
+    const weight = parseFloat(document.getElementById('weight').value);
+
+    document.getElementById('kcalError').classList.add('hidden');
+
+    if (!kcal || kcal < 800 || kcal > 10000) {
+      document.getElementById('kcalError').classList.remove('hidden');
+      hideResults();
+      return;
+    }
+
+    const r = ratios[_goal];
+
+    const protKcal = kcal * r.protein;
+    const carbKcal = kcal * r.carbs;
+    const fatKcal  = kcal * r.fat;
+
+    const protG = Math.round(protKcal / 4);
+    const carbG = Math.round(carbKcal / 4);
+    const fatG  = Math.round(fatKcal  / 9);
+
+    const pPct = Math.round(r.protein * 100);
+    const cPct = Math.round(r.carbs   * 100);
+    const fPct = Math.round(r.fat     * 100);
+
+    showResults(kcal, protG, carbG, fatG, Math.round(protKcal), Math.round(carbKcal), Math.round(fatKcal), pPct, cPct, fPct, weight);
+  }
+
+  function showResults(kcal, protG, carbG, fatG, protKcal, carbKcal, fatKcal, pPct, cPct, fPct, weight) {
+    document.getElementById('resultPlaceholder').classList.add('hidden');
+    const resEl = document.getElementById('results');
+    resEl.classList.remove('hidden');
+
+    // Animate macro grams
+    animateNumber(document.getElementById('protG'), protG, '');
+    animateNumber(document.getElementById('carbG'), carbG, '');
+    animateNumber(document.getElementById('fatG'),  fatG,  '');
+
+    // Sub lines
+    document.getElementById('protKcal').textContent = protKcal + ' kcal · ' + pPct + '%';
+    document.getElementById('carbKcal').textContent = carbKcal + ' kcal · ' + cPct + '%';
+    document.getElementById('fatKcal').textContent  = fatKcal  + ' kcal · ' + fPct + '%';
+
+    // Per kg note
+    const perKgEl = document.getElementById('protPerKg');
+    if (weight && weight >= 30 && weight <= 300) {
+      const perKg = (protG / weight).toFixed(1);
+      perKgEl.textContent = perKg.replace('.', ',') + ' g/kg de peso corporal';
+      perKgEl.classList.remove('hidden');
+    } else {
+      perKgEl.classList.add('hidden');
+    }
+
+    // Bar segments
+    setTimeout(() => {
+      document.getElementById('barProt').style.width = pPct + '%';
+      document.getElementById('barCarb').style.width = cPct + '%';
+      document.getElementById('barFat').style.width  = fPct + '%';
+    }, 50);
+
+    // Ratio label
+    const ratioStr = pPct + '/' + cPct + '/' + fPct;
+    document.getElementById('ratioLabel').textContent = ratioStr;
+
+    // Mini-cards
+    document.getElementById('totalKcal').textContent = Math.round(kcal).toLocaleString('es-ES');
+    document.getElementById('ratioMini').textContent = ratioStr;
+    document.getElementById('goalMini').textContent = goalNames[_goal];
+    document.getElementById('goalMiniSub').textContent = goalSubs[_goal];
+
+    // Mobile CTA hide
+    document.getElementById('mobileCTA').classList.add('hidden');
+  }
+
+  function hideResults() {
+    document.getElementById('resultPlaceholder').classList.remove('hidden');
+    document.getElementById('results').classList.add('hidden');
+  }
+
+  function recalcIfVisible() {
+    if (!document.getElementById('results').classList.contains('hidden')) {
+      calculate();
+    }
+  }
+
+  /* ===== FAQ ===== */
+  function toggleFaq(btn) {
+    const content = btn.nextElementSibling;
+    const icon = btn.querySelector('.faq-icon');
+    const isOpen = content.classList.contains('open');
+    document.querySelectorAll('.faq-content.open').forEach(c => {
+      c.classList.remove('open');
+      c.previousElementSibling.querySelector('.faq-icon').style.transform = '';
+      c.previousElementSibling.setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      content.classList.add('open');
+      icon.style.transform = 'rotate(180deg)';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  /* ===== ENTER TO CALCULATE ===== */
+  ['kcal', 'weight'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('keydown', e => { if (e.key === 'Enter') calculate(); });
+  });
+
+  /* ===== SCROLL REVEAL ===== */
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  /* ===== MOBILE CTA ===== */
+  const mobileCTA = document.getElementById('mobileCTA');
+  window.addEventListener('scroll', () => {
+    const hero = document.getElementById('hero');
+    const heroBottom = hero.getBoundingClientRect().bottom;
+    if (heroBottom < 0 && window.innerWidth < 768) {
+      mobileCTA.classList.remove('hidden');
+    } else {
+      mobileCTA.classList.add('hidden');
+    }
+  }, { passive: true });
+</script>
+</body>
+</html>
