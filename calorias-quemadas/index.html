@@ -158,7 +158,7 @@
           <!-- Peso -->
           <div class="cib-field">
             <label class="cib-label" for="weight">Peso <span id="weightUnitLabel" class="cib-unit">(kg)</span></label>
-            <input id="weight" class="cib-input" type="number" min="1" max="500" step="0.1" placeholder="70"
+            <input id="weight" class="cib-input" type="number" min="1" max="500" step="0.1" placeholder="70" value="78"
               autocomplete="off" inputmode="decimal" aria-label="Peso" />
           </div>
 
@@ -198,7 +198,7 @@
           <!-- Duración -->
           <div class="cib-field cib-field--sm">
             <label class="cib-label" for="duration">Duración <span class="cib-unit">(min)</span></label>
-            <input id="duration" class="cib-input" type="number" min="1" max="600" step="1" placeholder="30"
+            <input id="duration" class="cib-input" type="number" min="1" max="600" step="1" placeholder="30" value="30"
               autocomplete="off" inputmode="numeric" aria-label="Duración en minutos" />
           </div>
 
@@ -675,6 +675,12 @@ document.addEventListener('keydown', function(e) {
       cta.classList.add('hidden');
     });
   }
+
+  // Preset values
+  document.getElementById('weight').value = '78';
+  document.getElementById('activity').value = '2';
+  document.getElementById('duration').value = '30';
+  calculate();
 })();
 </script>
 </body>

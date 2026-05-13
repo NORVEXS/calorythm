@@ -136,7 +136,7 @@
           <!-- Peso -->
           <div class="cib-field">
             <label class="cib-label" for="weight">Peso <span id="weightUnit" class="cib-unit">(kg)</span></label>
-            <input id="weight" class="cib-input" type="number" min="1" max="500" step="0.1" placeholder="70"
+            <input id="weight" class="cib-input" type="number" min="1" max="500" step="0.1" placeholder="70" value="78"
               autocomplete="off" inputmode="decimal" aria-label="Peso" />
             <p id="weightError" class="cib-error hidden">Valor no válido</p>
           </div>
@@ -144,7 +144,7 @@
           <!-- Altura -->
           <div class="cib-field">
             <label class="cib-label" for="height">Altura <span id="heightUnit" class="cib-unit">(cm)</span></label>
-            <input id="height" class="cib-input" type="number" min="50" max="300" step="0.1" placeholder="175"
+            <input id="height" class="cib-input" type="number" min="50" max="300" step="0.1" placeholder="175" value="175"
               autocomplete="off" inputmode="decimal" aria-label="Altura" />
             <p id="heightError" class="cib-error hidden">Valor no válido</p>
           </div>
@@ -152,7 +152,7 @@
           <!-- Edad -->
           <div class="cib-field cib-field--sm">
             <label class="cib-label" for="age">Edad</label>
-            <input id="age" class="cib-input" type="number" min="10" max="120" step="1" placeholder="30"
+            <input id="age" class="cib-input" type="number" min="10" max="120" step="1" placeholder="30" value="30"
               autocomplete="off" inputmode="numeric" aria-label="Edad" />
           </div>
           <div class="cib-divider" aria-hidden="true"></div>
@@ -740,6 +740,9 @@
       mobileCTA.classList.add('hidden');
     }
   }, { passive: true });
+
+  // Preset values
+  calculate();
 </script>
 </body>
 </html>

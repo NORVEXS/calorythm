@@ -173,21 +173,21 @@
           <!-- Altura -->
           <div class="cib-field cib-field--sm">
             <label class="cib-label" for="height">Altura <span id="heightUnit" class="cib-unit">(cm)</span></label>
-            <input id="height" class="cib-input" type="number" min="100" max="250" step="0.5" placeholder="175"
+            <input id="height" class="cib-input" type="number" min="100" max="250" step="0.5" placeholder="175" value="175"
               autocomplete="off" inputmode="decimal" aria-label="Altura" oninput="onInputChange()" />
           </div>
           <div class="cib-divider" aria-hidden="true"></div>
           <!-- Cuello -->
           <div class="cib-field cib-field--sm">
             <label class="cib-label" for="neck">Cuello <span id="neckUnit" class="cib-unit">(cm)</span></label>
-            <input id="neck" class="cib-input" type="number" min="20" max="80" step="0.5" placeholder="37"
+            <input id="neck" class="cib-input" type="number" min="20" max="80" step="0.5" placeholder="37" value="37"
               autocomplete="off" inputmode="decimal" aria-label="Perímetro de cuello" oninput="onInputChange()" />
           </div>
           <div class="cib-divider" aria-hidden="true"></div>
           <!-- Cintura -->
           <div class="cib-field cib-field--sm">
             <label class="cib-label" for="waist">Cintura <span id="waistUnit" class="cib-unit">(cm)</span></label>
-            <input id="waist" class="cib-input" type="number" min="40" max="200" step="0.5" placeholder="80"
+            <input id="waist" class="cib-input" type="number" min="40" max="200" step="0.5" placeholder="80" value="84"
               autocomplete="off" inputmode="decimal" aria-label="Perímetro de cintura" oninput="onInputChange()" />
           </div>
           <!-- Cadera (solo mujeres) -->
@@ -201,7 +201,7 @@
           <!-- Peso (opcional) -->
           <div class="cib-field cib-field--sm">
             <label class="cib-label" for="weight">Peso <span id="weightUnit" class="cib-unit">(kg, opt.)</span></label>
-            <input id="weight" class="cib-input" type="number" min="30" max="300" step="0.5" placeholder="75"
+            <input id="weight" class="cib-input" type="number" min="30" max="300" step="0.5" placeholder="75" value="78"
               autocomplete="off" inputmode="decimal" aria-label="Peso corporal (opcional)" oninput="onInputChange()" />
           </div>
           <div class="cib-divider" aria-hidden="true"></div>
@@ -884,6 +884,9 @@ if (mobileCTA && hero) {
   }, { threshold: 0.1 });
   io.observe(hero);
 }
+
+// Preset values
+calculate();
 </script>
 </body>
 </html>

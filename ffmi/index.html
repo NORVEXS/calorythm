@@ -158,21 +158,21 @@
           <!-- Peso -->
           <div class="cib-field">
             <label class="cib-label" for="weight">Peso <span id="weightUnit" class="cib-unit">(kg)</span></label>
-            <input id="weight" class="cib-input" type="number" min="30" max="300" step="0.5" placeholder="80"
+            <input id="weight" class="cib-input" type="number" min="30" max="300" step="0.5" placeholder="80" value="78"
               autocomplete="off" inputmode="decimal" aria-label="Peso" oninput="onInputChange()" />
           </div>
           <div class="cib-divider" aria-hidden="true"></div>
           <!-- Altura -->
           <div class="cib-field cib-field--sm">
             <label class="cib-label" for="height">Altura <span id="heightUnit" class="cib-unit">(cm)</span></label>
-            <input id="height" class="cib-input" type="number" min="130" max="250" step="0.5" placeholder="175"
+            <input id="height" class="cib-input" type="number" min="130" max="250" step="0.5" placeholder="175" value="175"
               autocomplete="off" inputmode="decimal" aria-label="Altura" oninput="onInputChange()" />
           </div>
           <div class="cib-divider" aria-hidden="true"></div>
           <!-- % Grasa -->
           <div class="cib-field cib-field--sm">
             <label class="cib-label" for="bodyfat">% Grasa <span class="cib-unit">(corporal)</span></label>
-            <input id="bodyfat" class="cib-input" type="number" min="2" max="60" step="0.5" placeholder="15"
+            <input id="bodyfat" class="cib-input" type="number" min="2" max="60" step="0.5" placeholder="15" value="15"
               autocomplete="off" inputmode="decimal" aria-label="Porcentaje de grasa corporal" oninput="onInputChange()" />
           </div>
           <div class="cib-divider" aria-hidden="true"></div>
@@ -743,6 +743,10 @@ if (mobileCTA && hero) {
   }, { threshold: 0.1 });
   io.observe(hero);
 }
+
+// Preset values
+// Preset values
+calculate();
 </script>
 </body>
 </html>

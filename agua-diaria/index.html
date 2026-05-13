@@ -177,7 +177,7 @@
           <!-- Peso -->
           <div class="cib-field">
             <label class="cib-label" for="weight">Peso <span class="cib-unit">(kg)</span></label>
-            <input id="weight" class="cib-input" type="number" min="10" max="300" step="0.1" placeholder="70"
+            <input id="weight" class="cib-input" type="number" min="10" max="300" step="0.1" placeholder="70" value="78"
               autocomplete="off" inputmode="decimal" aria-label="Peso en kilogramos" />
             <p id="weightError" class="cib-error hidden">Valor entre 10 y 300 kg</p>
           </div>
@@ -722,6 +722,9 @@
       if (svg) svg.style.transform = det.open ? 'rotate(180deg)' : '';
     });
   });
+
+  // Preset values
+  calculate();
 </script>
 </body>
 </html>

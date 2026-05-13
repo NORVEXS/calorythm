@@ -226,3 +226,6 @@ document.getElementById('gFemale').addEventListener('keydown', e => { if(e.key==
 document.getElementById('calcBtn').addEventListener('click', () => {
   calculateBMI();
 });
+
+// Calcular con los valores preset al cargar
+calculateBMI();

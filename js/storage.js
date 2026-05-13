@@ -22,11 +22,15 @@ function saveToStorage() {
  */
 function loadFromStorage() {
   const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
-  if (saved.height) document.getElementById('height').value = saved.height;
-  if (saved.weight) document.getElementById('weight').value = saved.weight;
-  if (saved.age)    document.getElementById('age').value    = saved.age;
-  if (saved.gender) setGender(saved.gender);
-  if (saved.height && saved.weight) calculateBMI();
+  const height = saved.height || '175';
+  const weight = saved.weight || '78';
+  const age    = saved.age    || '30';
+  const gender = saved.gender || 'male';
+  document.getElementById('height').value = height;
+  document.getElementById('weight').value = weight;
+  document.getElementById('age').value    = age;
+  setGender(gender);
+  calculateBMI();
 }
 
 // Cargar datos al iniciar la página

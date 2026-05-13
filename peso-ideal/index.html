@@ -177,7 +177,7 @@
           <!-- Altura -->
           <div class="cib-field">
             <label class="cib-label" for="height">Altura <span id="heightUnit" class="cib-unit">(cm)</span></label>
-            <input id="height" class="cib-input" type="number" min="100" max="250" step="0.1" placeholder="170"
+            <input id="height" class="cib-input" type="number" min="100" max="250" step="0.1" placeholder="170" value="175"
               autocomplete="off" inputmode="decimal" aria-label="Altura" />
             <p id="heightError" class="cib-error hidden">Valor fuera de rango (100–250)</p>
           </div>
@@ -662,6 +662,9 @@
       if (svg) svg.style.transform = det.open ? 'rotate(180deg)' : '';
     });
   });
+
+  // Preset values
+  calculate();
 </script>
 </body>
 </html>
