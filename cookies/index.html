@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Cookies | Calorythm</title>
+  <meta name="description" content="Política de cookies de Calorythm. Qué cookies usamos, para qué sirven y cómo puedes desactivarlas." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="author" content="Calorythm" />
+  <meta name="theme-color" content="#2563EB" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="canonical" href="https://calorythm.com/cookies/" />
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23eff6ff' stroke='%23bfdbfe' stroke-width='1'/><polyline points='3,16 7,16 10,7 12,25 15,16 18,11 20,16 29,16' fill='none' stroke='%232563EB' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: { extend: { fontFamily: { sans: ["Inter","system-ui","sans-serif"] } } }
+    }
+  </script>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9067348148288028" crossorigin="anonymous"></script>
+  <!-- Google Analytics 4 — reemplaza G-XXXXXXXXXX con tu Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+</head>
+<body class="antialiased">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:rounded-lg focus:text-sm focus:font-semibold" style="background:var(--accent);color:#fff">Saltar al contenido principal</a>
+
+<!-- ======= NAVBAR ======= -->
+<header class="navbar">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center gap-3 h-full">
+    <a href="../" class="flex items-center gap-2 shrink-0" aria-label="Inicio">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect width="28" height="28" rx="7" fill="var(--accent-light)" stroke="var(--accent-muted)" stroke-width="1"/>
+        <polyline points="3,14 7,14 9,7 11,21 13,14 16,10 18,14 25,14" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="font-semibold text-sm tracking-tight hidden sm:inline" style="color:var(--text-primary)">Calory<span style="color:var(--accent)">thm</span></span>
+    </a>
+    <nav class="calc-nav" aria-label="Calculadoras">
+      <a href="../imc/"               class="calc-nav-link">IMC</a>
+      <a href="../peso-ideal/"        class="calc-nav-link">Peso ideal</a>
+      <a href="../calorias-diarias/"  class="calc-nav-link">Calorías</a>
+      <a href="../calorias-quemadas/" class="calc-nav-link">Cal. Quemadas</a>
+      <a href="../macros/"            class="calc-nav-link">Macros</a>
+      <a href="../ffmi/"              class="calc-nav-link">FFMI</a>
+      <a href="../grasa-corporal/"    class="calc-nav-link">% Grasa</a>
+      <a href="../agua-diaria/"       class="calc-nav-link">Agua</a>
+    </nav>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menú de calculadoras" aria-expanded="false" onclick="toggleMobileNav()">
+      <svg class="icon-open" width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/></svg>
+      <svg class="icon-close" width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <button id="darkToggle" class="theme-toggle shrink-0" aria-label="Cambiar modo oscuro">
+      <svg id="iconLight" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      <svg id="iconDark"  class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main-content">
+<div style="max-width:52rem;margin:0 auto;padding:3rem 1.5rem 4rem">
+
+  <h1 style="font-size:1.875rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem">Política de Cookies</h1>
+  <p style="color:var(--text-secondary);font-size:0.875rem;margin-bottom:2.5rem">Última actualización: 17 de mayo de 2026</p>
+
+  <div style="display:flex;flex-direction:column;gap:2rem;color:var(--text-primary);line-height:1.8">
+
+    <section>
+      <h2 style="font-size:1.125rem;font-weight:700;margin-bottom:0.75rem;color:var(--text-primary)">1. ¿Qué son las cookies?</h2>
+      <p>Las cookies son pequeños archivos de texto que los sitios web depositan en el dispositivo del usuario (ordenador, tablet, smartphone) cuando este los visita. Permiten que el sitio recuerde información sobre su visita, como el idioma preferido u otras configuraciones, con el objetivo de hacer más fácil su próxima visita y que el servicio le resulte más útil.</p>
+    </section>
+
+    <section>
+      <h2 style="font-size:1.125rem;font-weight:700;margin-bottom:0.75rem;color:var(--text-primary)">2. Cookies propias y de terceros</h2>
+      <p><strong>Cookies propias:</strong> generadas por el propio sitio web Calorythm. En la actualidad, Calorythm no instala cookies propias de sesión ni persistentes para el funcionamiento de sus calculadoras.</p>
+      <p style="margin-top:0.5rem"><strong>Cookies de terceros:</strong> generadas por servicios externos integrados en este sitio (Google Analytics y Google AdSense), cuyos datos son tratados por Google LLC según sus propias políticas de privacidad.</p>
+    </section>
+
+    <section>
+      <h2 style="font-size:1.125rem;font-weight:700;margin-bottom:0.75rem;color:var(--text-primary)">3. Tabla de cookies utilizadas</h2>
+      <p style="margin-bottom:1rem">A continuación se detalla la información sobre las cookies que pueden instalarse al navegar por Calorythm:</p>
+
+      <!-- Tabla responsive -->
+      <div style="overflow-x:auto;border-radius:var(--radius);border:1px solid var(--border)">
+        <table style="width:100%;border-collapse:collapse;font-size:0.875rem">
+          <thead>
+            <tr style="background:var(--surface-2);border-bottom:1px solid var(--border)">
+              <th style="padding:0.75rem 1rem;text-align:left;font-weight:600;color:var(--text-primary);white-space:nowrap">Cookie</th>
+              <th style="padding:0.75rem 1rem;text-align:left;font-weight:600;color:var(--text-primary);white-space:nowrap">Proveedor</th>
+              <th style="padding:0.75rem 1rem;text-align:left;font-weight:600;color:var(--text-primary);white-space:nowrap">Tipo</th>
+              <th style="padding:0.75rem 1rem;text-align:left;font-weight:600;color:var(--text-primary)">Finalidad</th>
+              <th style="padding:0.75rem 1rem;text-align:left;font-weight:600;color:var(--text-primary);white-space:nowrap">Duración</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border)">
+              <td style="padding:0.75rem 1rem;font-family:monospace;font-size:0.8125rem;color:var(--accent)">_ga</td>
+              <td style="padding:0.75rem 1rem;color:var(--text-secondary)">Google Analytics</td>
+              <td style="padding:0.75rem 1rem;color:var(--text-secondary)">Analítica</td>
+              <td style="padding:0.75rem 1rem;color:var(--text-secondary)">Distingue usuarios únicos asignándoles un identificador anónimo. Permite medir el número de visitas y el comportamiento en el sitio.</td>
+              <td style="padding:0.75rem 1rem;color:var(--text-secondary);white-space:nowrap">2 años</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);background:var(--surface-2)">
+              <td style="padding:0.75rem 1rem;font-family:monospace;font-size:0.8125rem;color:var(--accent)">_gid</td>
+              <td style="padding:0.75rem 1rem;color:var(--text-secondary)">Google Analytics</td>
+              <td style="padding:0.75rem 1rem;color:var(--text-secondary)">Analítica</td>
+              <td style="padding:0.75rem 1rem;color:var(--text-secondary)">Distingue usuarios en sesiones distintas para el mismo día. Complementa a _ga.</td>
+              <td style="padding:0.75rem 1rem;color:var(--text-secondary);white-space:nowrap">24 horas</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border)">
+              <td style="padding:0.75rem 1rem;font-family:monospace;font-size:0.8125rem;color:var(--accent)">_gat</td>
+              <td style="padding:0.75rem 1rem;color:var(--text-secondary)">Google Analytics</td>
+              <td style="padding:0.75rem 1rem;color:var(--text-secondary)">Analítica</td>
+              <td style="padding:0.75rem 1rem;color:var(--text-secondary)">Limita la frecuencia de peticiones al servidor de Google Analytics (throttling). Mejora el rendimiento.</td>
+              <td style="padding:0.75rem 1rem;color:var(--text-secondary);white-space:nowrap">1 minuto</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);background:var(--surface-2)">
+              <td style="padding:0.75rem 1rem;font-family:monospace;font-size:0.8125rem;color:var(--accent)">IDE</td>
+              <td style="padding:0.75rem 1rem;color:var(--text-secondary)">Google AdSense (doubleclick.net)</td>
+              <td style="padding:0.75rem 1rem;color:var(--text-secondary)">Publicidad</td>
+              <td style="padding:0.75rem 1rem;color:var(--text-secondary)">Se utiliza para identificar al usuario y mostrar anuncios personalizados según sus intereses. También mide la efectividad de los anuncios.</td>
+              <td style="padding:0.75rem 1rem;color:var(--text-secondary);white-space:nowrap">1 año</td>
+            </tr>
+            <tr>
+              <td style="padding:0.75rem 1rem;font-family:monospace;font-size:0.8125rem;color:var(--accent)">DSID</td>
+              <td style="padding:0.75rem 1rem;color:var(--text-secondary)">Google AdSense (doubleclick.net)</td>
+              <td style="padding:0.75rem 1rem;color:var(--text-secondary)">Publicidad</td>
+              <td style="padding:0.75rem 1rem;color:var(--text-secondary)">Identifica al usuario que ha iniciado sesión en Google para mostrar anuncios personalizados en dispositivos.</td>
+              <td style="padding:0.75rem 1rem;color:var(--text-secondary);white-space:nowrap">2 semanas</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2 style="font-size:1.125rem;font-weight:700;margin-bottom:0.75rem;color:var(--text-primary)">4. Cómo desactivar o eliminar cookies</h2>
+      <p style="margin-bottom:1rem">Puede configurar su navegador para que rechace o elimine las cookies instaladas en su dispositivo. A continuación encontrará instrucciones para los principales navegadores:</p>
+      <ul style="margin:0 0 0 1.25rem;list-style:disc;color:var(--text-secondary)">
+        <li style="margin-bottom:0.5rem">
+          <strong style="color:var(--text-primary)">Google Chrome:</strong>
+          Menú → Configuración → Privacidad y seguridad → Cookies y otros datos de sitios.
+          <a href="https://support.google.com/chrome/answer/95647" style="color:var(--accent)" target="_blank" rel="noopener noreferrer">Más información</a>
+        </li>
+        <li style="margin-bottom:0.5rem">
+          <strong style="color:var(--text-primary)">Mozilla Firefox:</strong>
+          Menú → Opciones → Privacidad y seguridad → Cookies y datos del sitio.
+          <a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" style="color:var(--accent)" target="_blank" rel="noopener noreferrer">Más información</a>
+        </li>
+        <li style="margin-bottom:0.5rem">
+          <strong style="color:var(--text-primary)">Apple Safari:</strong>
+          Preferencias → Privacidad → Gestionar datos de sitios web.
+          <a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" style="color:var(--accent)" target="_blank" rel="noopener noreferrer">Más información</a>
+        </li>
+        <li style="margin-bottom:0.5rem">
+          <strong style="color:var(--text-primary)">Microsoft Edge:</strong>
+          Menú → Configuración → Privacidad, búsqueda y servicios → Cookies y permisos del sitio.
+          <a href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" style="color:var(--accent)" target="_blank" rel="noopener noreferrer">Más información</a>
+        </li>
+        <li>
+          <strong style="color:var(--text-primary)">Opera:</strong>
+          Menú → Configuración → Privacidad y seguridad → Cookies.
+        </li>
+      </ul>
+      <p style="margin-top:1rem">También puede optar por no ser rastreado por Google Analytics visitando: <a href="https://tools.google.com/dlpage/gaoptout" style="color:var(--accent)" target="_blank" rel="noopener noreferrer">https://tools.google.com/dlpage/gaoptout</a></p>
+      <p style="margin-top:0.5rem">Para gestionar las preferencias de anuncios personalizados de Google: <a href="https://www.google.com/settings/ads" style="color:var(--accent)" target="_blank" rel="noopener noreferrer">https://www.google.com/settings/ads</a></p>
+      <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.875rem">Tenga en cuenta que deshabilitar ciertas cookies puede afectar a la funcionalidad y experiencia de uso del sitio web.</p>
+    </section>
+
+    <section>
+      <h2 style="font-size:1.125rem;font-weight:700;margin-bottom:0.75rem;color:var(--text-primary)">5. Consentimiento y actualización</h2>
+      <p>Al continuar navegando por Calorythm sin modificar la configuración de cookies de su navegador, usted acepta el uso de cookies conforme a lo indicado en esta Política. Esta política puede actualizarse para reflejar cambios en los servicios utilizados o en la legislación aplicable. La fecha de la última actualización figura al comienzo de este documento.</p>
+      <p style="margin-top:0.75rem">Para cualquier consulta sobre cookies puede contactar en: <a href="mailto:privacidad@calorythm.com" style="color:var(--accent)">privacidad@calorythm.com</a></p>
+    </section>
+
+  </div>
+</div>
+</main>
+
+<!-- ======= FOOTER ======= -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <a href="../" class="footer-logo">
+          <span class="footer-logo-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 28 28" fill="none"><polyline points="3,14 7,14 9,7 11,21 13,14 16,10 18,14 25,14" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="footer-logo-name">Calorythm</span>
+        </a>
+        <p class="footer-desc">Herramientas gratuitas de salud y fitness: IMC, calorías diarias (TDEE), peso ideal, tasa metabólica basal, % grasa corporal, FFMI y más.</p>
+      </div>
+      <nav aria-label="Peso y calorías">
+        <p class="footer-nav-title">Peso y calorías</p>
+        <ul class="footer-nav-list">
+          <li><a href="../imc/">Calculadora IMC</a></li>
+          <li><a href="../peso-ideal/">Calculadora Peso Ideal</a></li>
+          <li><a href="../calorias-diarias/">Calorías Diarias (TDEE)</a></li>
+          <li><a href="../calorias-quemadas/">Calorías Quemadas</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Composición corporal">
+        <p class="footer-nav-title">Composición corporal</p>
+        <ul class="footer-nav-list">
+          <li><a href="../macros/">Calculadora de Macros</a></li>
+          <li><a href="../grasa-corporal/">% Grasa Corporal (US Navy)</a></li>
+          <li><a href="../ffmi/">Índice FFMI</a></li>
+          <li><a href="../agua-diaria/">Agua Diaria Recomendada</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p data-en="© 2026 Calorythm · All rights reserved.">© 2026 Calorythm · Todos los derechos reservados.</p>
+      <p data-en="For guidance only · Not a substitute for medical advice · WHO criteria">Solo orientativo · No sustituye el consejo médico · Criterios OMS</p>
+      <nav aria-label="Aviso legal" style="margin-top:0.5rem;display:flex;gap:1.25rem;flex-wrap:wrap;justify-content:center">
+        <a href="../privacidad/" style="color:var(--text-muted);font-size:0.8rem;text-decoration:none" data-en="Privacy">Privacidad</a>
+        <a href="../aviso-legal/" style="color:var(--text-muted);font-size:0.8rem;text-decoration:none" data-en="Legal Notice">Aviso Legal</a>
+        <a href="../cookies/" style="color:var(--text-muted);font-size:0.8rem;text-decoration:none" data-en="Cookies">Cookies</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/theme.js"></script>
+<script>
+function toggleMobileNav() {
+  var nav = document.querySelector('.calc-nav');
+  var btn = document.getElementById('navHamburger');
+  if (!nav || !btn) return;
+  var open = nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
+}
+document.addEventListener('click', function(e) {
+  var nav = document.querySelector('.calc-nav');
+  var btn = document.getElementById('navHamburger');
+  if (!nav || !btn) return;
+  if (nav.classList.contains('open') && !btn.contains(e.target) && !nav.contains(e.target)) {
+    nav.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  }
+});
+</script>
+</body>
+</html>
