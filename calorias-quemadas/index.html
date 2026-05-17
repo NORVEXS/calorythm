@@ -7,25 +7,25 @@
   <meta name="description" content="Calcula las calorías que quemas en cualquier actividad física según tu peso y duración. Más de 20 actividades. Usa el índice MET. Gratis, sin registro." />
   <meta name="keywords" content="calculadora calorias quemadas, calorias corriendo, calorias ejercicio, calorias bicicleta, calorias natación, indice met, gasto energetico actividad fisica, quemar calorias" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
-  <meta name="author" content="IMC Calculadora" />
+  <meta name="author" content="Calorythm" />
   <meta name="theme-color" content="#2563EB" />
   <meta name="color-scheme" content="light dark" />
-  <link rel="canonical" href="https://calculadora-imc.es/calorias-quemadas/" />
+  <link rel="canonical" href="https://calorythm.com/calorias-quemadas/" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="../sitemap.xml" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="IMC Calculadora" />
-  <meta property="og:url" content="https://calculadora-imc.es/calorias-quemadas/" />
+  <meta property="og:site_name" content="Calorythm" />
+  <meta property="og:url" content="https://calorythm.com/calorias-quemadas/" />
   <meta property="og:title" content="Calculadora de Calorías Quemadas 2026 — Por actividad, peso y duración" />
   <meta property="og:description" content="Calcula las calorías que quemas en cualquier actividad física según tu peso y duración. Más de 20 actividades. Usa el índice MET. Gratis, sin registro." />
-  <meta property="og:image" content="https://calculadora-imc.es/og-image.jpg" />
+  <meta property="og:image" content="https://calorythm.com/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="es_ES" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Calculadora de Calorías Quemadas 2026 — Por actividad, peso y duración" />
   <meta name="twitter:description" content="Calcula las calorías que quemas en cualquier actividad según tu peso. Más de 20 actividades con MET. Gratis." />
-  <meta name="twitter:image" content="https://calculadora-imc.es/og-image.jpg" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232563EB'/><circle cx='16' cy='12' r='4' fill='none' stroke='white' stroke-width='2'/><path d='M8 24c0-4.4 3.6-8 8-8s8 3.6 8 8' fill='none' stroke='white' stroke-width='2'/></svg>" />
+  <meta name="twitter:image" content="https://calorythm.com/og-image.jpg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23eff6ff' stroke='%23bfdbfe' stroke-width='1'/><polyline points='3,16 7,16 10,7 12,25 15,16 18,11 20,16 29,16' fill='none' stroke='%232563EB' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
@@ -38,26 +38,52 @@
     }
   </script>
   <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    .zone-btn {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 3px; padding: 10px 6px 8px;
+      border: 1.5px solid var(--border); border-radius: 12px;
+      background: var(--surface-2); cursor: pointer;
+      font-family: inherit; transition: all 0.18s ease;
+      color: var(--text-muted);
+    }
+    .zone-btn:hover:not(.selected) {
+      border-color: var(--border-strong); background: var(--surface-3);
+      color: var(--text-secondary); transform: translateY(-1px);
+    }
+    .zone-btn.selected {
+      border: 2px solid var(--accent); background: var(--accent-light);
+      color: var(--accent); box-shadow: 0 3px 12px rgba(37,99,235,0.18);
+      transform: translateY(-1px);
+    }
+    .zone-emoji { font-size: 1.25rem; line-height: 1; }
+    .zone-name  { font-size: 0.75rem; font-weight: 700; color: inherit; text-align: center; }
+    .zone-bpm   { font-size: 0.6rem; opacity: 0.7; white-space: nowrap; }
+    @media (max-width: 480px) {
+      .zone-name { font-size: 0.65rem; }
+      .zone-bpm  { display: none; }
+    }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebApplication",
-        "@id": "https://calculadora-imc.es/calorias-quemadas/#app",
+        "@id": "https://calorythm.com/calorias-quemadas/#app",
         "name": "Calculadora de Calorías Quemadas",
-        "url": "https://calculadora-imc.es/calorias-quemadas/",
+        "url": "https://calorythm.com/calorias-quemadas/",
         "description": "Calcula las calorías quemadas en más de 20 actividades físicas según tu peso y duración. Basado en el índice MET.",
         "applicationCategory": "HealthApplication",
         "operatingSystem": "Web",
         "browserRequirements": "Requires JavaScript",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
         "inLanguage": "es-ES",
-        "author": { "@type": "Organization", "name": "IMC Calculadora", "url": "https://calculadora-imc.es/" }
+        "author": { "@type": "Organization", "name": "Calorythm", "url": "https://calorythm.com/" }
       },
       {
         "@type": "FAQPage",
-        "@id": "https://calculadora-imc.es/calorias-quemadas/#faq",
+        "@id": "https://calorythm.com/calorias-quemadas/#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -89,8 +115,8 @@
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://calculadora-imc.es/" },
-          { "@type": "ListItem", "position": 2, "name": "Calorías quemadas", "item": "https://calculadora-imc.es/calorias-quemadas/" }
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://calorythm.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Calorías quemadas", "item": "https://calorythm.com/calorias-quemadas/" }
         ]
       }
     ]
@@ -105,15 +131,13 @@
   <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center gap-3 h-full">
     <a href="../" class="flex items-center gap-2 shrink-0" aria-label="Inicio">
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-        <rect width="28" height="28" rx="7" fill="#2563EB"/>
-        <circle cx="14" cy="10" r="3.5" stroke="white" stroke-width="1.8" fill="none"/>
-        <path d="M7 21.5c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-        <path d="M14 17v4M12 21h4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        <rect width="28" height="28" rx="7" fill="var(--accent-light)" stroke="var(--accent-muted)" stroke-width="1"/>
+        <polyline points="3,14 7,14 9,7 11,21 13,14 16,10 18,14 25,14" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <span class="font-semibold text-sm tracking-tight hidden sm:inline" style="color:var(--text-primary)" data-en="BMI <span style=&quot;color:var(--accent)&quot;>Calculator</span>">IMC <span style="color:var(--accent)">Calculadora</span></span>
+      <span class="font-semibold text-sm tracking-tight hidden sm:inline" style="color:var(--text-primary)">Calory<span style="color:var(--accent)">thm</span></span>
     </a>
     <nav class="calc-nav" aria-label="Calculadoras">
-      <a href="../"                   class="calc-nav-link" data-en="BMI">IMC</a>
+      <a href="../imc/"               class="calc-nav-link" data-en="BMI">IMC</a>
       <a href="../peso-ideal/"        class="calc-nav-link" data-en="Ideal Weight">Peso ideal</a>
       <a href="../calorias-diarias/"  class="calc-nav-link" data-en="Calories">Calorías</a>
       <a href="../calorias-quemadas/" class="calc-nav-link active" data-en="Calories Burned">Cal. Quemadas</a>
@@ -122,6 +146,10 @@
       <a href="../grasa-corporal/"    class="calc-nav-link" data-en="Body Fat">% Grasa</a>
       <a href="../agua-diaria/"       class="calc-nav-link" data-en="Water">Agua</a>
     </nav>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menú de calculadoras" aria-expanded="false" onclick="toggleMobileNav()">
+      <svg class="icon-open" width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/></svg>
+      <svg class="icon-close" width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
     <button class="lang-btn shrink-0" onclick="toggleLang()" aria-label="Switch to English">EN</button>
     <button id="darkToggle" class="theme-toggle shrink-0" aria-label="Cambiar modo oscuro">
       <svg id="iconLight" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
@@ -160,67 +188,70 @@
       <!-- TOP: inputs -->
       <div class="calc-panel__top">
         <div class="calc-inputs-bar">
-
           <!-- Peso -->
           <div class="cib-field">
             <label class="cib-label" for="weight"><span data-en="Weight">Peso</span> <span id="weightUnitLabel" class="cib-unit">(kg)</span></label>
-            <input id="weight" class="cib-input" type="number" min="1" max="500" step="0.1" placeholder="70" value="78"
+            <input id="weight" class="cib-input" type="number" min="1" max="500" step="0.1" placeholder="70" value="70"
               autocomplete="off" inputmode="decimal" aria-label="Peso" />
           </div>
-
           <div class="cib-divider" aria-hidden="true"></div>
-
-          <!-- Actividad -->
-          <div class="cib-field" style="flex:2">
-            <label class="cib-label" for="activity" data-en="Activity">Actividad</label>
-            <select id="activity" class="cib-select" aria-label="Actividad">
-              <option value="0" data-en="Walking (normal pace)">Caminar (paso normal)</option>
-              <option value="1" data-en="Walking (brisk pace)">Caminar (paso rápido)</option>
-              <option value="2" data-en="Running (8 km/h)">Correr (8 km/h)</option>
-              <option value="3" data-en="Running (10 km/h)">Correr (10 km/h)</option>
-              <option value="4" data-en="Running (12 km/h)">Correr (12 km/h)</option>
-              <option value="5" data-en="Cycling (casual)">Ciclismo (casual)</option>
-              <option value="6" data-en="Cycling (intense)">Ciclismo (intenso)</option>
-              <option value="7" data-en="Swimming (moderate)">Natación (moderada)</option>
-              <option value="8" data-en="Swimming (intense)">Natación (intensa)</option>
-              <option value="9" data-en="HIIT">HIIT</option>
-              <option value="10" data-en="Weight training">Pesas / Musculación</option>
-              <option value="11" data-en="Yoga">Yoga</option>
-              <option value="12" data-en="Pilates">Pilates</option>
-              <option value="13" data-en="Football / Soccer">Fútbol</option>
-              <option value="14" data-en="Basketball">Baloncesto</option>
-              <option value="15" data-en="Tennis">Tenis</option>
-              <option value="16" data-en="Dancing">Baile</option>
-              <option value="17" data-en="Hiking / Mountain">Senderismo / Montaña</option>
-              <option value="18" data-en="Jump rope">Saltar a la comba</option>
-              <option value="19" data-en="Elliptical">Elíptica</option>
-              <option value="20" data-en="Rowing machine">Remo (máquina)</option>
-              <option value="21" data-en="Aerobics">Aeróbic</option>
-            </select>
-          </div>
-
-          <div class="cib-divider" aria-hidden="true"></div>
-
           <!-- Duración -->
-          <div class="cib-field cib-field--sm">
-            <label class="cib-label" for="duration"><span data-en="Duration">Duración</span> <span class="cib-unit">(min)</span></label>
-            <input id="duration" class="cib-input" type="number" min="1" max="600" step="1" placeholder="30" value="30"
-              autocomplete="off" inputmode="numeric" aria-label="Duración en minutos" />
-          </div>        </div>
-
-        <!-- Subrow -->
-        <div class="calc-subrow">
-          <div class="unit-toggle" role="group" aria-label="Sistema de unidades">
-            <button class="unit-btn active" id="btnMetric" onclick="setUnit('metric')">kg</button>
-            <button class="unit-btn" id="btnImperial" onclick="setUnit('imperial')">lb</button>
+          <div class="cib-field" style="flex:0 0 auto">
+            <label class="cib-label"><span data-en="Duration">Duración</span></label>
+            <div style="display:flex;align-items:baseline;gap:4px">
+              <input id="durHours" class="cib-input" type="number" min="0" max="23" step="1" placeholder="0"
+                style="width:2.5rem" autocomplete="off" inputmode="numeric" aria-label="Horas" />
+              <span style="font-size:0.75rem;color:var(--text-muted);font-weight:600" data-en="h">h</span>
+              <input id="durMins" class="cib-input" type="number" min="0" max="59" step="1" placeholder="30" value="30"
+                style="width:2.5rem" autocomplete="off" inputmode="numeric" aria-label="Minutos" />
+              <span style="font-size:0.75rem;color:var(--text-muted);font-weight:600" data-en="min">min</span>
+            </div>
           </div>
-          <div class="cp-trust">
-            <svg class="w-3 h-3" style="color:#4ade80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-            <span data-en="100% private" data-en="100% private">100% privado</span>
-            <span class="cp-trust-dot">·</span>
-            <span data-en="No registration">Sin registro</span>
-            <span class="cp-trust-dot">·</span>
-            <span data-en="MET Index">Índice MET</span>
+          <div class="cib-divider" aria-hidden="true"></div>
+          <div class="cib-field cib-field--units">
+            <label class="cib-label" data-en="Units">Unidades</label>
+            <div class="unit-toggle">
+              <button class="unit-btn active" id="btnMetric" onclick="setUnit('metric')">kg</button>
+              <button class="unit-btn" id="btnImperial" onclick="setUnit('imperial')">lb</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zonas de intensidad -->
+        <div style="padding:1rem 0 0.25rem;border-top:1px solid var(--border);margin-top:1rem">
+          <p class="cib-label" style="margin-bottom:0.75rem" data-en="Intensity zone">Zona de intensidad</p>
+          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px">
+
+            <button class="zone-btn" id="zoneVeryLight" onclick="setZone('verylight')" type="button" aria-pressed="false">
+              <span class="zone-emoji">🧘</span>
+              <span class="zone-name" data-en="Very light">Muy suave</span>
+              <span class="zone-bpm">&lt;60% FC</span>
+            </button>
+
+            <button class="zone-btn" id="zoneLight" onclick="setZone('light')" type="button" aria-pressed="false">
+              <span class="zone-emoji">🚶</span>
+              <span class="zone-name" data-en="Light">Suave</span>
+              <span class="zone-bpm">60–70% FC</span>
+            </button>
+
+            <button class="zone-btn selected" id="zoneModerate" onclick="setZone('moderate')" type="button" aria-pressed="true">
+              <span class="zone-emoji">🏃</span>
+              <span class="zone-name" data-en="Moderate">Moderado</span>
+              <span class="zone-bpm">70–80% FC</span>
+            </button>
+
+            <button class="zone-btn" id="zoneHard" onclick="setZone('hard')" type="button" aria-pressed="false">
+              <span class="zone-emoji">💪</span>
+              <span class="zone-name" data-en="Intense">Intenso</span>
+              <span class="zone-bpm">80–90% FC</span>
+            </button>
+
+            <button class="zone-btn" id="zoneMax" onclick="setZone('max')" type="button" aria-pressed="false">
+              <span class="zone-emoji">🔥</span>
+              <span class="zone-name" data-en="Maximum">Máximo</span>
+              <span class="zone-bpm">&gt;90% FC</span>
+            </button>
+
           </div>
         </div>
       </div>
@@ -313,7 +344,7 @@
     <div class="grid md:grid-cols-3 gap-5">
       <!-- Card 1 -->
       <div class="card card-hover reveal">
-        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:var(--accent-light)">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:#eff6ff">
           <svg class="w-5 h-5" style="color:var(--accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
         </div>
         <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)" data-en="What is the MET?">¿Qué es el MET?</h3>
@@ -321,19 +352,19 @@
       </div>
       <!-- Card 2 -->
       <div class="card card-hover reveal" style="transition-delay:0.08s">
-        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:var(--accent-light)">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:#eff6ff">
           <svg class="w-5 h-5" style="color:var(--accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
         </div>
         <h3 class="font-semibold text-sm mb-3" style="color:var(--text-primary)" data-en="Calculation formula">Fórmula de cálculo</h3>
         <div class="rounded-lg p-4 text-center mb-3" style="background:var(--surface-2);border:1px solid var(--border)">
           <p class="text-xs font-medium mb-1" style="color:var(--text-muted)">Kcal =</p>
-          <p class="text-sm font-bold" style="color:var(--accent)">MET × peso (kg) × tiempo (h)</p>
+          <p class="text-sm font-bold" style="color:var(--accent)" data-en="MET × weight (kg) × time (h)">MET × peso (kg) × tiempo (h)</p>
         </div>
         <p class="text-xs" style="color:var(--text-muted)"><span class="lang-es">Ejemplo: correr (MET 10) × 80 kg × 0,5 h = <strong style="color:var(--text-secondary)">400 kcal</strong></span><span class="lang-en">Example: running (MET 10) × 80 kg × 0.5 h = <strong style="color:var(--text-secondary)">400 kcal</strong></span></p>
       </div>
       <!-- Card 3 -->
       <div class="card card-hover reveal" style="transition-delay:0.16s">
-        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:var(--accent-light)">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:#eff6ff">
           <svg class="w-5 h-5" style="color:var(--accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
         </div>
         <h3 class="font-semibold text-sm mb-2" style="color:var(--text-primary)" data-en="Variables that affect it">Variables que afectan</h3>
@@ -444,11 +475,11 @@
     </div>
     <div class="tools-grid reveal">
 
-      <a href="../" class="tool-card">
+      <a href="../imc/" class="tool-card">
         <div class="tool-card-icon">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
         </div>
-        <span class="tool-card-name" data-en="BMI Calculator">Calculadora IMC</span>
+        <span class="tool-card-name">Calculadora IMC</span>
         <span class="tool-card-desc" data-en="Body Mass Index per WHO criteria">Índice de Masa Corporal según criterios OMS</span>
       </a>
 
@@ -513,9 +544,9 @@
       <div>
         <a href="../" class="footer-logo">
           <span class="footer-logo-icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="10" r="3.5" stroke="white" stroke-width="1.8" fill="none"/><path d="M7 21.5c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+            <svg width="18" height="18" viewBox="0 0 28 28" fill="none"><polyline points="3,14 7,14 9,7 11,21 13,14 16,10 18,14 25,14" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
-          <span class="footer-logo-name" data-en="BMI Calculator">IMC Calculadora</span>
+          <span class="footer-logo-name">Calorythm</span>
         </a>
         <p class="footer-desc" data-en="Free health tools: BMI, daily calories (TDEE), ideal weight, basal metabolic rate, body fat %, FFMI and more. Based on WHO criteria, Mifflin-St Jeor and Harris-Benedict formulas.">Herramientas gratuitas de salud: IMC, calorías diarias (TDEE), peso ideal, tasa metabólica basal, % grasa corporal, FFMI y más. Basado en criterios OMS, fórmulas Mifflin-St Jeor y Harris-Benedict.</p>
       </div>
@@ -523,7 +554,7 @@
       <nav aria-label="Peso y calorías">
         <p class="footer-nav-title" data-en="Weight &amp; Calories">Peso y calorías</p>
         <ul class="footer-nav-list">
-          <li><a href="../" data-en="BMI Calculator">Calculadora IMC</a></li>
+          <li><a href="../imc/">Calculadora IMC</a></li>
           <li><a href="../peso-ideal/" data-en="Ideal Weight Calculator">Calculadora Peso Ideal</a></li>
           <li><a href="../calorias-diarias/" data-en="Daily Calories (TDEE)">Calorías Diarias (TDEE)</a></li>
           <li><a href="../calorias-quemadas/" data-en="Calories Burned">Calorías Quemadas</a></li>
@@ -541,7 +572,7 @@
       </nav>
     </div>
     <div class="footer-bottom">
-      <p data-en="© 2026 BMI Calculator · All rights reserved.">© 2026 IMC Calculadora · Todos los derechos reservados.</p>
+      <p data-en="© 2026 Calorythm · All rights reserved.">© 2026 Calorythm · Todos los derechos reservados.</p>
       <p data-en="For guidance only · Not a substitute for medical advice · WHO criteria">Solo orientativo · No sustituye el consejo médico · Criterios OMS</p>
     </div>
   </div>
@@ -560,30 +591,23 @@
 /* ============================================================
    CALORÍAS QUEMADAS — Calculadora
    ============================================================ */
-const activities = [
-  { name: 'Caminar (paso normal)', nameEn: 'Walking (normal pace)',  met: 3.5 },
-  { name: 'Caminar (paso rápido)', nameEn: 'Walking (brisk pace)',   met: 4.5 },
-  { name: 'Correr (8 km/h)',       nameEn: 'Running (8 km/h)',       met: 8.0 },
-  { name: 'Correr (10 km/h)',      nameEn: 'Running (10 km/h)',      met: 10.0 },
-  { name: 'Correr (12 km/h)',      nameEn: 'Running (12 km/h)',      met: 11.5 },
-  { name: 'Ciclismo (casual)',     nameEn: 'Cycling (casual)',        met: 6.0 },
-  { name: 'Ciclismo (intenso)',    nameEn: 'Cycling (intense)',       met: 10.0 },
-  { name: 'Natación (moderada)',   nameEn: 'Swimming (moderate)',     met: 6.0 },
-  { name: 'Natación (intensa)',    nameEn: 'Swimming (intense)',      met: 9.8 },
-  { name: 'HIIT',                  nameEn: 'HIIT',                    met: 8.0 },
-  { name: 'Pesas / Musculación',   nameEn: 'Weight training',         met: 3.5 },
-  { name: 'Yoga',                  nameEn: 'Yoga',                    met: 2.5 },
-  { name: 'Pilates',               nameEn: 'Pilates',                 met: 3.0 },
-  { name: 'Fútbol',                nameEn: 'Football / Soccer',       met: 7.0 },
-  { name: 'Baloncesto',            nameEn: 'Basketball',              met: 6.5 },
-  { name: 'Tenis',                 nameEn: 'Tennis',                  met: 7.3 },
-  { name: 'Baile',                 nameEn: 'Dancing',                 met: 4.8 },
-  { name: 'Senderismo / Montaña',  nameEn: 'Hiking / Mountain',       met: 6.0 },
-  { name: 'Saltar a la comba',     nameEn: 'Jump rope',               met: 10.0 },
-  { name: 'Elíptica',              nameEn: 'Elliptical',              met: 5.0 },
-  { name: 'Remo (máquina)',        nameEn: 'Rowing machine',          met: 7.0 },
-  { name: 'Aeróbic',               nameEn: 'Aerobics',                met: 6.0 }
-];
+const zones = {
+  verylight: { name: 'Muy suave',  nameEn: 'Very light', met: 2.5,  bpm: '<60% FC' },
+  light:     { name: 'Suave',      nameEn: 'Light',       met: 4.0,  bpm: '60–70% FC' },
+  moderate:  { name: 'Moderado',   nameEn: 'Moderate',    met: 6.5,  bpm: '70–80% FC' },
+  hard:      { name: 'Intenso',    nameEn: 'Intense',     met: 9.5,  bpm: '80–90% FC' },
+  max:       { name: 'Máximo',     nameEn: 'Maximum',     met: 13.0, bpm: '>90% FC' }
+};
+let _zone = 'moderate';
+
+function setZone(z) {
+  _zone = z;
+  Object.keys(zones).forEach(function(k) {
+    const btn = document.getElementById('zone' + k.charAt(0).toUpperCase() + k.slice(1));
+    if (btn) { btn.classList.toggle('selected', k === z); btn.setAttribute('aria-pressed', k === z); }
+  });
+  calculate();
+}
 
 let _imperial = false;
 
@@ -615,23 +639,19 @@ function animateNumber(el, target, duration) {
 
 function calculate() {
   const wRaw = parseFloat(document.getElementById('weight').value);
-  const dur   = parseFloat(document.getElementById('duration').value);
-  const actIdx = parseInt(document.getElementById('activity').value);
+  const h    = parseInt(document.getElementById('durHours').value) || 0;
+  const m    = parseInt(document.getElementById('durMins').value)  || 0;
+  const dur  = h * 60 + m;
 
-  if (!wRaw || isNaN(wRaw) || !dur || isNaN(dur) || isNaN(actIdx)) {
-    return;
-  }
+  if (!wRaw || isNaN(wRaw) || dur < 1) return;
 
   const wKg = _imperial ? wRaw / 2.20462 : wRaw;
+  if (wKg < 20 || wKg > 300 || dur < 1 || dur > 600) return;
 
-  if (wKg < 20 || wKg > 300 || dur < 1 || dur > 600) {
-    return;
-  }
-
-  const act = activities[actIdx];
-  const kcal       = Math.round(act.met * wKg * (dur / 60));
+  const act = zones[_zone];
+  const kcal        = Math.round(act.met * wKg * (dur / 60));
   const kcalPerHour = Math.round(act.met * wKg);
-  const fatGrams   = Math.round(kcal / 9);
+  const fatGrams    = Math.round(kcal / 9);
 
   const healthyFoods = [
     { label: 'manzanas',         kcalEach: 52,  emoji: '🍎' },
@@ -657,10 +677,12 @@ function calculate() {
   const kcalEl = document.getElementById('resKcal');
   animateNumber(kcalEl, kcal, 800);
 
-  var _actName = (localStorage.getItem('lang') === 'en' && act.nameEn) ? act.nameEn : act.name;
-  document.getElementById('resActivity').textContent = _actName + ' · ' + dur + ' min';
+  var _isEn = localStorage.getItem('lang') === 'en';
+  var _actName = (_isEn ? act.nameEn : act.name) + ' · ' + act.bpm;
+  var durLabel = h > 0 ? (h + 'h ' + (m > 0 ? m + 'min' : '')) : (m + 'min');
+  document.getElementById('resActivity').textContent = _actName + ' · ' + durLabel.trim();
   document.getElementById('resKcalHour').textContent = kcalPerHour.toLocaleString('es-ES') + ' kcal';
-  document.getElementById('resDuration').textContent = dur + ' min';
+  document.getElementById('resDuration').textContent = durLabel.trim();
   document.getElementById('resMet').textContent = act.met.toFixed(1);
   document.getElementById('resFat').textContent = fatGrams + ' g';
 
@@ -711,8 +733,12 @@ function toggleFaq(btn) {
 
 /* Real-time recalculation */
 document.getElementById('weight').addEventListener('input', calculate);
-document.getElementById('duration').addEventListener('input', calculate);
-document.getElementById('activity').addEventListener('change', calculate);
+document.getElementById('durHours').addEventListener('input', calculate);
+document.getElementById('durMins').addEventListener('input', function() {
+  const el = document.getElementById('durMins');
+  if (parseInt(el.value) > 59) el.value = 59;
+  calculate();
+});
 
 /* Scroll reveal */
 (function() {
@@ -736,12 +762,29 @@ document.getElementById('activity').addEventListener('change', calculate);
   }
 
   // Preset values
-  document.getElementById('weight').value = '78';
-  document.getElementById('activity').value = '2';
-  document.getElementById('duration').value = '30';
+  document.getElementById('weight').value = '70';
+  document.getElementById('durMins').value = '30';
   calculate();
 })();
 </script>
   <script src="../js/lang.js"></script>
+<script>
+function toggleMobileNav() {
+  var nav = document.querySelector('.calc-nav');
+  var btn = document.getElementById('navHamburger');
+  if (!nav || !btn) return;
+  var open = nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
+}
+document.addEventListener('click', function(e) {
+  var nav = document.querySelector('.calc-nav');
+  var btn = document.getElementById('navHamburger');
+  if (!nav || !btn) return;
+  if (nav.classList.contains('open') && !btn.contains(e.target) && !nav.contains(e.target)) {
+    nav.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  }
+});
+</script>
 </body>
 </html>

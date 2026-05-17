@@ -21,9 +21,9 @@
       el.style.display = l !== 'en' ? 'none' : '';
     });
 
-    /* toggle button label */
+    /* toggle button label: shows the ACTIVE language */
     document.querySelectorAll('.lang-btn').forEach(function (btn) {
-      btn.textContent = l === 'en' ? 'ES' : 'EN';
+      btn.textContent = l === 'en' ? 'EN' : 'ES';
       btn.setAttribute('aria-label', l === 'en' ? 'Cambiar a español' : 'Switch to English');
     });
   }

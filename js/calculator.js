@@ -237,25 +237,30 @@ function calculateBMI() {
   const isElderly = age >= 65;
   const minBMI = isElderly ? 22   : 18.5;
   const maxBMI = isElderly ? 27   : 24.9;
-  const minH = (minBMI * heightM * heightM).toFixed(1);
-  const maxH = (maxBMI * heightM * heightM).toFixed(1);
-  document.getElementById('healthyRange').textContent = `${minH} kg – ${maxH} kg`;
+  const minKg = minBMI * heightM * heightM;
+  const maxKg = maxBMI * heightM * heightM;
+  const wUnit = isImperial ? 'lb' : 'kg';
+  const minH = isImperial ? (minKg * 2.20462).toFixed(1) : minKg.toFixed(1);
+  const maxH = isImperial ? (maxKg * 2.20462).toFixed(1) : maxKg.toFixed(1);
+  document.getElementById('healthyRange').textContent = `${minH} ${wUnit} – ${maxH} ${wUnit}`;
 
   let goal;
   if (bmi < minBMI) {
-    const g = (minBMI * heightM * heightM - weightKg).toFixed(1);
-    goal = isElderly
-      ? `Ganar ~${g} kg para alcanzar el rango saludable para tu edad.`
-      : `Ganar ~${g} kg para alcanzar el rango saludable.`;
+    const gKg = minKg - weightKg;
+    const g = isImperial ? (gKg * 2.20462).toFixed(1) : gKg.toFixed(1);
+    goal = _isEn
+      ? (isElderly ? `Gain ~${g} ${wUnit} to reach the healthy range for your age.` : `Gain ~${g} ${wUnit} to reach the healthy range.`)
+      : (isElderly ? `Ganar ~${g} ${wUnit} para alcanzar el rango saludable para tu edad.` : `Ganar ~${g} ${wUnit} para alcanzar el rango saludable.`);
   } else if (bmi <= maxBMI) {
-    goal = isElderly
-      ? '¡Perfecto para tu edad! Mantén actividad física y buena alimentación.'
-      : '¡Vas por buen camino! Mantén tus hábitos actuales.';
+    goal = _isEn
+      ? (isElderly ? 'Perfect for your age! Keep up physical activity and good nutrition.' : 'You are on track! Keep up your current habits.')
+      : (isElderly ? '¡Perfecto para tu edad! Mantén actividad física y buena alimentación.' : '¡Vas por buen camino! Mantén tus hábitos actuales.');
   } else {
-    const l = (weightKg - maxBMI * heightM * heightM).toFixed(1);
-    goal = isElderly
-      ? `Reducir ~${l} kg para entrar en el rango saludable para tu edad.`
-      : `Reducir ~${l} kg para entrar en el rango saludable.`;
+    const lKg = weightKg - maxKg;
+    const l = isImperial ? (lKg * 2.20462).toFixed(1) : lKg.toFixed(1);
+    goal = _isEn
+      ? (isElderly ? `Lose ~${l} ${wUnit} to enter the healthy range for your age.` : `Lose ~${l} ${wUnit} to enter the healthy range.`)
+      : (isElderly ? `Reducir ~${l} ${wUnit} para entrar en el rango saludable para tu edad.` : `Reducir ~${l} ${wUnit} para entrar en el rango saludable.`);
   }
   document.getElementById('goalSuggestion').textContent = goal;
 
