@@ -1,63 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ── Español ── -->
   <url>
     <loc>https://calorythm.com/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calorythm.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calorythm.com/en/"/>
   </url>
   <url>
     <loc>https://calorythm.com/imc/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://calorythm.com/peso-ideal/</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calorythm.com/imc/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calorythm.com/en/bmi-calculator/"/>
   </url>
   <url>
     <loc>https://calorythm.com/calorias-diarias/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calorythm.com/calorias-diarias/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calorythm.com/en/tdee-calculator/"/>
   </url>
   <url>
     <loc>https://calorythm.com/calorias-quemadas/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calorythm.com/calorias-quemadas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calorythm.com/en/calories-burned-calculator/"/>
   </url>
   <url>
     <loc>https://calorythm.com/macros/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calorythm.com/macros/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calorythm.com/en/macro-calculator/"/>
   </url>
   <url>
     <loc>https://calorythm.com/ffmi/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calorythm.com/ffmi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calorythm.com/en/ffmi-calculator/"/>
   </url>
   <url>
     <loc>https://calorythm.com/grasa-corporal/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calorythm.com/grasa-corporal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calorythm.com/en/body-fat-calculator/"/>
   </url>
   <url>
     <loc>https://calorythm.com/agua-diaria/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calorythm.com/agua-diaria/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calorythm.com/en/water-intake-calculator/"/>
+  </url>
+  <url>
+    <loc>https://calorythm.com/peso-ideal/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calorythm.com/peso-ideal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calorythm.com/en/ideal-weight-calculator/"/>
   </url>
   <url>
     <loc>https://calorythm.com/tmb/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calorythm.com/tmb/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calorythm.com/en/bmr-calculator/"/>
   </url>
+
+  <!-- ── English ── -->
+  <url>
+    <loc>https://calorythm.com/en/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calorythm.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calorythm.com/"/>
+  </url>
+  <url>
+    <loc>https://calorythm.com/en/bmi-calculator/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calorythm.com/en/bmi-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calorythm.com/imc/"/>
+  </url>
+  <url>
+    <loc>https://calorythm.com/en/tdee-calculator/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calorythm.com/en/tdee-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calorythm.com/calorias-diarias/"/>
+  </url>
+  <url>
+    <loc>https://calorythm.com/en/calories-burned-calculator/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calorythm.com/en/calories-burned-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calorythm.com/calorias-quemadas/"/>
+  </url>
+  <url>
+    <loc>https://calorythm.com/en/macro-calculator/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calorythm.com/en/macro-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calorythm.com/macros/"/>
+  </url>
+  <url>
+    <loc>https://calorythm.com/en/ffmi-calculator/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calorythm.com/en/ffmi-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calorythm.com/ffmi/"/>
+  </url>
+  <url>
+    <loc>https://calorythm.com/en/body-fat-calculator/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calorythm.com/en/body-fat-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calorythm.com/grasa-corporal/"/>
+  </url>
+  <url>
+    <loc>https://calorythm.com/en/water-intake-calculator/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calorythm.com/en/water-intake-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calorythm.com/agua-diaria/"/>
+  </url>
+  <url>
+    <loc>https://calorythm.com/en/ideal-weight-calculator/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calorythm.com/en/ideal-weight-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calorythm.com/peso-ideal/"/>
+  </url>
+  <url>
+    <loc>https://calorythm.com/en/bmr-calculator/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calorythm.com/en/bmr-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calorythm.com/tmb/"/>
+  </url>
+
 </urlset>
